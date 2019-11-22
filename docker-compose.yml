@@ -1,0 +1,42 @@
+version: '3.5'
+
+services:
+  frontend:
+    environment:
+      - PORT=8888
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '4200:80'
+      - '443:443'
+
+  backend:
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/bluespace
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - '8000:8000'
+    networks:
+      - dockernet
+    restart: always
+
+  mongodb:
+    image: mongo:3.6
+    volumes:
+      - mongovolumen:/data/db
+    ports:
+      - '27017:27017'
+    command: --smallfiles
+    networks:
+      - dockernet
+    restart: always
+
+volumes:
+  mongovolumen:
+
+networks:
+  dockernet:
+    external: true

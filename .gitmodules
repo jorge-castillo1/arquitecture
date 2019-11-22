@@ -1,0 +1,6 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://quantion.visualstudio.com/DefaultCollection/Bluespace/_git/frontend
+[submodule "backend"]
+	path = backend
+	url = https://quantion.visualstudio.com/DefaultCollection/Bluespace/_git/backend
