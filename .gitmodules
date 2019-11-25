@@ -1,9 +1,13 @@
-[submodule "apimanager_provisional"]
-	path = apimanager_provisional
-	url = https://quantion.visualstudio.com/DefaultCollection/Bluespace/_git/apimanager_provisional
 [submodule "crmcoreapi"]
 	path = crmcoreapi
 	url = https://quantion.visualstudio.com/DefaultCollection/Bluespace/_git/crmcoreapi
 [submodule "SMCoreAPI"]
 	path = SMCoreAPI
 	url = https://quantion.visualstudio.com/DefaultCollection/Bluespace/_git/SMCoreAPI
+[submodule "frontend"]
+	path = frontend
+	url = https://quantion.visualstudio.com/DefaultCollection/Bluespace/_git/frontend
+[submodule "backend"]
+	path = backend
+	url = https://quantion.visualstudio.com/DefaultCollection/Bluespace/_git/backend
+

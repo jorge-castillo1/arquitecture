@@ -1,0 +1,68 @@
+version: '3.5'
+
+services:
+  frontend:
+    environment:
+      - PORT=8888
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '4200:80'
+      - '443:443'
+
+  backend:
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/bluespace
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - '8000:80'
+    networks:
+      - dockernet
+    restart: always
+
+  crmcoreapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    build:
+      context: ./crmcoreapi
+      dockerfile: Dockerfile
+    ports:
+      - "8100:80"
+      - "44340:443"
+    networks:
+      - dockernet
+    restart: always
+
+  smcoreapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    build:
+      context: ./SMCoreAPI
+      dockerfile: Dockerfile
+    ports:
+      - "53526:80"
+      - "44339:443"
+    networks:
+      - dockernet
+    restart: always
+
+  mongodb:
+    image: mongo:3.6
+    volumes:
+      - mongovolumen:/data/db
+    ports:
+      - '27017:27017'
+    command: --smallfiles
+    networks:
+      - dockernet
+    restart: always
+
+volumes:
+  mongovolumen:
+
+networks:
+  dockernet:
+    external: true
