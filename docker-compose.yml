@@ -60,8 +60,51 @@ services:
       - dockernet
     restart: always
 
+  quantion_mysql:
+    image: mysql:5.7.20
+    ports:
+        - 3307:3306
+    environment:
+        MYSQL_ROOT_PASSWORD: wso2carbon
+    volumes:
+        - wso2datavolumebluespace:/var/lib/mysql
+        - ../data/mysql/scripts:/docker-entrypoint-initdb.d
+    healthcheck:
+        test: ["CMD", "mysqladmin" ,"ping", "-uroot", "-pwso2carbon"]
+        interval: 30s
+        timeout: 60s
+        retries: 5
+    networks:
+      - dockernet
+
+  api-manager:
+    image: wso2/wso2am:2.6.0
+    volumes:
+        - ../images/apim/files/wso2am-2.6.0/repository/deployment/server/jaggeryapps:/home/wso2carbon/wso2am-2.6.0/repository/deployment/server/jaggeryapps
+    links:
+        - quantion_mysql:quantion_mysql
+    ports:
+        - "9443:9443"
+        - "8280:8280"
+        - "8243:8243"
+    networks:
+      - dockernet
+
+  quantion_is:
+    image: wso2/wso2is:5.7.0
+    ports:
+        - "9763:9763"
+        - "9444:9443"
+    depends_on:
+        - quantion_mysql
+    links:
+        - quantion_mysql:quantion_mysql
+    networks:
+      - dockernet
+
 volumes:
   mongovolumen:
+  wso2datavolumebluespace:
 
 networks:
   dockernet:
