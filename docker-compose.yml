@@ -13,15 +13,18 @@ services:
 
   backend:
     environment:
-      - MONGO_URL=mongodb://mongodb:27017/bluespace
+      - MONGODB_URL=mongodb://mongodb:27019
+      - MONGODB_DB=customerportaldb
     build:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - '8000:80'
+      - '8000:8000'
     networks:
       - dockernet
     restart: always
+    volumes:
+      - ./backend:/var/www/symfony
 
   crmcoreapi:
     environment:
@@ -54,7 +57,7 @@ services:
     volumes:
       - mongovolumen:/data/db
     ports:
-      - '27017:27017'
+      - '27019:27017'
     command: --smallfiles
     networks:
       - dockernet
