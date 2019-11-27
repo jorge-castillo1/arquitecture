@@ -13,7 +13,8 @@ services:
 
   backend:
     environment:
-      - MONGO_URL=mongodb://mongodb:27017/bluespace
+      - MONGO_URL=mongodb://mongodb:27019
+      - MONGODB_DB=customerportaldb
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -54,7 +55,7 @@ services:
     volumes:
       - mongovolumen:/data/db
     ports:
-      - '27017:27017'
+      - '27019:27017'
     command: --smallfiles
     networks:
       - dockernet
