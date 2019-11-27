@@ -13,7 +13,7 @@ services:
 
   backend:
     environment:
-      - MONGODB_URL=mongodb://mongodb:27019
+      - MONGO_URL=mongodb://mongodb:27019
       - MONGODB_DB=customerportaldb
     build:
       context: ./backend
