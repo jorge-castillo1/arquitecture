@@ -1,21 +1,19 @@
 version: '3.5'
 
 services:
-  #frontend:
-  #  environment:
-  #    - PORT=8888
-  #  build:
-  #    context: ./frontend
-  #    dockerfile: Dockerfile
-  #  ports:
-  #    - '4200:80'
-  #    - '443:443'
+  frontend:
+    environment:
+      - PORT=8888
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '4200:80'
+      - '443:443'
 
   backend:
-    depends_on:
-      - mongodb
     environment:
-      - MONGODB_URL=mongodb://mongodb:27017
+      - MONGO_URL=mongodb://mongodb:27019
       - MONGODB_DB=customerportaldb
     build:
       context: ./backend
@@ -26,40 +24,38 @@ services:
       - dockernet
     restart: always
     volumes:
-      - ./backend:/app
-    links:
-      - mongodb:mongodb
+      - ./backend:/var/www/symfony
 
-  #crmcoreapi:
-  #  environment:
-  #    - ASPNETCORE_ENVIRONMENT=Development
-  #  build:
-  #    context: ./crmcoreapi
-  #    dockerfile: Dockerfile
-  #  ports:
-  #    - "8100:80"
-  #    - "44340:443"
-  #  networks:
-  #    - dockernet
-  #  restart: always
+  crmcoreapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    build:
+      context: ./crmcoreapi
+      dockerfile: Dockerfile
+    ports:
+      - "8100:80"
+      - "44340:443"
+    networks:
+      - dockernet
+    restart: always
 
-  #smcoreapi:
-  #  environment:
-  #    - ASPNETCORE_ENVIRONMENT=Development
-  #  build:
-  #    context: ./SMCoreAPI
-  #    dockerfile: Dockerfile
-  #  ports:
-  #    - "53526:80"
-  #    - "44339:443"
-  #  networks:
-  #    - dockernet
-  #  restart: always
+  smcoreapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    build:
+      context: ./SMCoreAPI
+      dockerfile: Dockerfile
+    ports:
+      - "53526:80"
+      - "44339:443"
+    networks:
+      - dockernet
+    restart: always
 
   mongodb:
     image: mongo:3.6
     volumes:
-      - ../data/mongo:/data/db:rw
+      - mongovolumen:/data/db
     ports:
       - '27019:27017'
     command: --smallfiles
@@ -67,51 +63,51 @@ services:
       - dockernet
     restart: always
 
-  #quantion_mysql:
-  #  image: mysql:5.7.20
-  #  ports:
-  #      - 3307:3306
-  #  environment:
-  #      MYSQL_ROOT_PASSWORD: wso2carbon
-  #  volumes:
-  #      - wso2datavolumebluespace:/var/lib/mysql
-  #      - ../data/mysql/scripts:/docker-entrypoint-initdb.d
-  #  healthcheck:
-  #      test: ["CMD", "mysqladmin" ,"ping", "-uroot", "-pwso2carbon"]
-  #      interval: 30s
-  #      timeout: 60s
-  #      retries: 5
-  #  networks:
-  #    - dockernet
+  quantion_mysql:
+    image: mysql:5.7.20
+    ports:
+        - 3307:3306
+    environment:
+        MYSQL_ROOT_PASSWORD: wso2carbon
+    volumes:
+        - wso2datavolumebluespace:/var/lib/mysql
+        - ../data/mysql/scripts:/docker-entrypoint-initdb.d
+    healthcheck:
+        test: ["CMD", "mysqladmin" ,"ping", "-uroot", "-pwso2carbon"]
+        interval: 30s
+        timeout: 60s
+        retries: 5
+    networks:
+      - dockernet
 
-  #api-manager:
-  #  image: wso2/wso2am:2.6.0
-  #  volumes:
-  #      - ../images/apim/files/wso2am-2.6.0/repository/deployment/server/jaggeryapps:/home/wso2carbon/wso2am-2.6.0/repository/deployment/server/jaggeryapps
-  #  links:
-  #      - quantion_mysql:quantion_mysql
-  #  ports:
-  #      - "9443:9443"
-  #      - "8280:8280"
-  #      - "8243:8243"
-  #  networks:
-  #    - dockernet
+  api-manager:
+    image: wso2/wso2am:2.6.0
+    volumes:
+        - ../images/apim/files/wso2am-2.6.0/repository/deployment/server/jaggeryapps:/home/wso2carbon/wso2am-2.6.0/repository/deployment/server/jaggeryapps
+    links:
+        - quantion_mysql:quantion_mysql
+    ports:
+        - "9443:9443"
+        - "8280:8280"
+        - "8243:8243"
+    networks:
+      - dockernet
 
-  #quantion_is:
-  #  image: wso2/wso2is:5.7.0
-  #  ports:
-  #      - "9763:9763"
-  #      - "9444:9443"
-  #  depends_on:
-  #      - quantion_mysql
-  #  links:
-  #      - quantion_mysql:quantion_mysql
-  #  networks:
-  #    - dockernet
+  quantion_is:
+    image: wso2/wso2is:5.7.0
+    ports:
+        - "9763:9763"
+        - "9444:9443"
+    depends_on:
+        - quantion_mysql
+    links:
+        - quantion_mysql:quantion_mysql
+    networks:
+      - dockernet
 
 volumes:
   mongovolumen:
-  #wso2datavolumebluespace:
+  wso2datavolumebluespace:
 
 networks:
   dockernet:
