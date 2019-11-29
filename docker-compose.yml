@@ -12,10 +12,8 @@ services:
       - '443:443'
 
   backend:
-    depends_on:
-      - mongodb
     environment:
-      - MONGODB_URL=mongodb://mongodb:27017
+      - MONGO_URL=mongodb://mongodb:27019
       - MONGODB_DB=customerportaldb
     build:
       context: ./backend
@@ -26,9 +24,7 @@ services:
       - dockernet
     restart: always
     volumes:
-      - ./backend:/app
-    links:
-      - mongodb:mongodb
+      - ./backend:/var/www/symfony
 
   crmcoreapi:
     environment:
@@ -59,7 +55,7 @@ services:
   mongodb:
     image: mongo:3.6
     volumes:
-      - ../data/mongo:/data/db:rw
+      - mongovolumen:/data/db
     ports:
       - '27019:27017'
     command: --smallfiles
