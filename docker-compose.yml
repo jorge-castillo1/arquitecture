@@ -16,7 +16,7 @@ services:
       - mongodb
     environment:
       - MONGODB_URL=mongodb://mongodb:27017
-      - MONGODB_DB=customerportaldb
+    #  - MONGODB_DB=customerportaldb
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -29,7 +29,7 @@ services:
       - ./backend:/app
     links:
       - mongodb:mongodb
-
+  
   crmcoreapi:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -59,7 +59,7 @@ services:
   mongodb:
     image: mongo:3.6
     volumes:
-      - ../data/mongo:/data/db:rw
+      - mongovolumen:/data/db:rw
     ports:
       - '27019:27017'
     command: --smallfiles
