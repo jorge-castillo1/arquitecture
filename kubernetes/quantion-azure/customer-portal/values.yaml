@@ -1,0 +1,56 @@
+angular:
+  registry: registry.quantion.com
+  replicas: 1
+  repository: bluespace-customerportal-web/frontend
+  tag: latest
+backend:
+  registry: registry.quantion.com
+  replicas: 1
+  repository: bluespace-customerportal-web/backend
+  tag: latest
+  gateway: http://crmapi-service
+  crmapi: crmapi/Contacts
+crmapi:
+  registry: registry.quantion.com
+  replicas: 1
+  repository: bluespace-customerportal-web/crmapi
+  tag: latest
+  serviceUrl: http://192.168.0.22/BLUESPACEPRE/
+  userAccount: quantion
+  password: PqNgxfYL0v12lvG
+  domain: BLUESPACE
+  api: api/data/v8.1/
+datosProyecto:
+  aplicacion: web
+  cliente: bluespace
+  entorno: dev
+  proyecto: customerportal
+  whitelist:
+    enabled: false
+    listIp:
+    - 2.139.194.97/32
+mongodb:
+  database: customerportal
+  datosProyecto:
+    aplicacion: web
+    cliente: bluespace
+    entorno: dev
+    proyecto: customerportal
+  enabled: true
+  fullnameOverride: mongodb
+  persistence:
+    enabled: true
+    size: 1Gi
+  replicaSet:
+    enabled: false
+    name: rs0
+    pdb:
+      enabled: false
+      minAvailable:
+        arbiter: 1
+        primary: 1
+        secondary: 1
+    replicas:
+      arbiter: 1
+      secondary: 2
+  usePassword: false

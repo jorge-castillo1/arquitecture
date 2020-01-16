@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: angular-deployment{{ template "include_branch_name" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: angular{{ template "include_branch_name" . }}
+    deploy: {{ template "datosProyecto.url" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: angular{{ template "include_branch_name" . }}
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: angular{{ template "include_branch_name" . }}
+    spec:
+      containers:
+      - image: "{{ .Values.angular.registry }}/{{ .Values.angular.repository }}:{{ .Values.angular.tag }}"
+        name: angular{{ template "include_branch_name" . }}
+        ports:
+        - containerPort: 80
+          name: http
+        imagePullPolicy: Always
+      imagePullSecrets:
+        - name: quantion-registry
+      
