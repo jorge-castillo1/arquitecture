@@ -15,7 +15,7 @@ crmapi:
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
   tag: latest
-  serviceUrl: http://192.168.0.22/BLUESPACEPRE/
+  serviceUrl: http://93.90.28.112/BLUESPACEPRE/
   userAccount: quantion
   password: PqNgxfYL0v12lvG
   domain: BLUESPACE

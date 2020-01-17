@@ -28,6 +28,8 @@ spec:
             value: DEV
           - name: MONGO_HOST
             value: {{ template "mongodb_replicaset_host" . }}
+          - name: ServiceUrl
+            value: http://93.90.28.112/BLUESPACEPRE/
         ports:
         - containerPort: 80
           name: http
