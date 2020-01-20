@@ -40,7 +40,7 @@ spec:
           - name: ProfileAPI
             value: /crmapi/Contacts/
           - name: ContractsAPI
-            value: /crmapi/Contacts/
+            value: /crmapi/Contracts/
         ports:
         - containerPort: 80
           name: http

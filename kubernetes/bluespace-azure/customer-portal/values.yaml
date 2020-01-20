@@ -40,6 +40,7 @@ mongodb:
   fullnameOverride: mongodb
   persistence:
     enabled: true
+    existingClaim: "mongodb-customerportal-pre-pvc"
     size: 1Gi
   replicaSet:
     enabled: false
