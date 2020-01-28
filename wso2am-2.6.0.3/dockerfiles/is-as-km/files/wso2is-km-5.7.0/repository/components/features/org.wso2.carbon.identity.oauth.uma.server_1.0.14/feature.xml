@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.identity.oauth.uma.server" label="WSO2 Carbon - UMA 2.0 Protection API Feature" provider-name="%providerName" version="1.0.14">
+  <description>This feature contains the core bundles required for Back-end UMA 2.0 Protection API functionality</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.identity.oauth.uma.xacml.extension" unpack="false" version="1.0.14"/>
+  <plugin id="org.wso2.carbon.identity.oauth.uma.resource.service" unpack="false" version="1.0.14"/>
+  <plugin id="org.wso2.carbon.identity.oauth.uma.permission.service" unpack="false" version="1.0.14"/>
+  <plugin id="org.wso2.carbon.identity.oauth.uma.common" unpack="false" version="1.0.14"/>
+  <plugin id="org.wso2.carbon.identity.oauth.uma.grant" unpack="false" version="1.0.14"/>
+  <require>
+    <import feature="org.wso2.carbon.database.utils" match="compatible" version="2.0.7"/>
+    <import feature="org.wso2.carbon.identity.oauth" match="compatible" version="6.0.0"/>
+  </require>
+</feature>
