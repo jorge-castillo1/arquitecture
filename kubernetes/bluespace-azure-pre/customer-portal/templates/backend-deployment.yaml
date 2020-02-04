@@ -37,15 +37,23 @@ spec:
             value: customerportal
           - name: GatewayUrl
             value: http://crmapi-service
+          - name: INVITE_URL
+            value: https://myprofile-pre.bluespace.eu/signup/
           - name: ProfileAPI
             value: /crmapi/Contacts/
           - name: ContractsAPI
             value: /crmapi/Contracts/
+          - name: MailFrom
+            value: no-reply@bluespace.eu
+          - name: Email__Smtp__Host
+            value: smtp.office365.com
+          - name: Email__Smtp__Username
+            value: no-reply@bluespace.eu
+          - name: Email__Smtp__Password
+            value: EoE4RygWaKVvQrvVu7dp
         ports:
         - containerPort: 80
           name: http
-        - containerPort: 443
-          name: https
         imagePullPolicy: Always
       imagePullSecrets:
         - name: quantion-registry
