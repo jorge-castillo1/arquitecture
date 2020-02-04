@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-wso2-apim-pv-pre
+  labels:
+    app: mysql-wso2-apim-pre
+spec:
+  capacity:
+    storage: 10Gi
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  azureDisk:
+    kind: Managed
+    diskName: mysql-wso2-apim-pre
+    diskURI: /subscriptions/83df56fa-0451-4d73-bffd-280158bd1d72/resourceGroups/MC_kubernetes_bluespace_francecentral/providers/Microsoft.Compute/disks/mysql-wso2-apim-pre

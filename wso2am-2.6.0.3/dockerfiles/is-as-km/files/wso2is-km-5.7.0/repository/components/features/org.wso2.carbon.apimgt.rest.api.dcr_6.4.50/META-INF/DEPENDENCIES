@@ -1,0 +1,19 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Carbon - API Dynamic Client Registration Rest API Feature
+
+
+From: 'an unknown organization'
+  - axis2.wso2 (http://wso2.org) org.apache.axis2.wso2:axis2:bundle:1.6.1-wso2v28
+
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Carbon API Manager- Dynamic Client Registration Web Service (http://wso2.org/service-stubs/apimgt/org.wso2.carbon.apimgt.rest.api.dcr) org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.rest.api.dcr:war:6.4.50
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

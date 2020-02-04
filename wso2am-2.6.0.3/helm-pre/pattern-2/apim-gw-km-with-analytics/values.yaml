@@ -1,0 +1,13 @@
+fullnameOverride: wso2apim
+username: ""
+password: ""
+email: ""
+
+namespace: "wso2-pre"
+svcaccount: "wso2svc-account"
+serverIp: "192.168.1.7"
+sharedDeploymentLocationPath: "/export/data/PRE/wso2/apim-shared-server"
+isKMLocationPath: "/export/data/PRE/wso2/apim-is-as-km-shared-server"
+
+
+
