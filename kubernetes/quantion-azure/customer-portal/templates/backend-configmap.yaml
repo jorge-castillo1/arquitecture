@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-configmap
+  namespace: {{ .Release.Namespace }}
+  labels:
+    deploy: {{ template "datosProyecto.url" . }}
+data:
+  MONGO_URL: {{ template "mongodb_replicaset_url" . }}
+  ENV: DEV
+  MONGO_HOST: {{ template "mongodb_replicaset_host" . }}
+  MONGO_DATABASE: customerportal
+  GatewayUrl: {{ .Values.backend.config.gateway }}
+  InviteConfirmation: {{ .Values.backend.config.inviteUrl }}
+  ProfileAPI: {{ .Values.backend.config.profileApi }}
+  ContractsAPI: {{ .Values.backend.config.contractsApi }}
+  MailFrom: {{ .Values.backend.config.mailFrom }}
+  Email__Smtp__Host: {{ .Values.backend.config.mailHost }}
+  Identity__BaseUri: {{ .Values.identity.baseuri }}
+  Identity__Endpoints__Authorize: {{ .Values.identity.endpoints.authorize }}
+  Identity__Endpoints__Validate: {{ .Values.identity.endpoints.validate }}
+  Identity__Endpoints__Provisioning: {{ .Values.identity.endpoints.provisioning }}

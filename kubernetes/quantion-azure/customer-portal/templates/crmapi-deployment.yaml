@@ -22,18 +22,19 @@ spec:
       - image: "{{ .Values.crmapi.registry }}/{{ .Values.crmapi.repository }}:{{ .Values.crmapi.tag }}"
         name: crmapi{{ template "include_branch_name" . }}
         env:
-          - name: MONGO_URL
-            value: {{ template "mongodb_replicaset_url" . }}
-          - name: ENV
-            value: DEV
-          - name: MONGO_HOST
-            value: {{ template "mongodb_replicaset_host" . }}
-          - name: ServiceUrl
-            value: http://93.90.28.112/BLUESPACEPRE/
           - name: UserAccount
-            value: quantion
+            valueFrom:
+              secretKeyRef:
+                name: crm-credentials
+                key: user
           - name: Password
-            value: PqNgxfYL0v12lvG
+            valueFrom:
+              secretKeyRef:
+                name: crm-credentials
+                key: password
+        envFrom:
+          - configMapRef:
+              name: crmapi-configmap
         ports:
         - containerPort: 80
           name: http

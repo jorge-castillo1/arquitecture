@@ -25,6 +25,14 @@ spec:
         - containerPort: 80
           name: http
         imagePullPolicy: Always
+        volumeMounts:
+          - mountPath: /var/www/html/config.js
+            subPath: config.js
+            name: angular-config
       imagePullSecrets:
         - name: quantion-registry
+      volumes:
+        - name: angular-config
+          configMap:
+            name: angular-configmap
       

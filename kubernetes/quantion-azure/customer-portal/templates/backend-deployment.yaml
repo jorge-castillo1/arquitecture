@@ -27,30 +27,39 @@ spec:
       - image: "{{ .Values.backend.registry }}/{{ .Values.backend.repository }}:{{ .Values.backend.tag }}"
         name: backend{{ template "include_branch_name" . }}
         env:
-          - name: MONGO_URL
-            value: {{ template "mongodb_replicaset_url" . }}
-          - name: ENV
-            value: DEV
-          - name: MONGO_HOST
-            value: {{ template "mongodb_replicaset_host" . }}
-          - name: MONGO_DATABASE
-            value: customerportal
-          - name: GatewayUrl
-            value: http://crmapi-service
-          - name: INVITE_URL
-            value: https://bluespace-customerportal-web-dev.quantion.com/signup/
-          - name: ProfileAPI
-            value: /crmapi/Contacts/
-          - name: ContractsAPI
-            value: /crmapi/Contracts/
-          - name: MailFrom
-            value: no-reply@bluespace.eu
-          - name: Email__Smtp__Host
-            value: smtp.office365.com
           - name: Email__Smtp__Username
-            value: no-reply@bluespace.eu
+            valueFrom:
+              secretKeyRef:
+                name: email-credentials
+                key: user
           - name: Email__Smtp__Password
-            value: EoE4RygWaKVvQrvVu7dp
+            valueFrom:
+              secretKeyRef:
+                name: email-credentials
+                key: password
+          - name: Identity__Credentials__ClientId
+            valueFrom:
+              secretKeyRef:
+                name: identity-credentials
+                key: clientId
+          - name: Identity__Credentials__ClientSecret
+            valueFrom:
+              secretKeyRef:
+                name: identity-credentials
+                key: clientSecret
+          - name: Identity__Credentials__User
+            valueFrom:
+              secretKeyRef:
+                name: identity-credentials
+                key: user
+          - name: Identity__Credentials__Password
+            valueFrom:
+              secretKeyRef:
+                name: identity-credentials
+                key: password
+        envFrom:
+          - configMapRef:
+              name: backend-configmap
         ports:
         - containerPort: 80
           name: http

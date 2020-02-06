@@ -10,6 +10,7 @@ backend:
   tag: latest
   gateway: http://crmapi-service
   crmapi: crmapi/Contacts
+
 crmapi:
   registry: registry.quantion.com
   replicas: 1
@@ -20,6 +21,7 @@ crmapi:
   password: PqNgxfYL0v12lvG
   domain: BLUESPACE
   api: api/data/v8.1/
+
 datosProyecto:
   aplicacion: web
   cliente: bluespace
@@ -29,6 +31,7 @@ datosProyecto:
     enabled: false
     listIp:
     - 2.139.194.97/32
+    
 mongodb:
   database: customerportal
   datosProyecto:
