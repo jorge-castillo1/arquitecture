@@ -17,6 +17,8 @@ spec:
     metadata:
       labels:
         app: angular{{ template "include_branch_name" . }}
+      annotations:
+        checksum/config: {{include (print $.Template.BasePath "/angular-configmap.yaml") .| sha256sum }}
     spec:
       containers:
       - image: "{{ .Values.angular.registry }}/{{ .Values.angular.repository }}:{{ .Values.angular.tag }}"

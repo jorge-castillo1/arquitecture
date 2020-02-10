@@ -2,25 +2,46 @@ angular:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/frontend
+  config:
+    backendUrl: https://myprofile-pre.bluespace.eu/backend
+    googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
   tag: bluespace
+
 backend:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/backend
   tag: latest
-  gateway: http://crmapi-service
-  crmapi: crmapi/Contacts
+  config:
+    gateway: http://crmapi-service
+    inviteUrl: https://bluespace-customerportal-web-dev.quantion.com/signup/
+    profileApi: /crmapi/Contacts/
+    contractsApi: /crmapi/Contracts/
+    accountsApi: /crmapi/Accounts/
+    countriesApi: /crmapi/Countries/
+    storesApi: /crmapi/Sites/
+    mailFrom: no-reply@bluespace.eu
+    mailHost: smtp.office365.com
+
+identity:
+  baseuri: https://identity-pre.bluespace.eu
+  endpoints:
+    authorize: oauth2/token
+    validate: oauth2/introspect
+    provisioning: wso2/scim/Users
+
+ingress:
+  secretName: bluespace-tls
 
 crmapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
   tag: latest
-  serviceUrl: http://192.168.0.22/BLUESPACEPRE/
-  userAccount: quantion
-  password: PqNgxfYL0v12lvG
-  domain: BLUESPACE
-  api: api/data/v8.1/
+  config:
+    serviceUrl: http://93.90.28.112/BLUESPACEPRE/
+    domain: BLUESPACE
+    api: api/data/v8.1/
 
 datosProyecto:
   aplicacion: web

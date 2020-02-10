@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: backend-ingress{{ template "include_branch_name" . }}
+  name: ingress{{ template "include_branch_name" . }}
   namespace: {{ .Release.Namespace }}
   labels:
     deploy: {{ template "datosProyecto.url" . }}
@@ -10,7 +10,7 @@ metadata:
     nginx.ingress.kubernetes.io/affinity: "cookie"
     nginx.ingress.kubernetes.io/session-cookie-name: "route"
     nginx.ingress.kubernetes.io/session-cookie-hash: "sha1"
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/rewrite-target: /
     {{- if .Values.datosProyecto.whitelist.enabled -}}
     nginx.ingress.kubernetes.io/whitelist-source-range: {{ template "whitelist" . }}
     {{- end }}
@@ -18,12 +18,12 @@ spec:
   tls:
   - hosts:
     - myprofile-pre.bluespace.eu
-    secretName: bluespace-tls
+    secretName: {{ .Values.ingress.secretName }}
   rules:
   - host: myprofile-pre.bluespace.eu
     http:
       paths:
-      - path: /backend(/|$)(.*)
+      - path: /
         backend:
-          serviceName: backend-service{{ template "include_branch_name" . }}
+          serviceName: angular-service{{ template "include_branch_name" . }}
           servicePort: 80

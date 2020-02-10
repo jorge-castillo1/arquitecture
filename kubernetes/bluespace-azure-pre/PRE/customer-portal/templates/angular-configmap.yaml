@@ -8,5 +8,5 @@ metadata:
 data:
   config.js: |
         window['httpApiManagerUrl'] = 'https://myprofile-pre.bluespace.eu/backend';
-        window['httpBackendUrl'] = 'https://myprofile-pre.bluespace.eu/backend';
-        window['googleApiKey'] = 'AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w';
+        window['httpBackendUrl'] = '{{ .Values.angular.config.backendUrl }}';
+        window['googleApiKey'] = '{{ .Values.angular.config.googleApiKey }}';

@@ -17,6 +17,9 @@ backend:
     inviteUrl: https://bluespace-customerportal-web-dev.quantion.com/signup/
     profileApi: /crmapi/Contacts/
     contractsApi: /crmapi/Contracts/
+    accountsApi: /crmapi/Accounts/
+    countriesApi: /crmapi/Countries/
+    storesApi: /crmapi/Sites/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
 
