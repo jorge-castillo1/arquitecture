@@ -3,9 +3,9 @@ angular:
   replicas: 1
   repository: bluespace-customerportal-web/frontend
   config:
-    backendUrl: https://bluespace-customerportal-web-dev.quantion.com/backend
+    backendUrl: https://myprofile.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
-  tag: bluespace_dev
+  tag: dev
 
 backend:
   registry: registry.quantion.com
@@ -14,7 +14,7 @@ backend:
   tag: dev
   config:
     gateway: http://crmapi-service
-    inviteUrl: https://bluespace-customerportal-web-dev.quantion.com/signup/
+    inviteUrl: https://myprofile.bluespace.eu/signup/
     profileApi: /crmapi/Contacts/
     contractsApi: /crmapi/Contracts/
     accountsApi: /crmapi/Accounts/
@@ -22,17 +22,16 @@ backend:
     storesApi: /crmapi/Sites/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
-    contactMail: samuel.sole@quantion.com
 
 identity:
-  baseuri: https://identity-pre.bluespace.eu
+  baseuri: https://identity.bluespace.eu
   endpoints:
     authorize: oauth2/token
     validate: oauth2/introspect
     provisioning: wso2/scim/Users
 
 ingress:
-  secretName: quantion-tls
+  secretName: bluespace-tls
 
 crmapi:
   registry: registry.quantion.com
@@ -53,7 +52,7 @@ datosProyecto:
     enabled: false
     listIp:
     - 2.139.194.97/32
-
+    
 mongodb:
   database: customerportal
   datosProyecto:

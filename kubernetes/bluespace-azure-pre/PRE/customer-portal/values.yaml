@@ -5,16 +5,16 @@ angular:
   config:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
-  tag: bluespace
+  tag: dev
 
 backend:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: latest
+  tag: dev
   config:
     gateway: http://crmapi-service
-    inviteUrl: https://bluespace-customerportal-web-dev.quantion.com/signup/
+    inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     profileApi: /crmapi/Contacts/
     contractsApi: /crmapi/Contracts/
     accountsApi: /crmapi/Accounts/
@@ -37,7 +37,7 @@ crmapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: latest
+  tag: pre
   config:
     serviceUrl: http://93.90.28.112/BLUESPACEPRE/
     domain: BLUESPACE

@@ -1,0 +1,106 @@
+affinity: {}
+clusterDomain: cluster.local
+configmap: null
+image:
+  debug: false
+  pullPolicy: IfNotPresent
+  registry: docker.io
+  repository: bitnami/mongodb
+  tag: 4.0.10-debian-9-r13
+ingress:
+  annotations: {}
+  enabled: false
+  hosts: []
+  labels: {}
+  paths:
+  - /
+  tls:
+  - hosts: []
+    secretName: secret-tls
+initConfigMap: {}
+livenessProbe:
+  enabled: true
+  failureThreshold: 6
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  successThreshold: 1
+  timeoutSeconds: 5
+metrics:
+  enabled: false
+  extraArgs: ""
+  image:
+    pullPolicy: Always
+    registry: docker.io
+    repository: forekshub/percona-mongodb-exporter
+    tag: latest
+  livenessProbe:
+    enabled: false
+    failureThreshold: 3
+    initialDelaySeconds: 15
+    periodSeconds: 5
+    successThreshold: 1
+    timeoutSeconds: 5
+  podAnnotations:
+    prometheus.io/port: "9216"
+    prometheus.io/scrape: "true"
+  readinessProbe:
+    enabled: false
+    failureThreshold: 3
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    successThreshold: 1
+    timeoutSeconds: 1
+  serviceMonitor:
+    additionalLabels: {}
+    alerting:
+      additionalLabels: {}
+      rules: {}
+    enabled: false
+mongodbDirectoryPerDB: false
+mongodbDisableSystemLog: false
+mongodbEnableIPv6: true
+mongodbExtraFlags: []
+mongodbSystemLogVerbosity: 0
+nodeSelector: {}
+persistence:
+  accessModes:
+  - ReadWriteOnce
+  annotations: {}
+  enabled: true
+  mountPath: /bitnami/mongodb
+  size: 8Gi
+  subPath: ""
+podAnnotations: {}
+podLabels: {}
+readinessProbe:
+  enabled: true
+  failureThreshold: 6
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  successThreshold: 1
+  timeoutSeconds: 5
+replicaSet:
+  enabled: false
+  name: rs0
+  pdb:
+    minAvailable:
+      arbiter: 1
+      primary: 1
+      secondary: 2
+  replicas:
+    arbiter: 1
+    secondary: 1
+  useHostnames: true
+resources: {}
+securityContext:
+  enabled: true
+  fsGroup: 1001
+  runAsUser: 1001
+service:
+  annotations: {}
+  port: 27017
+  type: ClusterIP
+tolerations: []
+updateStrategy:
+  type: RollingUpdate
+usePassword: true
