@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: signaturitapi-configmap
+  namespace: {{ .Release.Namespace }}
+  labels:
+    deploy: {{ template "datosProyecto.url" . }}
+data:
+  Signaturit__ApiUrl: {{ .Values.signaturitapi.config.signaturitapi }}
+  Signaturit__AccessToken: {{ .Values.signaturitapi.config.token }}
+  Database: {{ .Values.signaturitapi.config.database }}
+  EventsUrl: {{ .Values.signaturitapi.config.eventsUrl }}
+  GatewayUrl: {{ .Values.signaturitapi.config.gatewayUrl }}
+  GatewayUrlPortal: {{ .Values.signaturitapi.config.gatewayUrlPortal }}
+  DocumentationAPI: {{ .Values.signaturitapi.config.documentationApi }}
+  NotificationAPI: {{ .Values.signaturitapi.config.notificationApi }}
+  ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}

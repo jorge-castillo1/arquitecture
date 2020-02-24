@@ -1,0 +1,34 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: signaturitapi-deployment{{ template "include_branch_name" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: signaturitapi{{ template "include_branch_name" . }}
+    deploy: {{ template "datosProyecto.url" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: signaturitapi{{ template "include_branch_name" . }}
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: signaturitapi{{ template "include_branch_name" . }}
+    spec:
+      containers:
+      - image: "{{ .Values.signaturitapi.registry }}/{{ .Values.signaturitapi.repository }}:{{ .Values.signaturitapi.tag }}"
+        name: signaturitapi{{ template "include_branch_name" . }}
+        envFrom:
+          - configMapRef:
+              name: signaturitapi-configmap
+        ports:
+        - containerPort: 80
+          name: http
+        imagePullPolicy: Always
+      imagePullSecrets:
+        - name: quantion-registry
+      
+        
