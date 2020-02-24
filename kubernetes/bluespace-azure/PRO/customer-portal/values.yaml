@@ -22,7 +22,7 @@ backend:
     storesApi: /crmapi/Sites/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
-    contactMail: samuel.sole@quantion.com
+    contactMail: chema.gonzalez@bluespace.es
 
 identity:
   baseuri: https://identity.bluespace.eu
