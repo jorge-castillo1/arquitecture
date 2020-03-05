@@ -30,7 +30,7 @@ backend:
       contractsApi: /smapi/Contract/
     sign:
       gateway: http://signaturitapi-service
-      endpoint: /api/signature/
+      endpoint: api/signature/
     docs:
       gateway: http://sharepointapi-service
       documentsApi: /api/documents/
@@ -74,7 +74,7 @@ signaturitapi:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
     database: signatures
-    eventsUrl: https://bluespace-customerportal-web-dev.quantion.com/signature/api/events
+    eventsUrl: http://bluespace-customerportal-web-dev.quantion.com/signature/api/events
     gatewayUrl: http://sharepointapi-service
     gatewayUrlPortal: http://backend-service
     documentationApi: api/Document

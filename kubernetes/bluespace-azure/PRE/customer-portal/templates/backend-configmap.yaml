@@ -23,3 +23,12 @@ data:
   Identity__Endpoints__Authorize: {{ .Values.identity.endpoints.authorize }}
   Identity__Endpoints__Validate: {{ .Values.identity.endpoints.validate }}
   Identity__Endpoints__Provisioning: {{ .Values.identity.endpoints.provisioning }}
+  FormContactEmail: {{ .Values.backend.config.contactMail }}
+  GatewaySmUrl: {{ .Values.backend.config.sm.gateway }}
+  ContractsBySMCodeAPI: {{ .Values.backend.config.sm.contractsCodeApi }}
+  UnitsAPI: {{ .Values.backend.config.unitsApi }}
+  ContractSMAPI: {{ .Values.backend.config.sm.contractsApi }}
+  GatewaySignatureUrl: {{ .Values.backend.config.sign.gateway }}
+  SignatureEndpoint: {{ .Values.backend.config.sign.endpoint }}
+  GatewayDocumentUrl: {{ .Values.backend.config.docs.gateway }}
+  DocumentsAPI:  {{ .Values.backend.config.docs.documentsApi }}
