@@ -17,6 +17,8 @@ spec:
     metadata:
       labels:
         app: crmapi{{ template "include_branch_name" . }}
+      annotations:
+        checksum/config: {{include (print $.Template.BasePath "/crmapi-configmap.yaml") .| sha256sum }}
     spec:
       containers:
       - image: "{{ .Values.crmapi.registry }}/{{ .Values.crmapi.repository }}:{{ .Values.crmapi.tag }}"

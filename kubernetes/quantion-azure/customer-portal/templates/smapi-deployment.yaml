@@ -17,6 +17,8 @@ spec:
     metadata:
       labels:
         app: smapi{{ template "include_branch_name" . }}
+      annotations:
+        checksum/config: {{include (print $.Template.BasePath "/smapi-configmap.yaml") .| sha256sum }}
     spec:
       containers:
       - image: "{{ .Values.smapi.registry }}/{{ .Values.smapi.repository }}:{{ .Values.smapi.tag }}"
