@@ -32,7 +32,7 @@ backend:
       gateway: http://signaturitapi-service
       endpoint: api/signature/
     docs:
-      gateway: http://sharepointapi-service
+      gateway: http://docapi-service
       documentsApi: /api/documents/
 
 identity:
@@ -75,10 +75,22 @@ signaturitapi:
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
     database: signatures
     eventsUrl: http://bluespace-customerportal-web-dev.quantion.com/signature/api/events
-    gatewayUrl: http://sharepointapi-service
+    gatewayUrl: http://docapi-service
     gatewayUrlPortal: http://backend-service
     documentationApi: api/Document
     NotificationApi: api/events
+
+docapi:
+  registry: registry.quantion.com
+  replicas: 1
+  repository: bluespace-customerportal-web/sharepointapi
+  tag: dev
+  config:
+    database: documents
+    serviceUrl: https://quantion.sharepoint.com
+    sitesUrl: /sites/
+    api: _api/
+
 
 datosProyecto:
   aplicacion: web
