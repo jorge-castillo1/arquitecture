@@ -1,0 +1,21 @@
+[
+	{
+		"documenttype" : 1,
+		"documentname" : "Domiciliación SEPA",
+		"templateid" : "#new_5e4c1fc5a5d98",
+		"fields" : {
+			"contractnumber" : "textfield_02",
+			"company" : "textfield_04",
+			"cif" : "textfield_05",
+			"accountname" : "textfield_06",
+			"address" : "textfield_08",
+			"postalcode" : "textfield_09",
+			"country" : "textfield_10",
+			"clientname" : "textfield_11",
+			"clientaddress" : "textfield_12",
+			"clientpostalcode" : "textfield_13",
+			"clientcountry" : "textfield_14",
+			"iban" : "textfield_15"
+		}
+	}
+]
