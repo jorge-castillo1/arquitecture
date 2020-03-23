@@ -13,27 +13,32 @@ backend:
   repository: bluespace-customerportal-web/backend
   tag: v_1.2
   config:
-    gateway: http://crmapi-service
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
-    profileApi: /crmapi/Contacts/
-    contractsApi: /crmapi/Contracts/
-    accountsApi: /crmapi/Accounts/
-    countriesApi: /crmapi/Countries/
-    storesApi: /crmapi/Sites/
-    unitsApi;: /crmapi/Units/
+    resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
     contactMail: samuel.sole@quantion.com
+    storesMail: christian.garcia@quantion.com
+    environment: PRE
+    crm:
+      gateway: http://crmapi-service
+      profileApi: /crmapi/Contacts/
+      contractsApi: /crmapi/Contracts/
+      accountsApi: /crmapi/Accounts/
+      countriesApi: /crmapi/Countries/
+      storesApi: /crmapi/Sites/
+      unitsApi: /crmapi/Units/
+      contractsCodeApi: /crmapi/Contracts/code/
     sm:
       gateway: http://smapi-service
-      contractsCodeApi: /crmapi/contracts/code/
       contractsApi: /smapi/Contract/
+      accountApi: /smapi/Account/
     sign:
       gateway: http://signaturitapi-service
       endpoint: api/signature/
     docs:
       gateway: http://sharepointapi-service
-      documentsApi: /api/documents/
+      documentsApi: /api/Documents/
 
 identity:
   baseuri: https://identity-pre.bluespace.eu
@@ -41,7 +46,7 @@ identity:
     authorize: oauth2/token
     validate: oauth2/introspect
     provisioning: wso2/scim/Users
-    groups: scim2/Grooups
+    groups: scim2/Groups
     revoke: oauth2/revoke
 
 ingress:
@@ -75,15 +80,26 @@ signaturitapi:
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
     database: signatures
     eventsUrl: https://myprofile-pre.bluespace.eu/signature/api/events
-    gatewayUrl: http://sharepointapi-service/
+    gatewayUrl: http://docapi-service/
     gatewayUrlPortal: http://backend-service/
-    documentationApi: api/Document
+    documentationApi: api/Documents
     notificationApi: api/Events
+
+docapi:
+  registry: registry.quantion.com
+  replicas: 1
+  repository: bluespace-customerportal-web/sharepointapi
+  tag: dev
+  config:
+    database: documents
+    serviceUrl: https://quantion.sharepoint.com
+    sitesUrl: /sites/
+    api: _api/
 
 datosProyecto:
   aplicacion: web
   cliente: bluespace
-  entorno: dev
+  entorno: pre
   proyecto: customerportal
   whitelist:
     enabled: false

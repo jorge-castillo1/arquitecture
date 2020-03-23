@@ -6,7 +6,9 @@ metadata:
   labels:
     deploy: {{ template "datosProyecto.url" . }}
 data:
+  MONGO_URL: {{ template "mongodb_replicaset_url" . }}
   DatabaseName: {{ .Values.docapi.config.database }}
   ServiceUrl: {{ .Values.docapi.config.serviceUrl }}
   SitesUrl: {{ .Values.docapi.config.sitesUrl }}
   API: {{ .Values.docapi.config.api }}
+  ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}

@@ -8,15 +8,17 @@ metadata:
 data:
   MONGO_URL: {{ template "mongodb_replicaset_url" . }}
   ENV: DEV
+  Environment: {{ .Values.backend.config.environment }}
   MONGO_HOST: {{ template "mongodb_replicaset_host" . }}
   DatabaseName: {{ .Values.mongodb.database }}
-  GatewayUrl: {{ .Values.backend.config.gateway }}
+  GatewayUrl: {{ .Values.backend.config.crm.gateway }}
   InviteConfirmation: {{ .Values.backend.config.inviteUrl }}
-  ProfileAPI: {{ .Values.backend.config.profileApi }}
-  ContractsAPI: {{ .Values.backend.config.contractsApi }}
-  CountriesAPI:  {{ .Values.backend.config.countriesApi }}
-  StoresAPI:  {{ .Values.backend.config.storesApi }}
-  AccountsAPI:  {{ .Values.backend.config.accountsApi }}
+  ResetPassword: {{ .Values.backend.config.resetPasswordUrl }}
+  ProfileAPI: {{ .Values.backend.config.crm.profileApi }}
+  ContractsAPI: {{ .Values.backend.config.crm.contractsApi }}
+  CountriesAPI:  {{ .Values.backend.config.crm.countriesApi }}
+  StoresAPI:  {{ .Values.backend.config.crm.storesApi }}
+  AccountsAPI:  {{ .Values.backend.config.crm.accountsApi }}
   MailFrom: {{ .Values.backend.config.mailFrom }}
   Email__Smtp__Host: {{ .Values.backend.config.mailHost }}
   Identity__BaseUri: {{ .Values.identity.baseuri }}
@@ -25,10 +27,12 @@ data:
   Identity__Endpoints__Provisioning: {{ .Values.identity.endpoints.provisioning }}
   FormContactEmail: {{ .Values.backend.config.contactMail }}
   GatewaySmUrl: {{ .Values.backend.config.sm.gateway }}
-  ContractsBySMCodeAPI: {{ .Values.backend.config.sm.contractsCodeApi }}
-  UnitsAPI: {{ .Values.backend.config.unitsApi }}
+  ContractsBySMCodeAPI: {{ .Values.backend.config.crm.contractsCodeApi }}
+  UnitsAPI: {{ .Values.backend.config.crm.unitsApi }}
   ContractSMAPI: {{ .Values.backend.config.sm.contractsApi }}
+  SMAccountAPI: {{ .Values.backend.config.sm.accountApi }}
   GatewaySignatureUrl: {{ .Values.backend.config.sign.gateway }}
   SignatureEndpoint: {{ .Values.backend.config.sign.endpoint }}
   GatewayDocumentUrl: {{ .Values.backend.config.docs.gateway }}
   DocumentsAPI:  {{ .Values.backend.config.docs.documentsApi }}
+  MailStores: {{ .Values.backend.config.storesMail }}
