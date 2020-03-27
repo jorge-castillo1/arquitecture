@@ -2,7 +2,7 @@
 	{
 		"documenttype" : 1,
 		"documentname" : "Domiciliación SEPA",
-		"templateid" : "#new_5e4c1fc5a5d98",
+		"templateid" : '#01_BankAuth_SP_Template",
 		"fields" : {
 			"contractnumber" : "textfield_02",
 			"company" : "textfield_04",
