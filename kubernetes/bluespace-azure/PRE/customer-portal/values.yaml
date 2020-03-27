@@ -5,13 +5,14 @@ angular:
   config:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
-  tag: v_1.2
+    googleAnalyticsId: UA-160385611-1
+  tag: v_1.3
 
 backend:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.2
+  tag: b_logsbranch
   config:
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
@@ -37,8 +38,9 @@ backend:
       gateway: http://signaturitapi-service
       endpoint: api/signature/
     docs:
-      gateway: http://sharepointapi-service
-      documentsApi: /api/Documents/
+      gateway: http://docapi-service/
+      documentsApi: api/Documents/
+      searchEndpoint: api/Documents/Search/
 
 identity:
   baseuri: https://identity-pre.bluespace.eu
@@ -56,7 +58,7 @@ crmapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.2
+  tag: v_1.3
   config:
     serviceUrl: http://93.90.28.112/BLUESPACEPRE/
     domain: BLUESPACE
@@ -66,7 +68,7 @@ smapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: dev
+  tag: v_1.3
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.125;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
 
@@ -74,27 +76,31 @@ signaturitapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.2
+  tag: b_pre-config
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
     database: signatures
-    eventsUrl: https://myprofile-pre.bluespace.eu/signature/api/events
+    eventsUrl: https://myprofile-pre.bluespace.eu/signature/api/Events
     gatewayUrl: http://docapi-service/
     gatewayUrlPortal: http://backend-service/
     documentationApi: api/Documents
+    documentationAuditApi: api/Documents/Audit
     notificationApi: api/Events
 
 docapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: dev
+  tag: v_1.3
   config:
     database: documents
-    serviceUrl: https://quantion.sharepoint.com
-    sitesUrl: /sites/
+    serviceUrl: https://bluespaceselfstorage.sharepoint.com
+    sitesUrl: /sites/Stores-PRE/
     api: _api/
+    environment: PRE
+    siteName: SantBoi
+    sharedDocumentFolder: Documentos compartidos
 
 datosProyecto:
   aplicacion: web

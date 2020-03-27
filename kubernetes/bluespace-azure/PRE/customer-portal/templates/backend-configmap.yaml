@@ -33,6 +33,7 @@ data:
   SMAccountAPI: {{ .Values.backend.config.sm.accountApi }}
   GatewaySignatureUrl: {{ .Values.backend.config.sign.gateway }}
   SignatureEndpoint: {{ .Values.backend.config.sign.endpoint }}
-  GatewayDocumentUrl: {{ .Values.backend.config.docs.gateway }}
+  GatewayDocumentsUrl: {{ .Values.backend.config.docs.gateway }}
   DocumentsAPI:  {{ .Values.backend.config.docs.documentsApi }}
+  DocumentsSearchEndpoint:  {{ .Values.backend.config.docs.searchEndpoint }}
   MailStores: {{ .Values.backend.config.storesMail }}

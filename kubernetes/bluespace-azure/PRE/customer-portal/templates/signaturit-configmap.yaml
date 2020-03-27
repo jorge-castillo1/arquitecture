@@ -13,5 +13,6 @@ data:
   GatewayUrl: {{ .Values.signaturitapi.config.gatewayUrl }}
   GatewayUrlPortal: {{ .Values.signaturitapi.config.gatewayUrlPortal }}
   DocumentationAPI: {{ .Values.signaturitapi.config.documentationApi }}
+  DocumentationAuditAPI: {{ .Values.signaturitapi.config.documentationAuditApi }}
   NotificationAPI: {{ .Values.signaturitapi.config.notificationApi }}
   ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}
