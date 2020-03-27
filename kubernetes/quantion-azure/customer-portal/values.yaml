@@ -5,13 +5,14 @@ angular:
   config:
     backendUrl: https://bluespace-customerportal-web-dev.quantion.com/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
-  tag: dev
+    googleAnalyticsId: UA-160385611-1
+  tag: v_1.3
 
 backend:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: dev
+  tag: v_1.3
   config:
     inviteUrl: https://bluespace-customerportal-web-dev.quantion.com/signup/
     resetPasswordUrl: https://bluespace-customerportal-web-dev.quantion.com/reset-password/
@@ -39,6 +40,7 @@ backend:
     docs:
       gateway: http://docapi-service/
       documentsApi: api/Documents/
+      searchEndpoint: api/Documents/Search/
 
 identity:
   baseuri: https://identity-pre.bluespace.eu
@@ -56,7 +58,7 @@ crmapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: dev
+  tag: v_1.3
   config:
     serviceUrl: http://93.90.28.112/BLUESPACEPRE/
     domain: BLUESPACE
@@ -66,7 +68,7 @@ smapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: dev
+  tag: v_1.3
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.125;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
 
@@ -74,7 +76,7 @@ signaturitapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: dev
+  tag: v_1.3
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -83,19 +85,22 @@ signaturitapi:
     gatewayUrl: http://docapi-service/
     gatewayUrlPortal: http://backend-service/
     documentationApi: api/Documents
-    notificationApi: api/events
+    documentationAuditApi: api/Documents/Audit
+    notificationApi: api/Events
 
 docapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: dev
+  tag: v_1.3
   config:
     database: documents
     serviceUrl: https://quantion.sharepoint.com
     sitesUrl: /sites/
     api: _api/
-
+    environment: DEV
+    siteName: portal-dev
+    sharedDocumentFolder: Documentos compartidos
 
 datosProyecto:
   aplicacion: web

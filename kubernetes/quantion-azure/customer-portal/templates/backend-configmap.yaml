@@ -35,4 +35,5 @@ data:
   SignatureEndpoint: {{ .Values.backend.config.sign.endpoint }}
   GatewayDocumentsUrl: {{ .Values.backend.config.docs.gateway }}
   DocumentsAPI:  {{ .Values.backend.config.docs.documentsApi }}
+  DocumentsSearchEndpoint:  {{ .Values.backend.config.docs.searchEndpoint }}
   MailStores: {{ .Values.backend.config.storesMail }}

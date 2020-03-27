@@ -3,10 +3,11 @@ kind: ConfigMap
 metadata:
   name: angular-configmap
   namespace: {{ .Release.Namespace }}
-  labels:
+  labels:  
     deploy: {{ template "datosProyecto.url" . }}
 data:
   config.js: |
         window['httpApiManagerUrl'] = 'https://bluespace-customerportal-web-dev.quantion.com/backend';
         window['httpBackendUrl'] = '{{ .Values.angular.config.backendUrl }}';
         window['googleApiKey'] = '{{ .Values.angular.config.googleApiKey }}';
+        window['googleAnalyticsId'] = '{{ .Values.angular.config.googleAnalyticsId }}';

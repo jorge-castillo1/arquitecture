@@ -12,3 +12,6 @@ data:
   SitesUrl: {{ .Values.docapi.config.sitesUrl }}
   API: {{ .Values.docapi.config.api }}
   ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}
+  Environment: {{ .Values.docapi.config.environment }}
+  SharedDocumentsFolder: {{ .Values.docapi.config.sharedDocumentFolder }}
+  SiteNameSharepoint: {{ .Values.docapi.config.siteName }}
