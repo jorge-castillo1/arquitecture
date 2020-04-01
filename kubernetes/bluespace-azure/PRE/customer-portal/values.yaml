@@ -92,7 +92,7 @@ docapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.3
+  tag: b_logsbranch
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
