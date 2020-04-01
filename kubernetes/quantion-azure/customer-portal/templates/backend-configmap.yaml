@@ -31,6 +31,7 @@ data:
   UnitsAPI: {{ .Values.backend.config.crm.unitsApi }}
   ContractSMAPI: {{ .Values.backend.config.sm.contractsApi }}
   SMAccountAPI: {{ .Values.backend.config.sm.accountApi }}
+  InvoiceSMAPI: {{ .Values.backend.config.sm.invoiceApi }}
   GatewaySignatureUrl: {{ .Values.backend.config.sign.gateway }}
   SignatureEndpoint: {{ .Values.backend.config.sign.endpoint }}
   GatewayDocumentsUrl: {{ .Values.backend.config.docs.gateway }}
