@@ -20,6 +20,7 @@ backend:
     mailHost: smtp.office365.com
     contactMail: samuel.sole@quantion.com
     storesMail: christian.garcia@quantion.com
+    signatureEventsUrl: http://backend-service/api/Events
     environment: DEV
     crm:
       gateway: http://crmapi-service
@@ -83,10 +84,8 @@ signaturitapi:
     database: signatures
     eventsUrl: http://bluespace-customerportal-web-dev.quantion.com/signature/api/events
     gatewayUrl: http://docapi-service/
-    gatewayUrlPortal: http://backend-service/
     documentationApi: api/Documents
     documentationAuditApi: api/Documents/Audit
-    notificationApi: api/Events
 
 docapi:
   registry: registry.quantion.com
