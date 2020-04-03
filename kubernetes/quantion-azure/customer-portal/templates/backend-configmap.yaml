@@ -38,4 +38,4 @@ data:
   DocumentsAPI:  {{ .Values.backend.config.docs.documentsApi }}
   DocumentsSearchEndpoint:  {{ .Values.backend.config.docs.searchEndpoint }}
   MailStores: {{ .Values.backend.config.storesMail }}
-  GatewaySignatureUrl: {{ .Values.backend.config.signatureEventsUrl }}
+  GatewaySignatureEventsUrl: {{ .Values.backend.config.signatureEventsUrl }}
