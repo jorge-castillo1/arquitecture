@@ -10,3 +10,4 @@ data:
         window['httpApiManagerUrl'] = 'https://myprofile-pre.bluespace.eu/backend';
         window['httpBackendUrl'] = '{{ .Values.angular.config.backendUrl }}';
         window['googleApiKey'] = '{{ .Values.angular.config.googleApiKey }}';
+        window['googleAnalyticsId'] = '{{ .Values.angular.config.googleAnalyticsId }}';

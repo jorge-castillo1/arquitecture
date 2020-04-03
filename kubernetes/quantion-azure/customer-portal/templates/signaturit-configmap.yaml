@@ -11,7 +11,6 @@ data:
   Database: {{ .Values.signaturitapi.config.database }}
   EventsUrl: {{ .Values.signaturitapi.config.eventsUrl }}
   GatewayUrl: {{ .Values.signaturitapi.config.gatewayUrl }}
-  GatewayUrlPortal: {{ .Values.signaturitapi.config.gatewayUrlPortal }}
   DocumentationAPI: {{ .Values.signaturitapi.config.documentationApi }}
-  NotificationAPI: {{ .Values.signaturitapi.config.notificationApi }}
+  DocumentationAuditAPI: {{ .Values.signaturitapi.config.documentationAuditApi }}
   ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}
