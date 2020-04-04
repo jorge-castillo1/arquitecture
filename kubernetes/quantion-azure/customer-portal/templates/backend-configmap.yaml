@@ -39,3 +39,8 @@ data:
   DocumentsSearchEndpoint:  {{ .Values.backend.config.docs.searchEndpoint }}
   MailStores: {{ .Values.backend.config.storesMail }}
   GatewaySignatureEventsUrl: {{ .Values.backend.config.signatureEventsUrl }}
+  GatewayPaymentUrl: {{ .Values.backend.config.precognisPaymentsUrl }}
+  ChangePaymentMethodCardEndpoint: {{ .Values.backend.config.precognisChangePaymentMethod }}
+  CardConfirmationTokenEndpoint: {{ .Values.backend.config.precognisCardConfirmationToken }}
+  ChangePaymentMethodCardResponse: {{ .Values.backend.config.changePaymentMethodCardResponse }}
+  
