@@ -25,6 +25,9 @@ backend:
     precognisChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
     precognisCardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
     changePaymentMethodCardResponse: http://backend-service/api/payment/changepaymentmethod/card/response
+    paymentcredentials:
+       user: Integration
+       password: 1Integration1
     environment: DEV
     crm:
       gateway: http://crmapi-service
