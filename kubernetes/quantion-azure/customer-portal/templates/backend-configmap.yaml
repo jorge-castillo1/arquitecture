@@ -43,4 +43,5 @@ data:
   ChangePaymentMethodCardEndpoint: {{ .Values.backend.config.precognisChangePaymentMethod }}
   CardConfirmationTokenEndpoint: {{ .Values.backend.config.precognisCardConfirmationToken }}
   ChangePaymentMethodCardResponse: {{ .Values.backend.config.changePaymentMethodCardResponse }}
-  
+  PaymentCredentials__User: {{ .Values.backend.config.paymentcredentials.user }}
+  PaymentCredentials__Password: {{ .Values.backend.config.paymentcredentials.password }}
