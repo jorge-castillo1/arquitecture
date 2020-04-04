@@ -21,6 +21,10 @@ backend:
     contactMail: samuel.sole@quantion.com
     storesMail: christian.garcia@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
+    precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
+    precognisChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
+    precognisCardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
+    changePaymentMethodCardResponse: http://backend-service/api/payment/changepaymentmethod/card/response
     environment: DEV
     crm:
       gateway: http://crmapi-service
