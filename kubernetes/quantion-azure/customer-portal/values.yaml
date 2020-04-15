@@ -19,7 +19,7 @@ backend:
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
     contactMail: samuel.sole@quantion.com
-    storesMail: christian.garcia@quantion.com
+    storesMail: jordi.piella@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
     precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
     precognisChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
