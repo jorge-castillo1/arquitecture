@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<feature id="org.wso2.carbon.apimgt.core" label="WSO2 Carbon - Api management Core Feature" provider-name="%providerName" version="6.4.50">
-  <description>This feature contains the core bundles required for getting light weight API Management functionalities.</description>
-  <copyright>%copyright</copyright>
-  <license url="%licenseURL">%license</license>
-  <plugin id="org.apache.velocity" unpack="false" version="1.7"/>
-</feature>
