@@ -15,7 +15,7 @@
 !.vscode/extensions.json
 
 # WSO2 Source Code
-/wso2am-2.6.0.3
+#/wso2am-2.6.0.3
 
 # Coverage directory used by tools like istanbul
 coverage
