@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-configmap
+  namespace: {{ .Release.Namespace }}
+  labels:
+    deploy: {{ template "datosProyecto.url" . }}
+data:
+  MONGO_URL: {{ template "mongodb_replicaset_url" . }}
+  ENV: DEV
+  Environment: {{ .Values.backend.config.environment }}
+  MONGO_HOST: {{ template "mongodb_replicaset_host" . }}
+  DatabaseName: {{ .Values.mongodb.database }}
+  GatewayUrl: {{ .Values.backend.config.crm.gateway }}
+  InviteConfirmation: {{ .Values.backend.config.inviteUrl }}
+  ResetPassword: {{ .Values.backend.config.resetPasswordUrl }}
+  ProfileAPI: {{ .Values.backend.config.crm.profileApi }}
+  ContractsAPI: {{ .Values.backend.config.crm.contractsApi }}
+  CountriesAPI:  {{ .Values.backend.config.crm.countriesApi }}
+  StoresAPI:  {{ .Values.backend.config.crm.storesApi }}
+  AccountsAPI:  {{ .Values.backend.config.crm.accountsApi }}
+  MailFrom: {{ .Values.backend.config.mailFrom }}
+  Email__Smtp__Host: {{ .Values.backend.config.mailHost }}
+  Identity__BaseUri: {{ .Values.identity.baseuri }}
+  Identity__Endpoints__Authorize: {{ .Values.identity.endpoints.authorize }}
+  Identity__Endpoints__Validate: {{ .Values.identity.endpoints.validate }}
+  Identity__Endpoints__Provisioning: {{ .Values.identity.endpoints.provisioning }}
+  FormContactEmail: {{ .Values.backend.config.contactMail }}
+  GatewaySmUrl: {{ .Values.backend.config.sm.gateway }}
+  ContractsBySMCodeAPI: {{ .Values.backend.config.crm.contractsCodeApi }}
+  UnitsAPI: {{ .Values.backend.config.crm.unitsApi }}
+  ContractSMAPI: {{ .Values.backend.config.sm.contractsApi }}
+  SMAccountAPI: {{ .Values.backend.config.sm.accountApi }}
+  InvoiceSMAPI: {{ .Values.backend.config.sm.invoiceApi }}
+  GatewaySignatureUrl: {{ .Values.backend.config.sign.gateway }}
+  SignatureEndpoint: {{ .Values.backend.config.sign.endpoint }}
+  GatewayDocumentsUrl: {{ .Values.backend.config.docs.gateway }}
+  DocumentsAPI:  {{ .Values.backend.config.docs.documentsApi }}
+  DocumentsSearchEndpoint:  {{ .Values.backend.config.docs.searchEndpoint }}
+  MailStores: {{ .Values.backend.config.storesMail }}
+  GatewaySignatureEventsUrl: {{ .Values.backend.config.signatureEventsUrl }}
+  GatewayPaymentUrl: {{ .Values.backend.config.precognisPaymentsUrl }}
+  ChangePaymentMethodCardEndpoint: {{ .Values.backend.config.precognisChangePaymentMethod }}
+  CardConfirmationTokenEndpoint: {{ .Values.backend.config.precognisCardConfirmationToken }}
+  ChangePaymentMethodCardResponse: {{ .Values.backend.config.changePaymentMethodCardResponse }}

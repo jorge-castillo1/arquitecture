@@ -1,0 +1,114 @@
+import groovy.json.JsonSlurper
+
+@NonCPS
+def parseJsonText(String json) {
+  def object = new JsonSlurper().parseText(json)
+  if(object instanceof groovy.json.internal.LazyMap) {
+      return new HashMap<>(object)
+  }
+  return object
+}
+
+def label = "worker-${UUID.randomUUID().toString()}"
+echo "Paso1: " + label
+podTemplate(label: label, containers: [
+  containerTemplate(name: 'nodejs', image: 'node:11.14', command: 'cat', ttyEnabled: true),
+  containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true, privileged: true)
+],
+ volumes: [hostPathVolume(hostPath: '/var/run/docker.sock', mountPath: '/var/run/docker.sock')
+ ]) {
+node(label) {
+  try {
+    
+container('nodejs') {
+  gitlabBuilds(builds: ['build_frontend','build_backend','frontend_image','backend_image']) {
+
+    stage("build_frontend"){
+        gitlabCommitStatus(name: 'build_frontend'){
+            dir('frontend') {
+            // Pull the source
+                checkout changelog: true, poll: true, scm: [
+                    $class: 'GitSCM',
+                    branches: [[name: "gitlab/dev"]],
+                    doGenerateSubmoduleConfigurations: false,
+                    submoduleCfg: [],
+                    userRemoteConfigs: [[
+                        credentialsId: 'gitlabcom-jenkins-user-credentials',
+                        name: 'gitlab',
+                        url: "https://gitlab.com/quantion_bluespace/customer-portal/frontend.git"
+                    ]]
+                ]   
+            }
+        }
+
+    }
+
+    stage("build_backend"){
+        gitlabCommitStatus(name: 'build_backend'){
+            dir('backend'){
+                // Pull the source
+                checkout changelog: true, poll: true, scm: [
+                    $class: 'GitSCM',
+                    branches: [[name: "gitlab/dev"]],
+                    doGenerateSubmoduleConfigurations: false,
+                    submoduleCfg: [],
+                    userRemoteConfigs: [[
+                        credentialsId: 'gitlabcom-jenkins-user-credentials',
+                        name: 'gitlab',
+                        url: "https://gitlab.com/quantion_bluespace/customer-portal/backend.git"
+                    ]]
+                ]   
+            }
+        }
+    }
+   
+    def registry = 'registry.quantion.com'
+    def service = 'bluespace-customerportal-web'
+    
+    stage("frontend_image") {
+      gitlabCommitStatus(name: 'frontend_image')  {
+        container('docker') {
+            dir('frontend'){
+                script {
+                    docker.withRegistry('https://registry.quantion.com', 'registry_docker_credentials') {
+                        def image = docker.build("${registry}/${service}/frontend:dev", "--network container:\$(docker ps| grep \$(hostname) | grep k8s_jnlp | cut -d\" \" -f1) -f Dockerfile .")
+                    image.push()
+                    }      
+                }
+            }
+        }
+      }
+    }
+
+    stage("backend_image") {
+      gitlabCommitStatus(name: 'backend_image')  {
+        container('docker') {
+            dir('backend'){
+                script {
+                    docker.withRegistry('https://registry.quantion.com', 'registry_docker_credentials') {
+                        def image = docker.build("${registry}/${service}/backend:dev", "--network container:\$(docker ps| grep \$(hostname) | grep k8s_jnlp | cut -d\" \" -f1) -f Dockerfile .")
+                    image.push()
+                    }      
+                }
+            }
+        }
+      }
+    }
+  }
+}
+
+sh "echo VERSION=v${BUILD_NUMBER} >> build.properties"
+    
+echo "Build Finished"
+
+
+
+  } catch (Exception e) {
+    message = e.getMessage()
+    echo message
+    updateGitlabCommitStatus(name: 'build', state: 'failed')
+    addGitLabMRComment comment: "Build failed: '$message' . Build result is available at [Jenkins [${JOB_NAME} ${BUILD_DISPLAY_NAME}]](${BUILD_URL})"
+    throw e
+  }
+}
+}

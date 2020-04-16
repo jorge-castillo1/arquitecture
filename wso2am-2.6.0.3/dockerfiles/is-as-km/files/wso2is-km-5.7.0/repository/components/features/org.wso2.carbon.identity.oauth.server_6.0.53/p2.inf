@@ -1,0 +1,17 @@
+instructions.configure = \
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../../repository/); \
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../../repository/conf/); \
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../../repository/conf/identity/); \
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.wso2.carbon.identity.oauth.server_6.0.53/oidc-scope-config.xml,target:${installFolder}/../../conf/identity/oidc-scope-config.xml,overwrite:true);\
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../deployment/);\
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../deployment/server/);\
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../deployment/server/webapps/);\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.wso2.carbon.identity.oauth.server_6.0.53/oauth2.war,target:${installFolder}/../../deployment/server/webapps/oauth2.war,overwrite:true);\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.wso2.carbon.identity.oauth.server_6.0.53/api#identity#oauth2#v1.0.war,target:${installFolder}/../../deployment/server/webapps/api#identity#oauth2#v1.0.war,overwrite:true);\
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../../lib/); \
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../../lib/runtimes/); \
+org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/../../../lib/runtimes/cxf/); \
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/org.wso2.carbon.identity.oauth.server_6.0.53/runtimes/cxf/,target:${installFolder}/../../../lib/runtimes/cxf/,overwrite:true);\
+
+properties.0.name=org.wso2.carbon.p2.category.type
+properties.0.value=server
