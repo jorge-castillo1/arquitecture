@@ -6,13 +6,13 @@ angular:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
     googleAnalyticsId: UA-160385611-1
-  tag: v_1.3
+  tag: dev
 
 backend:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: b_logsbranch
+  tag: dev
   config:
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
@@ -24,10 +24,7 @@ backend:
     precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
     precognisChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
     precognisCardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
-    changePaymentMethodCardResponse: http://backend-service/api/payment/changepaymentmethod/card/response
-    paymentcredentials:
-       user: Integration
-       password: 1Integration1
+    changePaymentMethodCardResponse: http://myprofile-pre.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
     environment: PRE
     crm:
       gateway: http://crmapi-service
@@ -67,7 +64,7 @@ crmapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.3
+  tag: dev
   config:
     serviceUrl: http://93.90.28.112/BLUESPACEPRE/
     domain: BLUESPACE
@@ -77,7 +74,7 @@ smapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.3
+  tag: dev
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.125;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
 
@@ -85,7 +82,7 @@ signaturitapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: b_pre-config
+  tag: dev
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -99,7 +96,7 @@ docapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: b_logsbranch
+  tag: dev
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
