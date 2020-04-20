@@ -17,10 +17,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - {{ template "datosProyecto.url" . }}.quantion.com
+    - myprofile-pre.bluespace.eu
     secretName: {{ .Values.ingress.secretName }}
   rules:
-  - host: {{ template "datosProyecto.url" . }}.quantion.com
+  - host: myprofile-pre.bluespace.eu
     http:
       paths:
       - path: /document(/|$)(.*)
