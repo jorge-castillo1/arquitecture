@@ -21,10 +21,15 @@ backend:
     contactMail: samuel.sole@quantion.com
     storesMail: jordi.piella@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
-    precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
-    precognisChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
-    precognisCardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
-    changePaymentMethodCardResponse: http://bluespace-customerportal-web-dev.quantion.com/backend/api/payment/changepaymentmethod/card/response
+    changePaymentMethodCardResponse: https://bluespace-customerportal-web-dev.quantion.com/backend/api/payment/changepaymentmethod/card/response
+    payInvoiceByNewCardMethodCardResponse: https://bluespace-customerportal-web-dev.quantion.com/backend/api/payment/invoice/response
+    precognis:
+      PaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
+      ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
+      CardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
+      PayInvoice: com.precognis.einapay.bluespace.payinvoice_sm/usetoken
+      GetCardEndpoint: com.precognis.einapay.bluespace.checkcard
+      PayInvoiceNewCard: com.precognis.einapay.bluespace.payinvoice_sm/usenewcard
     environment: DEV
     crm:
       gateway: http://crmapi-service
@@ -35,11 +40,13 @@ backend:
       storesApi: /crmapi/Sites/
       unitsApi: /crmapi/Units/
       contractsCodeApi: /crmapi/Contracts/code/
+      paymentsApi: /crmapi/Payments/
     sm:
       gateway: http://smapi-service
       contractsApi: /smapi/Contract/
       accountApi: /smapi/Account/
       invoiceApi: /smapi/Invoice/
+      invoicePaymentApi: /smapi/Invoice/payment/
     sign:
       gateway: http://signaturitapi-service
       endpoint: api/signature/
@@ -105,6 +112,8 @@ docapi:
     environment: DEV
     siteName: portal-dev
     sharedDocumentFolder: Documentos compartidos
+    gatewayUrl: http://crmapi-service
+    contractsApi: /crmapi/Contracts/
 
 datosProyecto:
   aplicacion: web
