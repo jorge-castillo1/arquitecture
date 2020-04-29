@@ -105,6 +105,8 @@ docapi:
     environment: PRE
     siteName: SantBoi
     sharedDocumentFolder: Documentos compartidos
+    gatewayUrl: http://crmapi-service
+    contractsApi: /crmapi/Contracts/
 
 datosProyecto:
   aplicacion: web
