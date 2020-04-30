@@ -19,6 +19,7 @@ data:
   CountriesAPI:  {{ .Values.backend.config.crm.countriesApi }}
   StoresAPI:  {{ .Values.backend.config.crm.storesApi }}
   AccountsAPI:  {{ .Values.backend.config.crm.accountsApi }}
+  PaymentMethodsCRM: {{ .Values.backend.config.crm.paymentsApi }}
   MailFrom: {{ .Values.backend.config.mailFrom }}
   Email__Smtp__Host: {{ .Values.backend.config.mailHost }}
   Identity__BaseUri: {{ .Values.identity.baseuri }}
@@ -32,6 +33,7 @@ data:
   ContractSMAPI: {{ .Values.backend.config.sm.contractsApi }}
   SMAccountAPI: {{ .Values.backend.config.sm.accountApi }}
   InvoiceSMAPI: {{ .Values.backend.config.sm.invoiceApi }}
+  InvoicePaymentSMAPI: {{ .Values.backend.config.sm.invoicePaymentApi }}
   GatewaySignatureUrl: {{ .Values.backend.config.sign.gateway }}
   SignatureEndpoint: {{ .Values.backend.config.sign.endpoint }}
   GatewayDocumentsUrl: {{ .Values.backend.config.docs.gateway }}
@@ -39,7 +41,13 @@ data:
   DocumentsSearchEndpoint:  {{ .Values.backend.config.docs.searchEndpoint }}
   MailStores: {{ .Values.backend.config.storesMail }}
   GatewaySignatureEventsUrl: {{ .Values.backend.config.signatureEventsUrl }}
+  ChangePaymentMethodCardResponse: {{ .Values.backend.config.changePaymentMethodCardResponse }}
+  PayInvoiceByNewCardMethodCardResponse: {{ .Values.backend.config.payInvoiceByNewCardMethodCardResponse }}
   GatewayPaymentUrl: {{ .Values.backend.config.precognisPaymentsUrl }}
   ChangePaymentMethodCardEndpoint: {{ .Values.backend.config.precognisChangePaymentMethod }}
   CardConfirmationTokenEndpoint: {{ .Values.backend.config.precognisCardConfirmationToken }}
-  ChangePaymentMethodCardResponse: {{ .Values.backend.config.changePaymentMethodCardResponse }}
+  CardConfirmationTokenEndpoint: {{ .Values.backend.config.precognis.CardConfirmationToken }}
+  PayInvoice: {{ .Values.backend.config.precognis.PayInvoice }}
+  GetCardEndpoint: {{ .Values.backend.config.precognis.GetCardEndpoint }}
+  PayInvoiceNewCard: {{ .Values.backend.config.precognis.PayInvoiceNewCard }}
+  

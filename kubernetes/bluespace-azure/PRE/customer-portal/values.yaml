@@ -6,13 +6,13 @@ angular:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
     googleAnalyticsId: UA-160385611-1
-  tag: dev
+  tag: latest
 
 backend:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: dev
+  tag: latest
   config:
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
@@ -22,9 +22,15 @@ backend:
     storesMail: christian.garcia@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
     precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
-    precognisChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
-    precognisCardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
     changePaymentMethodCardResponse: http://myprofile-pre.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
+    payInvoiceByNewCardMethodCardResponse: https://myprofile-pre.bluespace.eu/backend/api/payment/invoice/response
+    precognis:
+      PaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
+      ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
+      CardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
+      PayInvoice: com.precognis.einapay.bluespace.payinvoice_sm/usetoken
+      GetCardEndpoint: com.precognis.einapay.bluespace.checkcard
+      PayInvoiceNewCard: com.precognis.einapay.bluespace.payinvoice_sm/usenewcard
     environment: PRE
     crm:
       gateway: http://crmapi-service
@@ -35,11 +41,13 @@ backend:
       storesApi: /crmapi/Sites/
       unitsApi: /crmapi/Units/
       contractsCodeApi: /crmapi/Contracts/code/
+      paymentsApi: /crmapi/Payments/
     sm:
       gateway: http://smapi-service
       contractsApi: /smapi/Contract/
       accountApi: /smapi/Account/
       invoiceApi: /smapi/Invoice/
+      invoicePaymentApi: /smapi/Invoice/payment/
     sign:
       gateway: http://signaturitapi-service
       endpoint: api/signature/
@@ -64,7 +72,7 @@ crmapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: dev
+  tag: latest
   config:
     serviceUrl: http://93.90.28.112/BLUESPACEPRE/
     domain: BLUESPACE
@@ -74,7 +82,7 @@ smapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: dev
+  tag: b_16738
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.125;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
 
@@ -82,7 +90,7 @@ signaturitapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: dev
+  tag: latest
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -96,7 +104,7 @@ docapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: dev
+  tag: latest
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com

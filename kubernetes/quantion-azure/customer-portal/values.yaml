@@ -81,7 +81,7 @@ smapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: dev
+  tag: b_16738
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.125;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
 
