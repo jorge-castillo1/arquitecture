@@ -13,4 +13,4 @@ spec:
   azureDisk:
     kind: Managed
     diskName: mongodb-customerportal-pro
-    diskURI: /subscriptions/83df56fa-0451-4d73-bffd-280158bd1d72/resourcegroups/MC_kubernetes_bluespace_francecentral/providers/Microsoft.Compute/disks/mongodb-customerportal-pro
+    diskURI: /subscriptions/83df56fa-0451-4d73-bffd-280158bd1d72/resourceGroups/MC_kubernetes_bluespace_francecentral/providers/Microsoft.Compute/disks/mongodb-customerportal-pro

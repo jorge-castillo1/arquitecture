@@ -5,24 +5,48 @@ angular:
   config:
     backendUrl: https://myprofile.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
-  tag: mvp
+    googleAnalyticsId: UA-160385611-1
+  tag: v_1.4
 
 backend:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: mvp
+  tag: v_1.4
   config:
-    gateway: http://crmapi-service
     inviteUrl: https://myprofile.bluespace.eu/signup/
-    profileApi: /crmapi/Contacts/
-    contractsApi: /crmapi/Contracts/
-    accountsApi: /crmapi/Accounts/
-    countriesApi: /crmapi/Countries/
-    storesApi: /crmapi/Sites/
+    resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
     contactMail: chema.gonzalez@bluespace.es
+    storesMail: christian.garcia@quantion.com
+    signatureEventsUrl: http://backend-service/api/Events
+    precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
+    precognisChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
+    precognisCardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
+    changePaymentMethodCardResponse: http://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
+    environment: PRO
+    crm:
+      gateway: http://crmapi-service
+      profileApi: /crmapi/Contacts/
+      contractsApi: /crmapi/Contracts/
+      accountsApi: /crmapi/Accounts/
+      countriesApi: /crmapi/Countries/
+      storesApi: /crmapi/Sites/
+      unitsApi: /crmapi/Units/
+      contractsCodeApi: /crmapi/Contracts/code/
+    sm:
+      gateway: http://smapi-service
+      contractsApi: /smapi/Contract/
+      accountApi: /smapi/Account/
+      invoiceApi: /smapi/Invoice/
+    sign:
+      gateway: http://signaturitapi-service
+      endpoint: api/signature/
+    docs:
+      gateway: http://docapi-service/
+      documentsApi: api/Documents/
+      searchEndpoint: api/Documents/Search/
 
 identity:
   baseuri: https://identity.bluespace.eu
@@ -30,6 +54,8 @@ identity:
     authorize: oauth2/token
     validate: oauth2/introspect
     provisioning: wso2/scim/Users
+    groups: scim2/Groups
+    revoke: oauth2/revoke
 
 ingress:
   secretName: bluespace-tls
@@ -38,16 +64,53 @@ crmapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: mvp
+  tag: v_1.4
   config:
     serviceUrl: http://93.90.28.112/BLUESPACEPRE/
     domain: BLUESPACE
     api: api/data/v8.1/
 
+smapi:
+  registry: registry.quantion.com
+  replicas: 1
+  repository: bluespace-customerportal-web/smapi
+  tag: v_1.4
+  config:
+    odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.125;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
+
+signaturitapi:
+  registry: registry.quantion.com
+  replicas: 1
+  repository: bluespace-customerportal-web/signaturitapi
+  tag: v_1.4
+  config:
+    signaturitapi: https://api.sandbox.signaturit.com/v3/
+    token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
+    database: signatures
+    eventsUrl: https://myprofile.bluespace.eu/signature/api/Events
+    gatewayUrl: http://docapi-service/
+    documentationApi: api/Documents
+    documentationAuditApi: api/Documents/Audit
+
+docapi:
+  registry: registry.quantion.com
+  replicas: 1
+  repository: bluespace-customerportal-web/sharepointapi
+  tag: v_1.4
+  config:
+    database: documents
+    serviceUrl: https://bluespaceselfstorage.sharepoint.com
+    sitesUrl: /sites/Stores-PRE/
+    api: _api/
+    environment: PRE
+    siteName: SantBoi
+    sharedDocumentFolder: Documentos compartidos
+
+
 datosProyecto:
   aplicacion: web
   cliente: bluespace
-  entorno: dev
+  entorno: pro
   proyecto: customerportal
   whitelist:
     enabled: false
@@ -59,15 +122,15 @@ mongodb:
   datosProyecto:
     aplicacion: web
     cliente: bluespace
-    entorno: dev
+    entorno: pro
     proyecto: customerportal
   enabled: true
   fullnameOverride: mongodb
   persistence:
     enabled: true
-    size: 1Gi
+    size: 128Gi
   replicaSet:
-    enabled: false
+    enabled: true
     name: rs0
     pdb:
       enabled: false
