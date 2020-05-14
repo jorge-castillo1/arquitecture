@@ -6,7 +6,7 @@ angular:
     backendUrl: https://bluespace-customerportal-web-dev.quantion.com/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
     googleAnalyticsId: UA-160385611-1
-  tag: dev
+  tag: b_BUG16738
 
 backend:
   registry: registry.quantion.com
