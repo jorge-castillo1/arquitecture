@@ -84,5 +84,5 @@ spec:
           name: https
         imagePullPolicy: Always
       imagePullSecrets:
-        - name: quantion-registry
+        - name: bluespace-registry
       
