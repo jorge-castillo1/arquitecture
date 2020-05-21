@@ -19,10 +19,10 @@ backend:
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
     contactMail: samuel.sole@quantion.com
-    storesMail: christian.garcia@quantion.com
+    storesMail: jordi.piella@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
     precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
-    changePaymentMethodCardResponse: http://myprofile-pre.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
+    changePaymentMethodCardResponse: https://myprofile-pre.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
     payInvoiceByNewCardMethodCardResponse: https://myprofile-pre.bluespace.eu/backend/api/payment/invoice/response
     precognis:
       PaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/

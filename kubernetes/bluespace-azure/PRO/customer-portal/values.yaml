@@ -19,12 +19,14 @@ backend:
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
     contactMail: chema.gonzalez@bluespace.es
-    storesMail: christian.garcia@quantion.com
+    storesMail: jordi.piella@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
     precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
     precognisChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
     precognisCardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
-    changePaymentMethodCardResponse: http://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
+    changePaymentMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
+    payInvoiceByNewCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/invoice/response
+
     environment: PRO
     crm:
       gateway: http://crmapi-service
