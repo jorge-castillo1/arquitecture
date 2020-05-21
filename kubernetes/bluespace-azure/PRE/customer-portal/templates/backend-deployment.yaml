@@ -64,6 +64,16 @@ spec:
               secretKeyRef:
                 name: customerportal-credentials
                 key: apikey
+          - name: PaymentCredentials__User
+            valueFrom:
+             secretKeyRef:
+               name: payment-credentials
+               key: user
+          - name: PaymentCredentials__Password
+            valueFrom:
+             secretKeyRef:
+               name: payment-credentials
+               key: password
         envFrom:
           - configMapRef:
               name: backend-configmap
