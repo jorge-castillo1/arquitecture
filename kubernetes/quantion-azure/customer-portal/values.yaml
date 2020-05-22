@@ -6,13 +6,13 @@ angular:
     backendUrl: https://bluespace-customerportal-web-dev.quantion.com/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
     googleAnalyticsId: UA-160385611-1
-  tag: v_1.5
+  tag: dev
 
 backend:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.5
+  tag: dev
   config:
     inviteUrl: https://bluespace-customerportal-web-dev.quantion.com/signup/
     resetPasswordUrl: https://bluespace-customerportal-web-dev.quantion.com/reset-password/
@@ -71,7 +71,7 @@ crmapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.5
+  tag: dev
   config:
     serviceUrl: http://93.90.28.112/BLUESPACEPRE/
     domain: BLUESPACE
@@ -81,7 +81,7 @@ smapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.5
+  tag: dev
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.125;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
 
@@ -89,7 +89,7 @@ signaturitapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.5
+  tag: dev
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -103,7 +103,7 @@ docapi:
   registry: registry.quantion.com
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.5
+  tag: dev
   config:
     database: documents
     serviceUrl: https://quantion.sharepoint.com

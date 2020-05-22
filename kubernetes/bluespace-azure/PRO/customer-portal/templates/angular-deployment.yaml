@@ -32,7 +32,7 @@ spec:
             subPath: config.js
             name: angular-config
       imagePullSecrets:
-        - name: quantion-registry
+        - name: bluespace-registry
       volumes:
         - name: angular-config
           configMap:
