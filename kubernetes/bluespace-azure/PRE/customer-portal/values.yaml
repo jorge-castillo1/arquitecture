@@ -1,28 +1,28 @@
 angular:
-  registry: registry.quantion.com
+  registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/frontend
   config:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
     googleAnalyticsId: UA-160385611-1
-  tag: latest
+  tag: v_1.5
 
 backend:
-  registry: registry.quantion.com
+  registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: latest
+  tag: v_1.5
   config:
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
     contactMail: samuel.sole@quantion.com
-    storesMail: christian.garcia@quantion.com
+    storesMail: jordi.piella@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
     precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
-    changePaymentMethodCardResponse: http://myprofile-pre.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
+    changePaymentMethodCardResponse: https://myprofile-pre.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
     payInvoiceByNewCardMethodCardResponse: https://myprofile-pre.bluespace.eu/backend/api/payment/invoice/response
     precognis:
       PaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
@@ -69,28 +69,28 @@ ingress:
   secretName: bluespace-tls
 
 crmapi:
-  registry: registry.quantion.com
+  registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: latest
+  tag: v_1.5
   config:
     serviceUrl: http://93.90.28.112/BLUESPACEPRE/
     domain: BLUESPACE
     api: api/data/v8.1/
 
 smapi:
-  registry: registry.quantion.com
+  registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: b_16738
+  tag: v_1.5
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.125;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
 
 signaturitapi:
-  registry: registry.quantion.com
+  registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: latest
+  tag: v_1.5
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -101,10 +101,10 @@ signaturitapi:
     documentationAuditApi: api/Documents/Audit
 
 docapi:
-  registry: registry.quantion.com
+  registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: latest
+  tag: v_1.5
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com

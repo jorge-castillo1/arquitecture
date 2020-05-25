@@ -40,6 +40,6 @@ spec:
           name: http
         imagePullPolicy: Always
       imagePullSecrets:
-        - name: quantion-registry
+        - name: bluespace-registry
       
         
