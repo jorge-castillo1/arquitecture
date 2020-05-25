@@ -1,4 +1,3 @@
-[
 	{
 		"documenttype" : 0,
 		"documentname" : "Contrato",
@@ -42,41 +41,4 @@
 			"storecity": "00_contract_Storecity",
 			"valuedeclared": "00_contract_valuedeclared"
 		}
-	},
-	{
-		"documenttype" : 1,
-		"documentname" : "Domiciliación SEPA",
-		"templateid" : "#01_BankAuth_SP_Template",
-		"fields": {
-			"contractnumber": "01_SEPAAuth_ContractNumber",
-			"companylegalname": "01_SEPAAuth_CompanyLegalName",
-			"companycif": "01_SEPAAuth_CompanyCIF",
-			"companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
-			"companycountry": "01_SEPAAuth_Companycountry",
-			"clientfullname": "01_SEPAAuth_ClientFullName",
-			"clientaddress": "01_SEPAAuth_ClientAddressMainLine",
-			"clientpostalcode": "01_SEPAAuth_ClientAddressExtraline",
-			"clientcountry": "01_SEPAAuth_ClientCountry",
-			"iban": "01_SEPAAuth_IBAN",
-			"storecity": "01_SEPAAuth_StoreCity"
-		}
-	},
-	{
-		"documenttype" : 2,
-		"documentname" : "Domiciliación Tarjeta",
-		"templateid" : "#02_CardAuth_SP_Template",
-		"fields": {
-			"customername": "02_CardAuth_ClientFullName",
-			"contractnumber": "02_CardAuth_ContractNumber",
-			"unitnumber": "02_CardAuth_UnitNumber",
-			"cardholdername": "02_CardAuth_CardHolder",
-			"cardholdercif": "02_CardAuth_ClientNIF",
-			"cardhoderaddress": "02_CardAuth_ClientAddressMainLine",
-			"cardhodercp": "02_CardAuth_ClientZIP",
-			"cardhodercity": "02_CardAuth_ClientCity",
-			"companylegalname": "02_CardAuth_CompanyLegalName",
-			"companycif": "02_CardAuth_CompanyCIF",
-			"storecity": "02_CardAuth_StoreCity"
-		}
 	}
-]
