@@ -43,3 +43,4 @@ data:
   ChangePaymentMethodCardEndpoint: {{ .Values.backend.config.precognisChangePaymentMethod }}
   CardConfirmationTokenEndpoint: {{ .Values.backend.config.precognisCardConfirmationToken }}
   ChangePaymentMethodCardResponse: {{ .Values.backend.config.changePaymentMethodCardResponse }}
+  PayInvoiceByNewCardMethodCardResponse: {{ .Values.backend.config.payInvoiceByNewCardMethodCardResponse }}

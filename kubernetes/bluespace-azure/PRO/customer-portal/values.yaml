@@ -24,7 +24,9 @@ backend:
     precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
     precognisChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
     precognisCardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
-    changePaymentMethodCardResponse: http://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
+    changePaymentMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
+    payInvoiceByNewCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/invoice/response
+
     environment: PRO
     crm:
       gateway: http://crmapi-service
