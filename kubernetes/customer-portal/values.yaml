@@ -1,0 +1,27 @@
+# Datos del proyecto
+datosProyecto:
+  # Si se habilita, se usan los datos del proyecto para generar el subdominio donde se publica.
+  # En caso contrario se usarán los datos de ingress.URLsubDomain
+  enabled: false
+  # Nombre del cliente (por ejemplo 'bluespace')
+  cliente: "bluespace"
+  # Nombre del proyecto (por ejemplo 'customerportal')
+  proyecto: "customerportal"
+  # Nombre de la aplicación (por ejemplo 'web')
+  aplicacion: "web"
+  # Entorno en el que se quiere desplegar (valores aceptados mr, dev, pre i pro)
+  entorno: "dev"
+
+image:
+  # Servidor de imagenes docker
+  registry: bluespaceregistry.azurecr.io
+  # secreto con las credenciales para conectarse
+  imagePullSecret: quantion-registry
+
+ingress:
+  # Dominio en el que se publica la aplicación
+  URLDomain: "bluespace.eu"
+  # Subdominio en el que se publica. Solo se usa si datosProyecto.enabled = false.
+  URLsubDomain: "www"
+  # Nombre del secreto que contiene el certificado TLS
+  secretName: "bluespace-tls"
