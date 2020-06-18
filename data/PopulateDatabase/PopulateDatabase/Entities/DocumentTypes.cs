@@ -12,6 +12,12 @@ namespace PopulateDatabase.Entities
         [BsonElement("documenttype")]
         public int DocumentType { get; set; }
 
+        [BsonElement("contractlanguage")]
+        public string ContractLanguage { get; set; }
+
+        [BsonElement("contractcountry")]
+        public string ContractCountry { get; set; }
+
         [BsonElement("documentname")]
         public string DocumentName { get; set; }
 
