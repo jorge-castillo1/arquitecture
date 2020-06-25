@@ -29,7 +29,8 @@ namespace PopulateDatabase
         private static List<T> GetData<T>(string fileName)
         {
             string path = Path.Combine(Environment.CurrentDirectory, @"..\..\..\Collections\" + fileName + ".json");
-            return JsonConvert.DeserializeObject<List<T>>(File.ReadAllText(path));
+            string fileContent = File.ReadAllText(path);
+            return JsonConvert.DeserializeObject<List<T>>(fileContent);
         }
 
         private static void GetDataAndPopulate<T>(MongoClient client, string databaseName, string collectionName)

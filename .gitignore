@@ -36,3 +36,7 @@ backend
 crmcoreapi
 frontend
 SMCoreAPI
+/.vs
+[Bb]in/
+[Oo]bj/
+/data/PopulateDatabase/.vs/
