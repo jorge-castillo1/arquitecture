@@ -90,7 +90,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.8
+  tag: v_1.8.1
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -104,7 +104,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.8
+  tag: v_1.8.1
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
@@ -115,7 +115,7 @@ docapi:
     sharedDocumentFolder: Documentos compartidos
     gatewayUrl: http://crmapi-service
     contractsApi: /crmapi/Contracts/
-    sitesApi: crmapi/Sites/
+    sitesApi: /crmapi/Sites/
 
 datosProyecto:
   aplicacion: web
