@@ -114,6 +114,7 @@ docapi:
     sharedDocumentFolder: Documentos compartidos
     gatewayUrl: http://crmapi-service
     contractsApi: /crmapi/Contracts/
+    sitesApi: /crmapi/Sites/
 
 datosProyecto:
   aplicacion: web

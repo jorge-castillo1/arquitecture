@@ -15,3 +15,6 @@ data:
   Environment: {{ .Values.docapi.config.environment }}
   SharedDocumentsFolder: {{ .Values.docapi.config.sharedDocumentFolder }}
   SiteNameSharepoint: {{ .Values.docapi.config.siteName }}
+  GatewayContractsUrl: {{ .Values.docapi.config.gatewayUrl }}
+  ContractsAPI: {{ .Values.docapi.config.contractsApi }}
+  SitesAPI: {{ .Values.docapi.config.sitesApi }}
