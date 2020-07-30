@@ -49,5 +49,7 @@ data:
   PayInvoice: {{ .Values.backend.config.precognis.PayInvoice }}
   GetCardEndpoint: {{ .Values.backend.config.precognis.GetCardEndpoint }}
   PayInvoiceNewCard: {{ .Values.backend.config.precognis.PayInvoiceNewCard }}
+  UpdateCardEndpoint: {{ .Values.backend.config.precognis.UpdateCardEndpoint }}
+  UpdateCardMethodCardResponse: {{ .Values.backend.config.updateCardMethodCardResponse }}
 
   
