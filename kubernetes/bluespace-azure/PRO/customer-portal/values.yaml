@@ -6,13 +6,13 @@ angular:
     backendUrl: https://myprofile.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
     googleAnalyticsId: UA-160385611-1
-  tag: v_1.13
+  tag: v_1.15
 
 backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.13
+  tag: v_1.15
   config:
     inviteUrl: https://myprofile.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
@@ -24,7 +24,7 @@ backend:
     precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
     changePaymentMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
     payInvoiceByNewCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/invoice/response
-    updateCardMethodCardResponse: http://backend-service/api/payment/update-card/response
+    updateCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/update-card/response
     precognis:
       PaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
@@ -33,6 +33,7 @@ backend:
       GetCardEndpoint: com.precognis.einapay.bluespace.checkcard
       PayInvoiceNewCard: com.precognis.einapay.bluespace.payinvoice_sm/usenewcard
       UpdateCardEndpoint: com.precognis.einapay.bluespace.webportalcard/updatecard
+      UpdateCardConfirmationTokenEndpoint: com.precognis.einapay.bluespace.cardsignature/updatecard
     environment: PRO
     crm:
       gateway: http://crmapi-service
@@ -74,7 +75,7 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.13
+  tag: v_1.14
   config:
     serviceUrl: http://93.90.28.122/BLUESPACE/
     domain: BLUESPACE
@@ -84,7 +85,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.13
+  tag: v_1.14
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.124;Port=2638;Servername=BLUESQL;Database=Spaceman
 
@@ -92,7 +93,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.13
+  tag: v_1.14
   config:
     signaturitapi: https://api.signaturit.com/v3/
     token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
@@ -106,7 +107,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.13
+  tag: v_1.14
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
