@@ -77,7 +77,7 @@ crmapi:
   repository: bluespace-customerportal-web/crmapi
   tag: v_1.14
   config:
-    serviceUrl: http://93.90.28.112/BLUESPACEPRE/
+    serviceUrl: http://212.36.77.38/BLUESPACEPRE/
     domain: BLUESPACE
     api: api/data/v8.1/
 
@@ -87,7 +87,7 @@ smapi:
   repository: bluespace-customerportal-web/smapi
   tag: v_1.14
   config:
-    odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.125;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
+    odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.49;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
 
 signaturitapi:
   registry: bluespaceregistry.azurecr.io
@@ -107,7 +107,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.14
+  tag: v_1.15
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
