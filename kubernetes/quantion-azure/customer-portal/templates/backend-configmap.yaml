@@ -49,4 +49,6 @@ data:
   PayInvoice: {{ .Values.backend.config.precognis.PayInvoice }}
   GetCardEndpoint: {{ .Values.backend.config.precognis.GetCardEndpoint }}
   PayInvoiceNewCard: {{ .Values.backend.config.precognis.PayInvoiceNewCard }}
+  LoginUnblockedTime: {{ .Values.backend.config.loginunblockedtime }}
+  LoginMaxAttempts: {{ .Values.backend.config.loginmaxattempts  }}  
   

@@ -31,6 +31,8 @@ backend:
       GetCardEndpoint: com.precognis.einapay.bluespace.checkcard
       PayInvoiceNewCard: com.precognis.einapay.bluespace.payinvoice_sm/usenewcard
     environment: DEV
+    loginunblockedtime: 15
+    loginmaxattempts: 5
     crm:
       gateway: http://crmapi-service
       profileApi: /crmapi/Contacts/
