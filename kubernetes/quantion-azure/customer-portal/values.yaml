@@ -23,6 +23,10 @@ backend:
     signatureEventsUrl: http://backend-service/api/Events
     changePaymentMethodCardResponse: https://bluespace-customerportal-web-dev.quantion.com/backend/api/payment/changepaymentmethod/card/response
     payInvoiceByNewCardMethodCardResponse: https://bluespace-customerportal-web-dev.quantion.com/backend/api/payment/invoice/response
+    accessCodeUnblockedTime: 15
+    accessCodeMaxAttempts: 5
+    loginUnblockedTime": 15
+    loginMaxAttempts": 5
     precognis:
       PaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
