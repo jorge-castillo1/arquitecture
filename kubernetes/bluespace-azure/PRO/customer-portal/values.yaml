@@ -25,6 +25,10 @@ backend:
     changePaymentMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
     payInvoiceByNewCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/invoice/response
     updateCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/update-card/response
+    accessCodeUnblockedTime: 15
+    accessCodeMaxAttempts: 5
+    loginUnblockedTime": 15
+    loginMaxAttempts": 5
     precognis:
       PaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
