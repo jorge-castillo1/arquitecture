@@ -51,5 +51,6 @@ data:
   PayInvoiceNewCard: {{ .Values.backend.config.precognis.PayInvoiceNewCard }}
   UpdateCardEndpoint: {{ .Values.backend.config.precognis.UpdateCardEndpoint }}
   UpdateCardMethodCardResponse: {{ .Values.backend.config.updateCardMethodCardResponse }}
+  UpdateCardConfirmationTokenEndpoint: {{ .Values.backend.config.precognis.UpdateCardConfirmationTokenEndpoint }}
 
   
