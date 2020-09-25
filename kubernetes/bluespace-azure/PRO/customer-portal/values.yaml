@@ -111,7 +111,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.15
+  tag: v_1.16
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
