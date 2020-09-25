@@ -20,10 +20,6 @@ data:
   StoresAPI:  {{ .Values.backend.config.crm.storesApi }}
   AccountsAPI:  {{ .Values.backend.config.crm.accountsApi }}
   PaymentMethodsCRM: {{ .Values.backend.config.crm.paymentsApi }}
-  AccessCodeUnblockedTime: {{ .Values.backend.config.accessCodeUnblockedTime }}
-  AccessCodeMaxAttempts: {{ .Values.backend.config.accessCodeMaxAttempts }}
-  LoginUnblockedTime: {{ .Values.backend.config.loginUnblockedTime }}
-  LoginMaxAttempts: {{ .Values.backend.config.loginMaxAttempts }}
   MailFrom: {{ .Values.backend.config.mailFrom }}
   Email__Smtp__Host: {{ .Values.backend.config.mailHost }}
   Identity__BaseUri: {{ .Values.identity.baseuri }}
@@ -56,5 +52,9 @@ data:
   UpdateCardEndpoint: {{ .Values.backend.config.precognis.UpdateCardEndpoint }}
   UpdateCardMethodCardResponse: {{ .Values.backend.config.updateCardMethodCardResponse }}
   UpdateCardConfirmationTokenEndpoint: {{ .Values.backend.config.precognis.UpdateCardConfirmationTokenEndpoint }}
-
+  AccessCodeUnblockedTime: !!string {{ .Values.backend.config.accessCodeUnblockedTime }}
+  LoginUnblockedTime: !!string {{ .Values.backend.config.loginUnblockedTime }}
+  AccessCodeMaxAttempts: !!string {{ .Values.backend.config.accessCodeMaxAttempts }}
+  LoginMaxAttempts: !!string {{ .Values.backend.config.loginMaxAttempts }}
+  Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
   
