@@ -20,6 +20,7 @@ data:
   StoresAPI:  {{ .Values.backend.config.crm.storesApi }}
   AccountsAPI:  {{ .Values.backend.config.crm.accountsApi }}
   PaymentMethodsCRM: {{ .Values.backend.config.crm.paymentsApi }}
+  OpportunityCRM: {{ .Values.backend.config.crm.opportunityApi }}
   MailFrom: {{ .Values.backend.config.mailFrom }}
   Email__Smtp__Host: {{ .Values.backend.config.mailHost }}
   Identity__BaseUri: {{ .Values.identity.baseuri }}

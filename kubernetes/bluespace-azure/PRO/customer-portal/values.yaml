@@ -49,6 +49,7 @@ backend:
       unitsApi: /crmapi/Units/
       contractsCodeApi: /crmapi/Contracts/code/
       paymentsApi: /crmapi/Payments/
+      opportunityApi: /crmapi/Opportunity/
     sm:
       gateway: http://smapi-service
       contractsApi: /smapi/Contract/
