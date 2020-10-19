@@ -17,6 +17,7 @@ data:
   ProfileAPI: {{ .Values.backend.config.crm.profileApi }}
   ContractsAPI: {{ .Values.backend.config.crm.contractsApi }}
   CountriesAPI:  {{ .Values.backend.config.crm.countriesApi }}
+  LanguagesAPI:  {{ .Values.backend.config.crm.languagesApi }}
   StoresAPI:  {{ .Values.backend.config.crm.storesApi }}
   AccountsAPI:  {{ .Values.backend.config.crm.accountsApi }}
   PaymentMethodsCRM: {{ .Values.backend.config.crm.paymentsApi }}

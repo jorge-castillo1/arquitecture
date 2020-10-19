@@ -41,6 +41,7 @@ backend:
       contractsApi: /crmapi/Contracts/
       accountsApi: /crmapi/Accounts/
       countriesApi: /crmapi/Countries/
+      languagesApi: /crmapi/Languages/
       storesApi: /crmapi/Sites/
       unitsApi: /crmapi/Units/
       contractsCodeApi: /crmapi/Contracts/code/

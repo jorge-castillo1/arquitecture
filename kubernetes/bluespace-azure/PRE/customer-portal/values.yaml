@@ -45,6 +45,7 @@ backend:
       contractsApi: /crmapi/Contracts/
       accountsApi: /crmapi/Accounts/
       countriesApi: /crmapi/Countries/
+      languagesApi: /crmapi/Languages/
       storesApi: /crmapi/Sites/
       unitsApi: /crmapi/Units/
       contractsCodeApi: /crmapi/Contracts/code/
@@ -135,7 +136,7 @@ datosProyecto:
     enabled: false
     listIp:
     - 2.139.194.97/32
-    
+
 mongodb:
   database: customerportal
   datosProyecto:
