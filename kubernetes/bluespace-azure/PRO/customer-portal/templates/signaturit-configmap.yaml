@@ -14,3 +14,4 @@ data:
   DocumentationAPI: {{ .Values.signaturitapi.config.documentationApi }}
   DocumentationAuditAPI: {{ .Values.signaturitapi.config.documentationAuditApi }}
   ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}
+  Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
