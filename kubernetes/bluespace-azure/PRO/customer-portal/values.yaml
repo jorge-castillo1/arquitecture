@@ -18,17 +18,17 @@ backend:
     resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
-    contactMail: chema.gonzalez@bluespace.es
+    contactMail: vicente.gonzalez@bluespace.es
     storesMail: jordi.piella@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
-    precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
+    precognisPaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
     changePaymentMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
     payInvoiceByNewCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/invoice/response
     updateCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/update-card/response
     accessCodeUnblockedTime: 15
     accessCodeMaxAttempts: 5
-    loginUnblockedTime": 15
-    loginMaxAttempts": 5
+    loginUnblockedTime: 15
+    loginMaxAttempts: 5
     precognis:
       PaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
@@ -130,6 +130,7 @@ datosProyecto:
   aplicacion: web
   cliente: bluespace
   entorno: pro
+  logLevel: Information
   proyecto: customerportal
   whitelist:
     enabled: false
