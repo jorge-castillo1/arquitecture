@@ -103,6 +103,18 @@ signaturitapi:
   config:
     signaturitapi: https://api.signaturit.com/v3/
     token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    es:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    en:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    fr:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    pt:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
     database: signatures
     eventsUrl: https://myprofile.bluespace.eu/signature/api/Events
     gatewayUrl: http://docapi-service/
