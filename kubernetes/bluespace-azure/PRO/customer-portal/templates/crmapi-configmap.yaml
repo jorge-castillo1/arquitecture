@@ -7,3 +7,4 @@ metadata:
     deploy: {{ template "datosProyecto.url" . }}
 data:
   ServiceUrl: {{ .Values.crmapi.config.serviceUrl }}
+  Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}

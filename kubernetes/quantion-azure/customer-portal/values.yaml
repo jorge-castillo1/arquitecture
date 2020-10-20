@@ -99,6 +99,18 @@ signaturitapi:
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
+    es:
+      signaturitapi: https://api.sandbox.signaturit.com/v3/
+      token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
+    en:
+      signaturitapi: https://api.sandbox.signaturit.com/v3/
+      token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
+    fr:
+      signaturitapi: https://api.sandbox.signaturit.com/v3/
+      token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
+    pt:
+      signaturitapi: https://api.sandbox.signaturit.com/v3/
+      token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
     database: signatures
     eventsUrl: http://bluespace-customerportal-web-dev.quantion.com/signature/api/events
     gatewayUrl: http://docapi-service/

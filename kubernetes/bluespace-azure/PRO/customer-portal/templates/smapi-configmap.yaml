@@ -7,3 +7,4 @@ metadata:
     deploy: {{ template "datosProyecto.url" . }}
 data:
   OdbcConnection: {{ .Values.smapi.config.odbcConnection }}
+  Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
