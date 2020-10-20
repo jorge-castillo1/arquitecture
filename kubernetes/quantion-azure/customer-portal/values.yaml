@@ -41,10 +41,12 @@ backend:
       contractsApi: /crmapi/Contracts/
       accountsApi: /crmapi/Accounts/
       countriesApi: /crmapi/Countries/
+      languagesApi: /crmapi/Languages/
       storesApi: /crmapi/Sites/
       unitsApi: /crmapi/Units/
       contractsCodeApi: /crmapi/Contracts/code/
       paymentsApi: /crmapi/Payments/
+      opportunityApi: /crmapi/Opportunity/
     sm:
       gateway: http://smapi-service
       contractsApi: /smapi/Contract/

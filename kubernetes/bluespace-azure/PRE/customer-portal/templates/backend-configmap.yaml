@@ -17,9 +17,11 @@ data:
   ProfileAPI: {{ .Values.backend.config.crm.profileApi }}
   ContractsAPI: {{ .Values.backend.config.crm.contractsApi }}
   CountriesAPI:  {{ .Values.backend.config.crm.countriesApi }}
+  LanguagesAPI:  {{ .Values.backend.config.crm.languagesApi }}
   StoresAPI:  {{ .Values.backend.config.crm.storesApi }}
   AccountsAPI:  {{ .Values.backend.config.crm.accountsApi }}
   PaymentMethodsCRM: {{ .Values.backend.config.crm.paymentsApi }}
+  OpportunityCRM: {{ .Values.backend.config.crm.opportunityApi }}
   MailFrom: {{ .Values.backend.config.mailFrom }}
   Email__Smtp__Host: {{ .Values.backend.config.mailHost }}
   Identity__BaseUri: {{ .Values.identity.baseuri }}
@@ -57,4 +59,3 @@ data:
   AccessCodeMaxAttempts: !!string {{ .Values.backend.config.accessCodeMaxAttempts }}
   LoginMaxAttempts: !!string {{ .Values.backend.config.loginMaxAttempts }}
   Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
-  

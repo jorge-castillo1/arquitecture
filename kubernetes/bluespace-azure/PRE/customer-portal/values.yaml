@@ -6,13 +6,13 @@ angular:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
     googleAnalyticsId: UA-160385611-1
-  tag: v_1.19
+  tag: v_1.21
 
 backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.19
+  tag: v_1.21
   config:
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
@@ -45,10 +45,12 @@ backend:
       contractsApi: /crmapi/Contracts/
       accountsApi: /crmapi/Accounts/
       countriesApi: /crmapi/Countries/
+      languagesApi: /crmapi/Languages/
       storesApi: /crmapi/Sites/
       unitsApi: /crmapi/Units/
       contractsCodeApi: /crmapi/Contracts/code/
       paymentsApi: /crmapi/Payments/
+      opportunityApi: /crmapi/Opportunity/
     sm:
       gateway: http://smapi-service
       contractsApi: /smapi/Contract/
@@ -79,7 +81,7 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.17
+  tag: v_1.21
   config:
     serviceUrl: http://212.36.77.38/BLUESPACEPRE/
     domain: BLUESPACE
@@ -89,7 +91,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.17
+  tag: v_1.21
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.49;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
 
@@ -97,7 +99,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.17
+  tag: v_1.21
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -111,7 +113,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.17
+  tag: v_1.20
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
@@ -134,7 +136,7 @@ datosProyecto:
     enabled: false
     listIp:
     - 2.139.194.97/32
-    
+
 mongodb:
   database: customerportal
   datosProyecto:

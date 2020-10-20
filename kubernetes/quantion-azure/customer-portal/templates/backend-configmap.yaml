@@ -17,9 +17,11 @@ data:
   ProfileAPI: {{ .Values.backend.config.crm.profileApi }}
   ContractsAPI: {{ .Values.backend.config.crm.contractsApi }}
   CountriesAPI:  {{ .Values.backend.config.crm.countriesApi }}
+  LanguagesAPI:  {{ .Values.backend.config.crm.languagesApi }}
   StoresAPI:  {{ .Values.backend.config.crm.storesApi }}
   AccountsAPI:  {{ .Values.backend.config.crm.accountsApi }}
   PaymentMethodsCRM: {{ .Values.backend.config.crm.paymentsApi }}
+  OpportunityCRM: {{ .Values.backend.config.crm.opportunityApi }}
   AccessCodeUnblockedTime: {{ .Values.backend.config.accessCodeUnblockedTime }}
   AccessCodeMaxAttempts: {{ .Values.backend.config.accessCodeMaxAttempts }}
   LoginUnblockedTime: {{ .Values.backend.config.loginUnblockedTime }}
@@ -53,4 +55,3 @@ data:
   PayInvoice: {{ .Values.backend.config.precognis.PayInvoice }}
   GetCardEndpoint: {{ .Values.backend.config.precognis.GetCardEndpoint }}
   PayInvoiceNewCard: {{ .Values.backend.config.precognis.PayInvoiceNewCard }}
-  
