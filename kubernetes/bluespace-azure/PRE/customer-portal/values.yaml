@@ -81,7 +81,7 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.25
+  tag: v_1.26
   config:
     serviceUrl: http://212.36.77.38/BLUESPACEPRE/
     domain: BLUESPACE
@@ -91,7 +91,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.25
+  tag: v_1.26
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.49;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
 
@@ -99,7 +99,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.25
+  tag: v_1.26
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -125,7 +125,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.25
+  tag: v_1.26
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
@@ -137,16 +137,17 @@ docapi:
     gatewayUrl: http://crmapi-service
     contractsApi: /crmapi/Contracts/
     sitesApi: /crmapi/Sites/
-    datosProyecto:
-      aplicacion: web
-      cliente: bluespace
-      entorno: pre
-      logLevel: Debug
-      proyecto: customerportal
-      whitelist:
-        enabled: false
-        listIp:
-        - 2.139.194.97/32
+
+datosProyecto:
+  aplicacion: web
+  cliente: bluespace
+  entorno: pre
+  logLevel: Information
+  proyecto: customerportal
+  whitelist:
+    enabled: false
+    listIp:
+    - 2.139.194.97/32
 
 mongodb:
   database: customerportal
