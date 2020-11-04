@@ -6,25 +6,29 @@ angular:
     backendUrl: https://myprofile.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
     googleAnalyticsId: UA-160385611-1
-  tag: v_1.15
+  tag: v_1.23
 
 backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.15
+  tag: v_1.23
   config:
     inviteUrl: https://myprofile.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
-    contactMail: chema.gonzalez@bluespace.es
+    contactMail: vicente.gonzalez@bluespace.es
     storesMail: jordi.piella@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
-    precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
+    precognisPaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
     changePaymentMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
     payInvoiceByNewCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/invoice/response
     updateCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/update-card/response
+    accessCodeUnblockedTime: 15
+    accessCodeMaxAttempts: 5
+    loginUnblockedTime: 15
+    loginMaxAttempts: 5
     precognis:
       PaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
@@ -41,10 +45,12 @@ backend:
       contractsApi: /crmapi/Contracts/
       accountsApi: /crmapi/Accounts/
       countriesApi: /crmapi/Countries/
+      languagesApi: /crmapi/Languages/
       storesApi: /crmapi/Sites/
       unitsApi: /crmapi/Units/
       contractsCodeApi: /crmapi/Contracts/code/
       paymentsApi: /crmapi/Payments/
+      opportunityApi: /crmapi/Opportunity/
     sm:
       gateway: http://smapi-service
       contractsApi: /smapi/Contract/
@@ -75,9 +81,9 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.14
+  tag: v_1.23
   config:
-    serviceUrl: http://93.90.28.122/BLUESPACE/
+    serviceUrl: http://212.36.77.37/BLUESPACE/
     domain: BLUESPACE
     api: api/data/v8.1/
 
@@ -85,18 +91,30 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.14
+  tag: v_1.23
   config:
-    odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=93.90.28.124;Port=2638;Servername=BLUESQL;Database=Spaceman
+    odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.48;Port=2638;Servername=BLUESQL;Database=Spaceman
 
 signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.14
+  tag: v_1.23
   config:
     signaturitapi: https://api.signaturit.com/v3/
     token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    es:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    en:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    fr:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    pt:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
     database: signatures
     eventsUrl: https://myprofile.bluespace.eu/signature/api/Events
     gatewayUrl: http://docapi-service/
@@ -107,7 +125,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.14
+  tag: b_httpclient-timeout
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
@@ -124,12 +142,13 @@ datosProyecto:
   aplicacion: web
   cliente: bluespace
   entorno: pro
+  logLevel: Information
   proyecto: customerportal
   whitelist:
     enabled: false
     listIp:
     - 2.139.194.97/32
-    
+
 mongodb:
   database: customerportal
   datosProyecto:
