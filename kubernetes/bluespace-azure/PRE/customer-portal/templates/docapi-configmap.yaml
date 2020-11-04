@@ -19,3 +19,4 @@ data:
   ContractsAPI: {{ .Values.docapi.config.contractsApi }}
   SitesAPI: {{ .Values.docapi.config.sitesApi }}
   Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
+  Logging__MongoDbLogger__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}
