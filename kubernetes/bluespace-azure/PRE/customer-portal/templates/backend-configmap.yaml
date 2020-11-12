@@ -59,3 +59,4 @@ data:
   AccessCodeMaxAttempts: !!string {{ .Values.backend.config.accessCodeMaxAttempts }}
   LoginMaxAttempts: !!string {{ .Values.backend.config.loginMaxAttempts }}
   Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
+  Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}
