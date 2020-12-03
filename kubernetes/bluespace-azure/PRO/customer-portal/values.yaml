@@ -6,13 +6,13 @@ angular:
     backendUrl: https://myprofile.bluespace.eu/backend
     googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
     googleAnalyticsId: UA-160385611-1
-  tag: v_1.23
+  tag: v_1.31
 
 backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.23
+  tag: v_1.31
   config:
     inviteUrl: https://myprofile.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
@@ -81,7 +81,7 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.23
+  tag: v_1.31
   config:
     serviceUrl: http://212.36.77.37/BLUESPACE/
     domain: BLUESPACE
@@ -91,7 +91,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.23
+  tag: v_1.31
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.48;Port=2638;Servername=BLUESQL;Database=Spaceman
 
@@ -99,7 +99,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.27
+  tag: v_1.31
   config:
     signaturitapi: https://api.signaturit.com/v3/
     token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
@@ -111,7 +111,7 @@ signaturitapi:
       token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
     fr:
       signaturitapi: https://api.signaturit.com/v3/
-      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+      token: oDBdxHiNWqqKPnLfdUrHNqpOkzyVyNXhWmdztHHlIXUHbCxxTasMvMjRWBXAgGLtQCViFujjljbMUVBuSDYNuJ
     pt:
       signaturitapi: https://api.signaturit.com/v3/
       token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
