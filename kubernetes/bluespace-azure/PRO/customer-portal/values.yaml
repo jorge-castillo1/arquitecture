@@ -4,7 +4,7 @@ angular:
   repository: bluespace-customerportal-web/frontend
   config:
     backendUrl: https://myprofile.bluespace.eu/backend
-    googleApiKey: AIzaSyDhc6D7txBsiVTTgWFiflBtvrAycaw9l1w
+    googleApiKey: AIzaSyB-Xfpk_h8jCeTWO7vKgfK_8nK3F3uYD5w
     googleAnalyticsId: UA-160385611-1
   tag: v_1.33
 
