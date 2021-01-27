@@ -114,7 +114,7 @@ signaturitapi:
       token: oDBdxHiNWqqKPnLfdUrHNqpOkzyVyNXhWmdztHHlIXUHbCxxTasMvMjRWBXAgGLtQCViFujjljbMUVBuSDYNuJ
     pt:
       signaturitapi: https://api.signaturit.com/v3/
-      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+      token: USPSYdCQNrYMTlaMZPbsMGxIVWwOtunKcslBzduiEzqywJTxEYGLcdxcfuzqYQfRAnYpAHLKYFfTahJeOjOWeV
     database: signatures
     eventsUrl: https://myprofile.bluespace.eu/signature/api/Events
     gatewayUrl: http://docapi-service/
