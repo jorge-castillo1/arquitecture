@@ -56,6 +56,7 @@ backend:
       contractsApi: /smapi/Contract/
       accountApi: /smapi/Account/
       invoiceApi: /smapi/Invoice/
+      InvoiceByCustomerApi: /smapi/Invoice/customer/
       invoicePaymentApi: /smapi/Invoice/payment/
     sign:
       gateway: http://signaturitapi-service
