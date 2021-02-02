@@ -35,6 +35,7 @@ data:
   ContractSMAPI: {{ .Values.backend.config.sm.contractsApi }}
   SMAccountAPI: {{ .Values.backend.config.sm.accountApi }}
   InvoiceSMAPI: {{ .Values.backend.config.sm.invoiceApi }}
+  InvoiceByCustomerIdSMAPI: {{ .Values.backend.config.sm.InvoiceByCustomerApi }}
   InvoicePaymentSMAPI: {{ .Values.backend.config.sm.invoicePaymentApi }}
   GatewaySignatureUrl: {{ .Values.backend.config.sign.gateway }}
   SignatureEndpoint: {{ .Values.backend.config.sign.endpoint }}
