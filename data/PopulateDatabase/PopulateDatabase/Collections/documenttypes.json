@@ -1,5 +1,7 @@
-[
-  {
+[{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec12a"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_ESes_Template",
@@ -40,13 +42,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec12b"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_ESen_Template",
@@ -87,13 +92,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
 },{
-
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec12c"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_ESfr_Template",
@@ -134,13 +142,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
 },{
-
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec12d"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_ESpt_Template",
@@ -181,13 +192,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec12e"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_FRfr_Template",
@@ -228,13 +242,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec12f"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_FRes_Template",
@@ -275,13 +292,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec130"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_FRen_Template",
@@ -322,13 +342,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec131"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_FRpt_Template",
@@ -369,13 +392,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec132"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_PTpt_Template",
@@ -416,13 +442,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec133"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_PTen_Template",
@@ -463,13 +492,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec134"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_PTes_Template",
@@ -510,13 +542,16 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec135"
+  },
   "documenttype": 0,
   "documentname": "Contrato",
   "templateid": "#00_UnitContract_PTfr_Template",
@@ -557,209 +592,22 @@
     "folioid": "00_contract_FolioID",
     "hojaid": "00_contract_HojaID",
     "unitnumber": "00_contract_UnitNumber",
+    "unitcategory": "00_contract_UnitCategory",
     "selloempresa": "stamp_01",
     "monthlytotalprice": "00_contract_Total",
     "storecity": "00_contract_Storecity",
     "valuedeclared": "00_contract_valuedeclared"
   }
-},
-{
-  "documenttype": 0,
-  "documentname": "Contrato",
-  "templateid": "#00_UnitContract_ENen_Template",
-  "documentlanguage": "EN",
-  "documentcountry": "EN",
-  "fields": {
-    "contractnumber": "00_contract_ContractNumber",
-    "storename": "00_contract_StoreName",
-    "storefulladdress": "00_contract_StoreFullAddress",
-    "companylegalname": "00_contract_CompanyLegalName",
-    "companycif": "00_contract_CompanyCIF",
-    "companylegaladdress": "00_contract_CompanyLegalAddress",
-    "clientfullname": "00_contract_ClientFullName",
-    "clientnif": "00_contract_ClientNIF",
-    "contactname": "00_contract_ContactName",
-    "contactnif": "00_contract_ContactNIF",
-    "clientaddress1": "00_contract_ClientAddressMainLine",
-    "clientaddress2": "00_contract_ClientAddressExtraLine",
-    "clientmailphone": "00_contract_ClientMainPhone",
-    "clientotherphones": "00_contract_ClientOtherPhones",
-    "clientemail": "00_contract_ClientEmail",
-    "clientpaymentmethod": "00_contract_ClientPaymentMethod",
-    "unitquantity": "00_contract_UnitQTY",
-    "unitsize": "00_contract_UnitSize",
-    "unitvolume": "00_contract_UnitVolume",
-    "contractinitialdate": "00_contract_InitialDate",
-    "contractenddate": "00_contract_EndDate",
-    "pricewithoutiva": "00_contract_PriceWithoutIVA",
-    "pricewithiva": "00_contract_PriceWithIVA",
-    "deposit": "00_contract_Deposit",
-    "insurance": "00_contract_Insurance",
-    "priceinsurance": "00_contract_PriceInsurance",
-    "adminfee": "00_contract_AdminFee",
-    "promotiondetail": "00_contract_PromotionDetail",
-    "contractdate": "00_contract_ContractDate",
-    "cityregistered": "00_contract_CityRegistered",
-    "tomoid": "00_contract_TomoID",
-    "folioid": "00_contract_FolioID",
-    "hojaid": "00_contract_HojaID",
-    "unitnumber": "00_contract_UnitNumber",
-    "selloempresa": "stamp_01",
-    "monthlytotalprice": "00_contract_Total",
-    "storecity": "00_contract_Storecity",
-    "valuedeclared": "00_contract_valuedeclared"
-  }
-},
-{
-  "documenttype": 0,
-  "documentname": "Contrato",
-  "templateid": "#00_UnitContract_ENes_Template",
-  "documentlanguage": "ES",
-  "documentcountry": "EN",
-  "fields": {
-    "contractnumber": "00_contract_ContractNumber",
-    "storename": "00_contract_StoreName",
-    "storefulladdress": "00_contract_StoreFullAddress",
-    "companylegalname": "00_contract_CompanyLegalName",
-    "companycif": "00_contract_CompanyCIF",
-    "companylegaladdress": "00_contract_CompanyLegalAddress",
-    "clientfullname": "00_contract_ClientFullName",
-    "clientnif": "00_contract_ClientNIF",
-    "contactname": "00_contract_ContactName",
-    "contactnif": "00_contract_ContactNIF",
-    "clientaddress1": "00_contract_ClientAddressMainLine",
-    "clientaddress2": "00_contract_ClientAddressExtraLine",
-    "clientmailphone": "00_contract_ClientMainPhone",
-    "clientotherphones": "00_contract_ClientOtherPhones",
-    "clientemail": "00_contract_ClientEmail",
-    "clientpaymentmethod": "00_contract_ClientPaymentMethod",
-    "unitquantity": "00_contract_UnitQTY",
-    "unitsize": "00_contract_UnitSize",
-    "unitvolume": "00_contract_UnitVolume",
-    "contractinitialdate": "00_contract_InitialDate",
-    "contractenddate": "00_contract_EndDate",
-    "pricewithoutiva": "00_contract_PriceWithoutIVA",
-    "pricewithiva": "00_contract_PriceWithIVA",
-    "deposit": "00_contract_Deposit",
-    "insurance": "00_contract_Insurance",
-    "priceinsurance": "00_contract_PriceInsurance",
-    "adminfee": "00_contract_AdminFee",
-    "promotiondetail": "00_contract_PromotionDetail",
-    "contractdate": "00_contract_ContractDate",
-    "cityregistered": "00_contract_CityRegistered",
-    "tomoid": "00_contract_TomoID",
-    "folioid": "00_contract_FolioID",
-    "hojaid": "00_contract_HojaID",
-    "unitnumber": "00_contract_UnitNumber",
-    "selloempresa": "stamp_01",
-    "monthlytotalprice": "00_contract_Total",
-    "storecity": "00_contract_Storecity",
-    "valuedeclared": "00_contract_valuedeclared"
-  }
-},
-{
-  "documenttype": 0,
-  "documentname": "Contrato",
-  "templateid": "#00_UnitContract_ENfr_Template",
-  "documentlanguage": "FR",
-  "documentcountry": "EN",
-  "fields": {
-    "contractnumber": "00_contract_ContractNumber",
-    "storename": "00_contract_StoreName",
-    "storefulladdress": "00_contract_StoreFullAddress",
-    "companylegalname": "00_contract_CompanyLegalName",
-    "companycif": "00_contract_CompanyCIF",
-    "companylegaladdress": "00_contract_CompanyLegalAddress",
-    "clientfullname": "00_contract_ClientFullName",
-    "clientnif": "00_contract_ClientNIF",
-    "contactname": "00_contract_ContactName",
-    "contactnif": "00_contract_ContactNIF",
-    "clientaddress1": "00_contract_ClientAddressMainLine",
-    "clientaddress2": "00_contract_ClientAddressExtraLine",
-    "clientmailphone": "00_contract_ClientMainPhone",
-    "clientotherphones": "00_contract_ClientOtherPhones",
-    "clientemail": "00_contract_ClientEmail",
-    "clientpaymentmethod": "00_contract_ClientPaymentMethod",
-    "unitquantity": "00_contract_UnitQTY",
-    "unitsize": "00_contract_UnitSize",
-    "unitvolume": "00_contract_UnitVolume",
-    "contractinitialdate": "00_contract_InitialDate",
-    "contractenddate": "00_contract_EndDate",
-    "pricewithoutiva": "00_contract_PriceWithoutIVA",
-    "pricewithiva": "00_contract_PriceWithIVA",
-    "deposit": "00_contract_Deposit",
-    "insurance": "00_contract_Insurance",
-    "priceinsurance": "00_contract_PriceInsurance",
-    "adminfee": "00_contract_AdminFee",
-    "promotiondetail": "00_contract_PromotionDetail",
-    "contractdate": "00_contract_ContractDate",
-    "cityregistered": "00_contract_CityRegistered",
-    "tomoid": "00_contract_TomoID",
-    "folioid": "00_contract_FolioID",
-    "hojaid": "00_contract_HojaID",
-    "unitnumber": "00_contract_UnitNumber",
-    "selloempresa": "stamp_01",
-    "monthlytotalprice": "00_contract_Total",
-    "storecity": "00_contract_Storecity",
-    "valuedeclared": "00_contract_valuedeclared"
-  }
-},
-{
-  "documenttype": 0,
-  "documentname": "Contrato",
-  "templateid": "#00_UnitContract_ENpt_Template",
-  "documentlanguage": "PT",
-  "documentcountry": "EN",
-  "fields": {
-    "contractnumber": "00_contract_ContractNumber",
-    "storename": "00_contract_StoreName",
-    "storefulladdress": "00_contract_StoreFullAddress",
-    "companylegalname": "00_contract_CompanyLegalName",
-    "companycif": "00_contract_CompanyCIF",
-    "companylegaladdress": "00_contract_CompanyLegalAddress",
-    "clientfullname": "00_contract_ClientFullName",
-    "clientnif": "00_contract_ClientNIF",
-    "contactname": "00_contract_ContactName",
-    "contactnif": "00_contract_ContactNIF",
-    "clientaddress1": "00_contract_ClientAddressMainLine",
-    "clientaddress2": "00_contract_ClientAddressExtraLine",
-    "clientmailphone": "00_contract_ClientMainPhone",
-    "clientotherphones": "00_contract_ClientOtherPhones",
-    "clientemail": "00_contract_ClientEmail",
-    "clientpaymentmethod": "00_contract_ClientPaymentMethod",
-    "unitquantity": "00_contract_UnitQTY",
-    "unitsize": "00_contract_UnitSize",
-    "unitvolume": "00_contract_UnitVolume",
-    "contractinitialdate": "00_contract_InitialDate",
-    "contractenddate": "00_contract_EndDate",
-    "pricewithoutiva": "00_contract_PriceWithoutIVA",
-    "pricewithiva": "00_contract_PriceWithIVA",
-    "deposit": "00_contract_Deposit",
-    "insurance": "00_contract_Insurance",
-    "priceinsurance": "00_contract_PriceInsurance",
-    "adminfee": "00_contract_AdminFee",
-    "promotiondetail": "00_contract_PromotionDetail",
-    "contractdate": "00_contract_ContractDate",
-    "cityregistered": "00_contract_CityRegistered",
-    "tomoid": "00_contract_TomoID",
-    "folioid": "00_contract_FolioID",
-    "hojaid": "00_contract_HojaID",
-    "unitnumber": "00_contract_UnitNumber",
-    "selloempresa": "stamp_01",
-    "monthlytotalprice": "00_contract_Total",
-    "storecity": "00_contract_Storecity",
-    "valuedeclared": "00_contract_valuedeclared"
-  }
-},
-
-
-
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec13a"
+  },
   "documenttype": 1,
   "documentcountry": "ES",
   "documentlanguage": "ES",
   "documentname": "Domiciliación SEPA",
   "templateid": "#01_BankAuth_SP_ESes_Template",
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971",
   "fields": {
     "contractnumber": "01_SEPAAuth_ContractNumber",
     "companylegalname": "01_SEPAAuth_CompanyLegalName",
@@ -768,13 +616,16 @@
     "clientfullname": "01_SEPAAuth_ClientFullName",
     "storecity": "01_SEPAAuth_StoreCity"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec13b"
+  },
   "documenttype": 1,
   "documentcountry": "ES",
   "documentlanguage": "EN",
   "documentname": "Domiciliación SEPA",
   "templateid": "#01_BankAuth_SP_ESen_Template",
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971",
   "fields": {
     "contractnumber": "01_SEPAAuth_ContractNumber",
     "companylegalname": "01_SEPAAuth_CompanyLegalName",
@@ -784,11 +635,15 @@
     "storecity": "01_SEPAAuth_StoreCity"
   }
 },{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec13c"
+  },
   "documenttype": 1,
   "documentcountry": "ES",
   "documentlanguage": "PT",
   "documentname": "Domiciliación SEPA",
   "templateid": "#01_BankAuth_SP_ESpt_Template",
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971",
   "fields": {
     "contractnumber": "01_SEPAAuth_ContractNumber",
     "companylegalname": "01_SEPAAuth_CompanyLegalName",
@@ -798,11 +653,15 @@
     "storecity": "01_SEPAAuth_StoreCity"
   }
 },{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec13d"
+  },
   "documenttype": 1,
   "documentcountry": "ES",
   "documentlanguage": "FR",
   "documentname": "Domiciliación SEPA",
   "templateid": "#01_BankAuth_SP_ESfr_Template",
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971",
   "fields": {
     "contractnumber": "01_SEPAAuth_ContractNumber",
     "companylegalname": "01_SEPAAuth_CompanyLegalName",
@@ -811,13 +670,16 @@
     "clientfullname": "01_SEPAAuth_ClientFullName",
     "storecity": "01_SEPAAuth_StoreCity"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec13e"
+  },
   "documenttype": 1,
   "documentcountry": "FR",
   "documentlanguage": "FR",
   "documentname": "Domiciliación SEPA",
   "templateid": "#01_BankAuth_SP_FRfr_Template",
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971",
   "fields": {
     "contractnumber": "01_SEPAAuth_ContractNumber",
     "companylegalname": "01_SEPAAuth_CompanyLegalName",
@@ -826,8 +688,10 @@
     "clientfullname": "01_SEPAAuth_ClientFullName",
     "storecity": "01_SEPAAuth_StoreCity"
   }
-},
-{
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec13f"
+  },
   "documenttype": 1,
   "documentcountry": "FR",
   "documentlanguage": "ES",
@@ -840,9 +704,12 @@
     "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
     "clientfullname": "01_SEPAAuth_ClientFullName",
     "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec140"
+  },
   "documenttype": 1,
   "documentcountry": "FR",
   "documentlanguage": "EN",
@@ -855,9 +722,12 @@
     "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
     "clientfullname": "01_SEPAAuth_ClientFullName",
     "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec141"
+  },
   "documenttype": 1,
   "documentcountry": "FR",
   "documentlanguage": "PT",
@@ -870,9 +740,12 @@
     "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
     "clientfullname": "01_SEPAAuth_ClientFullName",
     "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec142"
+  },
   "documenttype": 1,
   "documentcountry": "PT",
   "documentlanguage": "PT",
@@ -885,9 +758,12 @@
     "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
     "clientfullname": "01_SEPAAuth_ClientFullName",
     "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec143"
+  },
   "documenttype": 1,
   "documentcountry": "PT",
   "documentlanguage": "EN",
@@ -900,9 +776,12 @@
     "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
     "clientfullname": "01_SEPAAuth_ClientFullName",
     "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec144"
+  },
   "documenttype": 1,
   "documentcountry": "PT",
   "documentlanguage": "FR",
@@ -915,9 +794,12 @@
     "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
     "clientfullname": "01_SEPAAuth_ClientFullName",
     "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec145"
+  },
   "documenttype": 1,
   "documentcountry": "PT",
   "documentlanguage": "ES",
@@ -930,70 +812,12 @@
     "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
     "clientfullname": "01_SEPAAuth_ClientFullName",
     "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-{
-  "documenttype": 1,
-  "documentcountry": "EN",
-  "documentlanguage": "EN",
-  "documentname": "Domiciliación SEPA",
-  "templateid": "#01_BankAuth_SP_ENen_Template",
-  "fields": {
-    "contractnumber": "01_SEPAAuth_ContractNumber",
-    "companylegalname": "01_SEPAAuth_CompanyLegalName",
-    "companycif": "01_SEPAAuth_CompanyCIF",
-    "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
-    "clientfullname": "01_SEPAAuth_ClientFullName",
-    "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-{
-  "documenttype": 1,
-  "documentcountry": "EN",
-  "documentlanguage": "ES",
-  "documentname": "Domiciliación SEPA",
-  "templateid": "#01_BankAuth_SP_ENes_Template",
-  "fields": {
-    "contractnumber": "01_SEPAAuth_ContractNumber",
-    "companylegalname": "01_SEPAAuth_CompanyLegalName",
-    "companycif": "01_SEPAAuth_CompanyCIF",
-    "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
-    "clientfullname": "01_SEPAAuth_ClientFullName",
-    "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-{
-  "documenttype": 1,
-  "documentcountry": "EN",
-  "documentlanguage": "FR",
-  "documentname": "Domiciliación SEPA",
-  "templateid": "#01_BankAuth_SP_ENfr_Template",
-  "fields": {
-    "contractnumber": "01_SEPAAuth_ContractNumber",
-    "companylegalname": "01_SEPAAuth_CompanyLegalName",
-    "companycif": "01_SEPAAuth_CompanyCIF",
-    "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
-    "clientfullname": "01_SEPAAuth_ClientFullName",
-    "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-{
-  "documenttype": 1,
-  "documentcountry": "EN",
-  "documentlanguage": "pt",
-  "documentname": "Domiciliación SEPA",
-  "templateid": "#01_BankAuth_SP_ENpt_Template",
-  "fields": {
-    "contractnumber": "01_SEPAAuth_ContractNumber",
-    "companylegalname": "01_SEPAAuth_CompanyLegalName",
-    "companycif": "01_SEPAAuth_CompanyCIF",
-    "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
-    "clientfullname": "01_SEPAAuth_ClientFullName",
-    "storecity": "01_SEPAAuth_StoreCity"
-  }
-},
-
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec14a"
+  },
   "documenttype": 2,
   "documentlanguage": "ES",
   "documentcountry": "ES",
@@ -1005,8 +829,12 @@
     "companylegalname": "02_CardAuth_CompanyLegalName",
     "companycif": "02_CardAuth_CompanyCIF",
     "storecity": "02_CardAuth_StoreCity"
-  }
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
 },{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec14b"
+  },
   "documenttype": 2,
   "documentlanguage": "EN",
   "documentcountry": "ES",
@@ -1018,8 +846,12 @@
     "companylegalname": "02_CardAuth_CompanyLegalName",
     "companycif": "02_CardAuth_CompanyCIF",
     "storecity": "02_CardAuth_StoreCity"
-  }
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
 },{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec14c"
+  },
   "documenttype": 2,
   "documentlanguage": "FR",
   "documentcountry": "ES",
@@ -1031,9 +863,12 @@
     "companylegalname": "02_CardAuth_CompanyLegalName",
     "companycif": "02_CardAuth_CompanyCIF",
     "storecity": "02_CardAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec14d"
+  },
   "documenttype": 2,
   "documentlanguage": "PT",
   "documentcountry": "ES",
@@ -1045,9 +880,12 @@
     "companylegalname": "02_CardAuth_CompanyLegalName",
     "companycif": "02_CardAuth_CompanyCIF",
     "storecity": "02_CardAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec14e"
+  },
   "documenttype": 2,
   "documentlanguage": "FR",
   "documentcountry": "FR",
@@ -1059,9 +897,12 @@
     "companylegalname": "02_CardAuth_CompanyLegalName",
     "companycif": "02_CardAuth_CompanyCIF",
     "storecity": "02_CardAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec14f"
+  },
   "documenttype": 2,
   "documentlanguage": "ES",
   "documentcountry": "FR",
@@ -1073,37 +914,12 @@
     "companylegalname": "02_CardAuth_CompanyLegalName",
     "companycif": "02_CardAuth_CompanyCIF",
     "storecity": "02_CardAuth_StoreCity"
-  }
-},
-{
-  "documenttype": 2,
-  "documentlanguage": "FR",
-  "documentcountry": "EN",
-  "documentname": "Domiciliación Tarjeta",
-  "templateid": "#02_CardAuth_SP_FRen_Template",
-  "fields": {
-    "contractnumber": "02_CardAuth_ContractNumber",
-    "unitnumber": "02_CardAuth_UnitNumber",
-    "companylegalname": "02_CardAuth_CompanyLegalName",
-    "companycif": "02_CardAuth_CompanyCIF",
-    "storecity": "02_CardAuth_StoreCity"
-  }
-},
-{
-  "documenttype": 2,
-  "documentlanguage": "FR",
-  "documentcountry": "PT",
-  "documentname": "Domiciliación Tarjeta",
-  "templateid": "#02_CardAuth_SP_FRpt_Template",
-  "fields": {
-    "contractnumber": "02_CardAuth_ContractNumber",
-    "unitnumber": "02_CardAuth_UnitNumber",
-    "companylegalname": "02_CardAuth_CompanyLegalName",
-    "companycif": "02_CardAuth_CompanyCIF",
-    "storecity": "02_CardAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec152"
+  },
   "documenttype": 2,
   "documentlanguage": "PT",
   "documentcountry": "PT",
@@ -1115,9 +931,12 @@
     "companylegalname": "02_CardAuth_CompanyLegalName",
     "companycif": "02_CardAuth_CompanyCIF",
     "storecity": "02_CardAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec153"
+  },
   "documenttype": 2,
   "documentlanguage": "EN",
   "documentcountry": "PT",
@@ -1129,9 +948,12 @@
     "companylegalname": "02_CardAuth_CompanyLegalName",
     "companycif": "02_CardAuth_CompanyCIF",
     "storecity": "02_CardAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec154"
+  },
   "documenttype": 2,
   "documentlanguage": "ES",
   "documentcountry": "PT",
@@ -1143,9 +965,12 @@
     "companylegalname": "02_CardAuth_CompanyLegalName",
     "companycif": "02_CardAuth_CompanyCIF",
     "storecity": "02_CardAuth_StoreCity"
-  }
-},
-{
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "5f8ed9de945ec754942ec155"
+  },
   "documenttype": 2,
   "documentlanguage": "FR",
   "documentcountry": "PT",
@@ -1157,5 +982,40 @@
     "companylegalname": "02_CardAuth_CompanyLegalName",
     "companycif": "02_CardAuth_CompanyCIF",
     "storecity": "02_CardAuth_StoreCity"
-  }
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "601a83a3247d929a92b53acc"
+  },
+  "documenttype": 2,
+  "documentlanguage": "EN",
+  "documentcountry": "FR",
+  "documentname": "Domiciliación Tarjeta",
+  "templateid": "#02_CardAuth_SP_FRen_Template",
+  "fields": {
+    "contractnumber": "02_CardAuth_ContractNumber",
+    "unitnumber": "02_CardAuth_UnitNumber",
+    "companylegalname": "02_CardAuth_CompanyLegalName",
+    "companycif": "02_CardAuth_CompanyCIF",
+    "storecity": "02_CardAuth_StoreCity"
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
+},{
+  "_id": {
+    "$oid": "601a83b4247d929a92b53ae6"
+  },
+  "documenttype": 2,
+  "documentlanguage": "PT",
+  "documentcountry": "FR",
+  "documentname": "Domiciliación Tarjeta",
+  "templateid": "#02_CardAuth_SP_FRpt_Template",
+  "fields": {
+    "contractnumber": "02_CardAuth_ContractNumber",
+    "unitnumber": "02_CardAuth_UnitNumber",
+    "companylegalname": "02_CardAuth_CompanyLegalName",
+    "companycif": "02_CardAuth_CompanyCIF",
+    "storecity": "02_CardAuth_StoreCity"
+  },
+  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971"
 }]
