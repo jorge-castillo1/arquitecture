@@ -44,10 +44,10 @@ data:
   DocumentsSearchEndpoint:  {{ .Values.backend.config.docs.searchEndpoint }}
   MailStores: {{ .Values.backend.config.storesMail }}
   GatewaySignatureEventsUrl: {{ .Values.backend.config.signatureEventsUrl }}
-  ChangePaymentMethodCardEndpoint: {{ .Values.backend.config.precognisChangePaymentMethod }}
+  ChangePaymentMethodCardResponse: {{ .Values.backend.config.changePaymentMethodCardResponse }}
+  ChangePaymentMethodCardEndpoint: {{ .Values.backend.config.precognis.ChangePaymentMethod }}
   PayInvoiceByNewCardMethodCardResponse: {{ .Values.backend.config.payInvoiceByNewCardMethodCardResponse }}
   GatewayPaymentUrl: {{ .Values.backend.config.precognis.PaymentsUrl }}
-  ChangePaymentMethodCardEndpoint: {{ .Values.backend.config.precognis.ChangePaymentMethod }}
   CardConfirmationTokenEndpoint: {{ .Values.backend.config.precognis.CardConfirmationToken }}
   PayInvoice: {{ .Values.backend.config.precognis.PayInvoice }}
   GetCardEndpoint: {{ .Values.backend.config.precognis.GetCardEndpoint }}
