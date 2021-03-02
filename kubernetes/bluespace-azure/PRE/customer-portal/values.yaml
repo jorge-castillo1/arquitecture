@@ -95,6 +95,7 @@ smapi:
   tag: v_1.42
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.49;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
+    database: spacemanager
 
 signaturitapi:
   registry: bluespaceregistry.azurecr.io

@@ -8,6 +8,6 @@ metadata:
 data:
   OdbcConnection: {{ .Values.smapi.config.odbcConnection }}
   ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}
-  DatabaseName: {{ .Values.mongodb.database }}
+  DatabaseName: {{ .Values.smapi.config.database }}
   Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
   Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}

@@ -95,6 +95,7 @@ smapi:
   tag: v_1.34
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.48;Port=2638;Servername=BLUESQL;Database=Spaceman
+    database: spacemanager
 
 signaturitapi:
   registry: bluespaceregistry.azurecr.io
