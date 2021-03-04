@@ -87,6 +87,7 @@ crmapi:
     serviceUrl: http://212.36.77.37/BLUESPACE/
     domain: BLUESPACE
     api: api/data/v8.1/
+    authorization: NTLM
 
 smapi:
   registry: bluespaceregistry.azurecr.io

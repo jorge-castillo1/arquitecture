@@ -11,3 +11,4 @@ data:
   DatabaseName: {{ .Values.mongodb.database }}
   Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
   Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}
+  Authorization: {{ .Values.crmapi.config.authorization }}
