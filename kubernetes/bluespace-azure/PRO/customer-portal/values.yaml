@@ -88,6 +88,7 @@ crmapi:
     domain: BLUESPACE
     api: api/data/v8.1/
     authorization: NTLM
+    environment: PRO
 
 smapi:
   registry: bluespaceregistry.azurecr.io
