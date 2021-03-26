@@ -61,3 +61,4 @@ data:
   LoginMaxAttempts: !!string {{ .Values.backend.config.loginMaxAttempts }}
   Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
   Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}
+  BaseUrl: {{ .Values.backend.config.baseUrl }}

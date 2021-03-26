@@ -29,6 +29,7 @@ backend:
     accessCodeMaxAttempts: 5
     loginUnblockedTime: 15
     loginMaxAttempts: 5
+    baseUrl: https://myprofile-pre.bluespace.eu/
     precognis:
       PaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
