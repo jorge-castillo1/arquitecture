@@ -606,15 +606,21 @@
   "documentcountry": "ES",
   "documentlanguage": "ES",
   "documentname": "Domiciliación SEPA",
-  "templateid": "#01_BankAuth_SP_ESes_Template",
-  "brandingid": "b4d14229-5bc2-45d6-a4ff-e6450373a971",
+  "templateid": "#01_BankAuth_ESes_Template",
   "fields": {
     "contractnumber": "01_SEPAAuth_ContractNumber",
     "companylegalname": "01_SEPAAuth_CompanyLegalName",
     "companycif": "01_SEPAAuth_CompanyCIF",
     "companylegaladdress": "01_SEPAAuth_CompanyLegalAddress",
+    "companycountry": "01_SEPAAuth_CompanyCountry",
     "clientfullname": "01_SEPAAuth_ClientFullName",
-    "storecity": "01_SEPAAuth_StoreCity"
+    "clientaddress": "01_SEPAAuth_ClientAddressMainLine",
+    "clientcountry": "01_SEPAAuth_ClientCountry",
+    "clientpostalcode": "01_SEPAAuth_ClientAddressExtraline",
+    "storecity": "01_SEPAAuth_StoreCity",
+    "iban": "01_SEPAAuth_IBAN",
+    "aps": "01_SEPAAuth_APS",
+    "date": "01_SEPAAuth_Date"
   }
 },{
   "_id": {
