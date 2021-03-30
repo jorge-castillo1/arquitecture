@@ -30,7 +30,7 @@ backend:
     loginUnblockedTime: 15
     loginMaxAttempts: 5
     baseUrl: https://myprofile.bluespace.eu/
-    mailIT: christian.garcia@quantion.com
+    mailIT: avisosit@bluespace.es
     precognis:
       PaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
