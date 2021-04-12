@@ -127,6 +127,7 @@ signaturitapi:
     documentationApi: api/Documents
     documentationAuditApi: api/Documents/Audit
     customerPortal_ApiUrl: https://myprofile.bluespace.eu/
+    environment: PRO
 
 docapi:
   registry: bluespaceregistry.azurecr.io
