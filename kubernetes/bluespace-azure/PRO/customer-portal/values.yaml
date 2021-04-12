@@ -126,7 +126,7 @@ signaturitapi:
     gatewayUrl: http://docapi-service/
     documentationApi: api/Documents
     documentationAuditApi: api/Documents/Audit
-    customerPortal_ApiUrl: https://myprofile-pre.bluespace.eu/
+    customerPortal_ApiUrl: https://myprofile.bluespace.eu/
 
 docapi:
   registry: bluespaceregistry.azurecr.io
