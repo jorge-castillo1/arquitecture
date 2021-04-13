@@ -23,6 +23,12 @@ spec:
       containers:
       - image: "{{ .Values.signaturitapi.registry }}/{{ .Values.signaturitapi.repository }}:{{ .Values.signaturitapi.tag }}"
         name: signaturitapi{{ template "include_branch_name" . }}
+        env:
+          - name: CustomerPortal_ApiKey
+            valueFrom:
+              secretKeyRef:
+                name: customerportal-credentials
+                key: apikey
         envFrom:
           - configMapRef:
               name: signaturitapi-configmap

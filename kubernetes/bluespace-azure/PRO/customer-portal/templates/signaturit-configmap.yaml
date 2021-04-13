@@ -24,3 +24,5 @@ data:
   ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}
   Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
   Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}
+  CustomerPortal_ApiUrl: {{ .Values.signaturitapi.config.customerPortal_ApiUrl }}
+  Environment: {{ .Values.signaturitapi.config.environment }}
