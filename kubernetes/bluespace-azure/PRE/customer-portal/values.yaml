@@ -67,6 +67,7 @@ backend:
       gateway: http://docapi-service/
       documentsApi: api/Documents/
       searchEndpoint: api/Documents/Search/
+      blobAPI: api/blob/
 
 identity:
   baseuri: https://identity-pre.bluespace.eu

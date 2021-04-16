@@ -63,3 +63,4 @@ data:
   Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}
   BaseUrl: {{ .Values.backend.config.baseUrl }}
   MailIT: {{ .Values.backend.config.mailIT }}
+  BlobAPI:  {{ .Values.backend.config.docs.blobAPI }}
