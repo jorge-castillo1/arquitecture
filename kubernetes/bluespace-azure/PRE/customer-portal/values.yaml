@@ -8,7 +8,7 @@ angular:
     googleAnalyticsId: UA-160385611-1
     blobStorageUnitContainer: 'webportal-pre'
     httpBlobStorageUrl: 'https://blobstorageblues.blob.core.windows.net'
-    unitCategoryImage: 'image/unit/category/'
+    unitCategoryImagePath: 'image/unit/category/'
   tag: v_1.70
 
 backend:

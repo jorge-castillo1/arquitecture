@@ -13,4 +13,4 @@ data:
         window['googleAnalyticsId'] = '{{ .Values.angular.config.googleAnalyticsId }}';
         window['blobStorageUnitContainer'] = '{{ .Values.angular.config.blobStorageUnitContainer }}';
         window['httpBlobStorageUrl'] = '{{ .Values.angular.config.httpBlobStorageUrl }}';
-        window['unitCategoryImage'] = '{{ .Values.angular.config.unitCategoryImage }}';
+        window['unitCategoryImagePath'] = '{{ .Values.angular.config.unitCategoryImagePath }}';
