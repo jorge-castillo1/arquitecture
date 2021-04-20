@@ -6,6 +6,9 @@ angular:
     backendUrl: https://myprofile.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
     googleAnalyticsId: UA-432507-8
+    blobStorageUnitContainer: 'webportal-pro'
+    httpBlobStorageUrl: 'https://blobstorageblues.blob.core.windows.net'
+    unitCategoryImage: 'image/unit/category/'
   tag: v_1.39
 
 backend:
@@ -146,6 +149,8 @@ docapi:
     gatewayUrl: http://crmapi-service
     contractsApi: /crmapi/Contracts/
     sitesApi: /crmapi/Sites/
+    azureBlobStorageConnectionString: "DefaultEndpointsProtocol=https;AccountName=blobstorageblues;AccountKey=UN1QNSVZD3D7nqRjwQqQjkVdXDefZBJsJVFrOJJO8C2AxkBq6jONiqxRh1n2V+o9fjJubkc+LHtPO1yKstk+1w==;EndpointSuffix=core.windows.net"
+    blobStorageUnitContainer: 'webportal-pro'
 
 datosProyecto:
   aplicacion: web
