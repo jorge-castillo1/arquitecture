@@ -7,7 +7,7 @@ angular:
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
     googleAnalyticsId: UA-432507-8
     blobStorageUnitContainer: 'webportal-pro'
-    httpBlobStorageUrl: 'https://blobstorageblues.blob.core.windows.net'
+    httpBlobStorageUrl: 'https://prewebportalsa.blob.core.windows.net'
     unitCategoryImagePath: 'image/unit/category/'
   tag: v_1.39
 
