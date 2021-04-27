@@ -64,3 +64,4 @@ data:
   BaseUrl: {{ .Values.backend.config.baseUrl }}
   MailIT: {{ .Values.backend.config.mailIT }}
   BlobAPI:  {{ .Values.backend.config.docs.blobAPI }}
+  BlobStorageUnitImageContainer:  {{ .Values.backend.config.docs.blobStorageUnitImageContainer }}

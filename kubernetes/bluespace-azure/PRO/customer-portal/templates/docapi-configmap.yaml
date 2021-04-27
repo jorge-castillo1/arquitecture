@@ -21,4 +21,3 @@ data:
   Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
   Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}
   AzureBlobStorageConnectionString: {{ .Values.docapi.config.azureBlobStorageConnectionString }}
-  BlobStorageUnitContainer: {{ .Values.docapi.config.blobStorageUnitContainer }}
