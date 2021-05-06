@@ -86,7 +86,7 @@ crmapi:
   repository: bluespace-customerportal-web/crmapi
   tag: v_1.37
   config:
-    serviceUrl: http://212.36.77.37/BLUESPACE/
+    serviceUrl: https://bluebase20.bluespace.es/BLUESPACE/
     domain: BLUESPACE
     api: api/data/v8.1/
     authorization: NTLM
