@@ -11,3 +11,8 @@ data:
         window['httpBackendUrl'] = '{{ .Values.angular.config.backendUrl }}';
         window['googleApiKey'] = '{{ .Values.angular.config.googleApiKey }}';
         window['googleAnalyticsId'] = '{{ .Values.angular.config.googleAnalyticsId }}';
+        window['clientId'] = '{{ .Values.angular.config.clientId }}';
+        window['tenantId'] = '{{ .Values.angular.config.tenantId }}';
+        window['redirectUri'] = '{{ .Values.angular.config.redirectUri }}';
+        window['postLogoutRedirectUri'] = '{{ .Values.angular.config.postLogoutRedirectUri }}';
+        window['CustomHttpHeaderUseAzureMethodAuthentication'] = '{{ .Values.angular.config.CustomHttpHeaderUseAzureMethodAuthentication }}';

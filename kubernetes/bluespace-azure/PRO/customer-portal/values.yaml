@@ -6,6 +6,11 @@ angular:
     backendUrl: https://myprofile.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
     googleAnalyticsId: UA-432507-8
+    clientId: 2cbe6f17-cf20-4c8d-8717-e97949f6cdac
+    tenantId: 9198de27-04ba-4978-954a-65a095c8beaf
+    redirectUri: http://localhost:4200/wp-admin
+    postLogoutRedirectUri: http://localhost:4200/login
+    CustomHttpHeaderUseAzureMethodAuthentication: use-azure-method-authentication
   tag: v_1.42
 
 backend:
