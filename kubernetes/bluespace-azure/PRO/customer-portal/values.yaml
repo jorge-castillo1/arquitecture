@@ -35,7 +35,11 @@ backend:
     loginUnblockedTime: 15
     loginMaxAttempts: 5
     baseUrl: https://myprofile.bluespace.eu/
-    mailIT: avisosit@bluespace.es
+    mailIT: vicente.gonzalez@bluespace.es
+    azureAd: 
+      instance: https://login.microsoftonline.com/
+      clientId: 2cbe6f17-cf20-4c8d-8717-e97949f6cdac
+      tenantId: 9198de27-04ba-4978-954a-65a095c8beaf
     precognis:
       PaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod

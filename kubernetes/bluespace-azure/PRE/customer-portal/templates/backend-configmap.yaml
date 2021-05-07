@@ -63,3 +63,6 @@ data:
   Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}
   BaseUrl: {{ .Values.backend.config.baseUrl }}
   MailIT: {{ .Values.backend.config.mailIT }}
+  Instance: {{ .Values.backend.config.azureAd.instance }}
+  ClientId: {{ .Values.backend.config.azureAd.clientId }}
+  TenantId: {{ .Values.backend.config.azureAd.tenantId }}

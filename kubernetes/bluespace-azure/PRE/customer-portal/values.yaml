@@ -36,6 +36,10 @@ backend:
     loginMaxAttempts: 5
     baseUrl: https://myprofile-pre.bluespace.eu/
     mailIT: christian.garcia@quantion.com
+    azureAd: 
+      instance: https://login.microsoftonline.com/
+      clientId: 2cbe6f17-cf20-4c8d-8717-e97949f6cdac
+      tenantId: 9198de27-04ba-4978-954a-65a095c8beaf
     precognis:
       PaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
