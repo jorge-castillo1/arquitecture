@@ -8,9 +8,8 @@ angular:
     googleAnalyticsId: UA-160385611-1
     clientId: 2cbe6f17-cf20-4c8d-8717-e97949f6cdac
     tenantId: 9198de27-04ba-4978-954a-65a095c8beaf
-    redirectUri: http://localhost:4200/backoffice
-    postLogoutRedirectUri: http://localhost:4200/login
-    CustomHttpHeaderUseAzureMethodAuthentication: use-azure-method-authentication
+    redirectUri: https://myprofile-pre.bluespace.eu/backoffice
+    postLogoutRedirectUri: https://myprofile-pre.bluespace.eu/login
   tag: v_1.72
 
 backend:
