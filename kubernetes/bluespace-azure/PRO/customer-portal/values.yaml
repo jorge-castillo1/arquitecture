@@ -8,20 +8,20 @@ angular:
     googleAnalyticsId: UA-432507-8
     blobStorageUnitImageContainer: 'unit-images'
     httpBlobStorageUrl: 'https://prewebportalsa.blob.core.windows.net'
-  tag: v_1.39
+  tag: v_1.43
 
 backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.39
+  tag: v_1.43
   config:
     inviteUrl: https://myprofile.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
     contactMail: vicente.gonzalez@bluespace.es
-    storesMail: christian.garcia@quantion.com
+    storesMail: vicente.gonzalez@bluespace.es
     signatureEventsUrl: http://backend-service/api/Events
     precognisPaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
     changePaymentMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
@@ -88,9 +88,9 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.36
+  tag: v_1.40
   config:
-    serviceUrl: http://212.36.77.37/BLUESPACE/
+    serviceUrl: https://bluebase20.bluespace.es/BLUESPACE/
     domain: BLUESPACE
     api: api/data/v8.1/
     authorization: NTLM
@@ -100,7 +100,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.36
+  tag: v_1.40
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.48;Port=2638;Servername=BLUESQL;Database=Spaceman
     database: spacemanager
@@ -109,7 +109,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.36
+  tag: v_1.40
   config:
     signaturitapi: https://api.signaturit.com/v3/
     token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
@@ -137,7 +137,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.36
+  tag: v_1.40
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
