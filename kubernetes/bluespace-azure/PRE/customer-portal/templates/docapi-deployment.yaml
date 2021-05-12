@@ -49,6 +49,16 @@ spec:
               secretKeyRef:
                 name: customerportal-credentials
                 key: apikey
+          - name: Email__Smtp__Username
+            valueFrom:
+              secretKeyRef:
+                name: email-credentials
+                key: user
+          - name: Email__Smtp__Password
+            valueFrom:
+              secretKeyRef:
+                name: email-credentials
+                key: password
         envFrom:
           - configMapRef:
               name: docapi-configmap
