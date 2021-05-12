@@ -2,6 +2,7 @@ angular:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/frontend
+  tag: v_1.73
   config:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
@@ -10,13 +11,14 @@ angular:
     tenantId: 9198de27-04ba-4978-954a-65a095c8beaf
     redirectUri: https://myprofile-pre.bluespace.eu/backoffice
     postLogoutRedirectUri: https://myprofile-pre.bluespace.eu/login
-  tag: v_1.72
+    blobStorageUnitImageContainer: 'unit-images'
+    httpBlobStorageUrl: 'https://prewebportalsa.blob.core.windows.net'
 
 backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.72
+  tag: v_1.73
   config:
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
@@ -75,6 +77,9 @@ backend:
       gateway: http://docapi-service/
       documentsApi: api/Documents/
       searchEndpoint: api/Documents/Search/
+      blobAPI: api/blob/
+      blobStorageUnitImageContainer: 'unit-images'
+
 
 identity:
   baseuri: https://identity-pre.bluespace.eu
@@ -92,7 +97,7 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.66
+  tag: v_1.67
   config:
     serviceUrl: https://bluebasetest.bluespace.es/BLUESPACEPRE/
     domain: BLUESPACE
@@ -104,7 +109,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.66
+  tag: v_1.67
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.49;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
     database: spacemanager
@@ -113,7 +118,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.66
+  tag: v_1.67
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -141,7 +146,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.66
+  tag: v_1.67
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
@@ -153,6 +158,7 @@ docapi:
     gatewayUrl: http://crmapi-service
     contractsApi: /crmapi/Contracts/
     sitesApi: /crmapi/Sites/
+    azureBlobStorageConnectionString: "DefaultEndpointsProtocol=https;AccountName=prewebportalsa;AccountKey=BZf+jxz4E2OziR0egxxQcZnnmOPLA9wdvRvxreLR12FJgtnvwljCVrCQ7NZjiYnZNkbBzVoAS9EKsKgJuJdkgQ==;EndpointSuffix=core.windows.net"
 
 datosProyecto:
   aplicacion: web

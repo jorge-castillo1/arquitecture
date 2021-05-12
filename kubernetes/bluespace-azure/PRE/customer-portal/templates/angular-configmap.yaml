@@ -15,3 +15,5 @@ data:
         window['tenantId'] = '{{ .Values.angular.config.tenantId }}';
         window['redirectUri'] = '{{ .Values.angular.config.redirectUri }}';
         window['postLogoutRedirectUri'] = '{{ .Values.angular.config.postLogoutRedirectUri }}';
+        window['blobStorageUnitImageContainer'] = '{{ .Values.angular.config.blobStorageUnitImageContainer }}';
+        window['httpBlobStorageUrl'] = '{{ .Values.angular.config.httpBlobStorageUrl }}';
