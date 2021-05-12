@@ -44,6 +44,11 @@ spec:
               secretKeyRef:
                 name: sharepoint-credentials
                 key: realm
+          - name: CustomerPortal_ApiKey
+            valueFrom:
+              secretKeyRef:
+                name: customerportal-credentials
+                key: apikey
         envFrom:
           - configMapRef:
               name: docapi-configmap
