@@ -11,3 +11,5 @@ data:
         window['httpBackendUrl'] = '{{ .Values.angular.config.backendUrl }}';
         window['googleApiKey'] = '{{ .Values.angular.config.googleApiKey }}';
         window['googleAnalyticsId'] = '{{ .Values.angular.config.googleAnalyticsId }}';
+        window['blobStorageUnitImageContainer'] = '{{ .Values.angular.config.blobStorageUnitImageContainer }}';
+        window['httpBlobStorageUrl'] = '{{ .Values.angular.config.httpBlobStorageUrl }}';

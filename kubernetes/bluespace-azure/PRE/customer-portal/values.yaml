@@ -6,6 +6,8 @@ angular:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
     googleAnalyticsId: UA-160385611-1
+    blobStorageUnitImageContainer: 'unit-images'
+    httpBlobStorageUrl: 'https://prewebportalsa.blob.core.windows.net'
   tag: v_1.72
 
 backend:
@@ -67,6 +69,9 @@ backend:
       gateway: http://docapi-service/
       documentsApi: api/Documents/
       searchEndpoint: api/Documents/Search/
+      blobAPI: api/blob/
+      blobStorageUnitImageContainer: 'unit-images'
+
 
 identity:
   baseuri: https://identity-pre.bluespace.eu
@@ -145,6 +150,7 @@ docapi:
     gatewayUrl: http://crmapi-service
     contractsApi: /crmapi/Contracts/
     sitesApi: /crmapi/Sites/
+    azureBlobStorageConnectionString: "DefaultEndpointsProtocol=https;AccountName=prewebportalsa;AccountKey=BZf+jxz4E2OziR0egxxQcZnnmOPLA9wdvRvxreLR12FJgtnvwljCVrCQ7NZjiYnZNkbBzVoAS9EKsKgJuJdkgQ==;EndpointSuffix=core.windows.net"
 
 datosProyecto:
   aplicacion: web
