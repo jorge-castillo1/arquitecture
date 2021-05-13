@@ -44,6 +44,16 @@ spec:
               secretKeyRef:
                 name: sharepoint-credentials
                 key: realm
+          - name: Email__Smtp__Username
+            valueFrom:
+              secretKeyRef:
+                name: email-credentials
+                key: user
+          - name: Email__Smtp__Password
+            valueFrom:
+              secretKeyRef:
+                name: email-credentials
+                key: password
         envFrom:
           - configMapRef:
               name: docapi-configmap
