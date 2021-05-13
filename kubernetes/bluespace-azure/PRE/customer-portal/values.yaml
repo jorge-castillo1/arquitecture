@@ -151,6 +151,7 @@ docapi:
     contractsApi: /crmapi/Contracts/
     sitesApi: /crmapi/Sites/
     azureBlobStorageConnectionString: "DefaultEndpointsProtocol=https;AccountName=prewebportalsa;AccountKey=BZf+jxz4E2OziR0egxxQcZnnmOPLA9wdvRvxreLR12FJgtnvwljCVrCQ7NZjiYnZNkbBzVoAS9EKsKgJuJdkgQ==;EndpointSuffix=core.windows.net"
+    emailITSupport: christian.garcia@quantion.com
 
 datosProyecto:
   aplicacion: web
