@@ -22,3 +22,4 @@ data:
   Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}
   AzureBlobStorageConnectionString: {{ .Values.docapi.config.azureBlobStorageConnectionString }}
   EmailITSupport: {{ .Values.docapi.config.emailITSupport }}
+  Email__Smtp__Host: {{ .Values.backend.config.mailHost }}
