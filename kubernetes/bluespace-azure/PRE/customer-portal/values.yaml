@@ -24,8 +24,8 @@ backend:
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
-    contactMail: christian.garcia@quantion.com
-    storesMail: christian.garcia@quantion.com
+    contactMail: jorge.castillo@quantion.com
+    storesMail: jorge.castillo@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
     precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
     changePaymentMethodCardResponse: https://myprofile-pre.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
@@ -36,7 +36,7 @@ backend:
     loginUnblockedTime: 15
     loginMaxAttempts: 5
     baseUrl: https://myprofile-pre.bluespace.eu/
-    mailIT: christian.garcia@quantion.com
+    mailIT: jorge.castillo@quantion.com
     azureAd: 
       instance: https://login.microsoftonline.com/
       clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
@@ -160,7 +160,7 @@ docapi:
     sitesApi: /crmapi/Sites/
     azureBlobStorageConnectionString: "DefaultEndpointsProtocol=https;AccountName=prewebportalsa;AccountKey=BZf+jxz4E2OziR0egxxQcZnnmOPLA9wdvRvxreLR12FJgtnvwljCVrCQ7NZjiYnZNkbBzVoAS9EKsKgJuJdkgQ==;EndpointSuffix=core.windows.net"
     mailHost: smtp.office365.com
-    emailITSupport: christian.garcia@quantion.com
+    emailITSupport: jorge.castillo@quantion.com
     mailFrom: no-reply@bluespace.eu
 
 datosProyecto:
