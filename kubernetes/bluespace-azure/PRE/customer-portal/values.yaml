@@ -2,13 +2,17 @@ angular:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/frontend
+  tag: v_1.77
   config:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
     googleAnalyticsId: UA-160385611-1
+    clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
+    tenantId: eaac2fb5-db15-44de-9b3a-fd6b9d799c58
+    redirectUri: https://myprofile-pre.bluespace.eu/backoffice
+    postLogoutRedirectUri: https://myprofile-pre.bluespace.eu/login
     blobStorageUnitImageContainer: 'unit-images'
     httpBlobStorageUrl: 'https://prewebportalsa.blob.core.windows.net'
-  tag: v_1.77
 
 backend:
   registry: bluespaceregistry.azurecr.io
@@ -20,8 +24,8 @@ backend:
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
-    contactMail: christian.garcia@quantion.com
-    storesMail: christian.garcia@quantion.com
+    contactMail: jorge.castillo@quantion.com
+    storesMail: jorge.castillo@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
     precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
     changePaymentMethodCardResponse: https://myprofile-pre.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
@@ -32,7 +36,11 @@ backend:
     loginUnblockedTime: 15
     loginMaxAttempts: 5
     baseUrl: https://myprofile-pre.bluespace.eu/
-    mailIT: christian.garcia@quantion.com
+    mailIT: jorge.castillo@quantion.com
+    azureAd: 
+      instance: https://login.microsoftonline.com/
+      clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
+      tenantId: eaac2fb5-db15-44de-9b3a-fd6b9d799c58
     precognis:
       PaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
@@ -151,8 +159,8 @@ docapi:
     contractsApi: /crmapi/Contracts/
     sitesApi: /crmapi/Sites/
     azureBlobStorageConnectionString: "DefaultEndpointsProtocol=https;AccountName=prewebportalsa;AccountKey=BZf+jxz4E2OziR0egxxQcZnnmOPLA9wdvRvxreLR12FJgtnvwljCVrCQ7NZjiYnZNkbBzVoAS9EKsKgJuJdkgQ==;EndpointSuffix=core.windows.net"
-    emailITSupport: christian.garcia@quantion.com
     mailHost: smtp.office365.com
+    emailITSupport: jorge.castillo@quantion.com
     mailFrom: no-reply@bluespace.eu
 
 datosProyecto:
