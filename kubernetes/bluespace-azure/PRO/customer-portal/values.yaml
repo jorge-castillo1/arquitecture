@@ -8,13 +8,13 @@ angular:
     googleAnalyticsId: UA-432507-8
     blobStorageUnitImageContainer: 'unit-images'
     httpBlobStorageUrl: 'https://prewebportalsa.blob.core.windows.net'
-  tag: v_1.44
+  tag: v_1.45
 
 backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.44
+  tag: v_1.45
   config:
     inviteUrl: https://myprofile.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
@@ -88,7 +88,7 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.41
+  tag: v_1.42
   config:
     serviceUrl: https://bluebase20.bluespace.es/BLUESPACE/
     domain: BLUESPACE
@@ -100,7 +100,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.41
+  tag: v_1.42
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.48;Port=2638;Servername=BLUESQL;Database=Spaceman
     database: spacemanager
@@ -109,7 +109,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.41
+  tag: v_1.42
   config:
     signaturitapi: https://api.signaturit.com/v3/
     token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
@@ -137,7 +137,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.41
+  tag: v_1.42
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
