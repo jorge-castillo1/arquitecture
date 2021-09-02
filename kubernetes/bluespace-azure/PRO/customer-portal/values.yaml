@@ -159,7 +159,7 @@ docapi:
     sitesApi: /crmapi/Sites/
     azureBlobStorageConnectionString: "DefaultEndpointsProtocol=https;AccountName=prewebportalsa;AccountKey=BZf+jxz4E2OziR0egxxQcZnnmOPLA9wdvRvxreLR12FJgtnvwljCVrCQ7NZjiYnZNkbBzVoAS9EKsKgJuJdkgQ==;EndpointSuffix=core.windows.net"
     mailHost: smtp.office365.com
-    emailITSupport: jorge.castillo@quantion.com
+    emailITSupport: support.bluespace@quantion.com
     mailFrom: no-reply@bluespace.eu
 
 datosProyecto:
