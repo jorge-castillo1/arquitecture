@@ -86,8 +86,8 @@ cron:
   tag: latest
   config:
     gatewaySignatureUrl: http://signaturitapi-service
-    signatureEndpoint: /api/signature/
-    userEndpoint: /api/users/
+    signatureEndpoint: api/signature/
+    userEndpoint: api/users/
     customerPortalApiUrl: https://myprofile-pre.bluespace.eu/backend/
     customerPortalApiKey: F56A2E61-6D3C-4C3F-B1B5-16C335EADA96
     environment: PRE
