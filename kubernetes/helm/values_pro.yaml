@@ -85,7 +85,7 @@ cron:
   repository: bluespace-customerportal-web/cronjobs
   tag: latest
   config:
-    gatewaySignatureUrl: http://signaturitapi-service
+    gatewaySignatureUrl: http://signaturitapi-service/
     signatureEndpoint: api/signature/
     userEndpoint: api/users/
     customerPortalApiUrl: https://myprofile.bluespace.eu/backend/
