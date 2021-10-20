@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: smapi-configmap
-  namespace: {{ .Release.Namespace }}
-  labels:
-    deploy: {{ template "datosProyecto.url" . }}
-data:
-  OdbcConnection: {{ .Values.smapi.config.odbcConnection }}
