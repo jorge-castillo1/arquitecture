@@ -1,0 +1,202 @@
+angular:
+  registry: bluespaceregistry.azurecr.io
+  replicas: 1
+  repository: bluespace-customerportal-web/frontend
+  tag: v_1.100
+  config:
+    backendUrl: https://myprofile.bluespace.eu/backend
+    googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
+    googleAnalyticsId: UA-432507-8
+    clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
+    tenantId: eaac2fb5-db15-44de-9b3a-fd6b9d799c58
+    redirectUri: https://myprofile.bluespace.eu/backoffice
+    postLogoutRedirectUri: https://myprofile.bluespace.eu/login
+    blobStorageUnitImageContainer: 'unit-images'
+    httpBlobStorageUrl: 'https://prewebportalsa.blob.core.windows.net'
+
+backend:
+  registry: bluespaceregistry.azurecr.io
+  replicas: 1
+  repository: bluespace-customerportal-web/backend
+  tag: v_1.100
+  config:
+    inviteUrl: https://myprofile.bluespace.eu/signup/
+    resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
+    mailFrom: no-reply@bluespace.eu
+    mailHost: smtp.office365.com
+    contactMail: vicente.gonzalez@bluespace.es
+    storesMail: vicente.gonzalez@bluespace.es
+    signatureEventsUrl: http://backend-service/api/Events
+    precognisPaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
+    changePaymentMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
+    payInvoiceByNewCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/invoice/response
+    updateCardMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/update-card/response
+    accessCodeUnblockedTime: 15
+    accessCodeMaxAttempts: 5
+    loginUnblockedTime: 15
+    loginMaxAttempts: 5
+    baseUrl: https://myprofile.bluespace.eu/
+    mailIT: vicente.gonzalez@bluespace.es
+    azureAd: 
+      instance: https://login.microsoftonline.com/
+      clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
+      tenantId: eaac2fb5-db15-44de-9b3a-fd6b9d799c58
+    precognis:
+      PaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
+      ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
+      CardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
+      PayInvoice: com.precognis.einapay.bluespace.payinvoice_sm/usetoken
+      GetCardEndpoint: com.precognis.einapay.bluespace.checkcard
+      PayInvoiceNewCard: com.precognis.einapay.bluespace.payinvoice_sm/usenewcard
+      UpdateCardEndpoint: com.precognis.einapay.bluespace.webportalcard/updatecard
+      UpdateCardConfirmationTokenEndpoint: com.precognis.einapay.bluespace.cardsignature/updatecard
+    environment: PRO
+    crm:
+      gateway: http://crmapi-service
+      profileApi: /crmapi/Contacts/
+      contractsApi: /crmapi/Contracts/
+      accountsApi: /crmapi/Accounts/
+      countriesApi: /crmapi/Countries/
+      languagesApi: /crmapi/Languages/
+      storesApi: /crmapi/Sites/
+      unitsApi: /crmapi/Units/
+      contractsCodeApi: /crmapi/Contracts/code/
+      paymentsApi: /crmapi/Payments/
+      opportunityApi: /crmapi/Opportunity/
+    sm:
+      gateway: http://smapi-service
+      contractsApi: /smapi/Contract/
+      accountApi: /smapi/Account/
+      invoiceApi: /smapi/Invoice/
+      InvoiceByCustomerApi: /smapi/Invoice/customer/
+      invoicePaymentApi: /smapi/Invoice/payment/
+    sign:
+      gateway: http://signaturitapi-service
+      endpoint: api/signature/
+    docs:
+      gateway: http://docapi-service/
+      documentsApi: api/Documents/
+      searchEndpoint: api/Documents/Search/
+      blobAPI: api/blob/
+      blobStorageUnitImageContainer: 'unit-images'
+
+identity:
+  baseuri: https://identity.bluespace.eu
+  endpoints:
+    authorize: oauth2/token
+    validate: oauth2/introspect
+    provisioning: wso2/scim/Users
+    groups: scim2/Groups
+    revoke: oauth2/revoke
+
+ingress:
+  secretName: bluespace-tls
+  host: myprofile.bluespace.eu
+
+crmapi:
+  registry: bluespaceregistry.azurecr.io
+  replicas: 1
+  repository: bluespace-customerportal-web/crmapi
+  tag: v_1.98
+  config:
+    serviceUrl: https://bluebase20.bluespace.es/BLUESPACE/
+    domain: BLUESPACE
+    api: api/data/v8.1/
+    authorization: NTLM
+    environment: PRO
+
+smapi:
+  registry: bluespaceregistry.azurecr.io
+  replicas: 1
+  repository: bluespace-customerportal-web/smapi
+  tag: v_1.98
+  config:
+    odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.48;Port=2638;Servername=BLUESQL;Database=Spaceman
+    database: spacemanager
+
+signaturitapi:
+  registry: bluespaceregistry.azurecr.io
+  replicas: 1
+  repository: bluespace-customerportal-web/signaturitapi
+  tag: v_1.98
+  config:
+    signaturitapi: https://api.signaturit.com/v3/
+    token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    es:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    en:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
+    fr:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: oDBdxHiNWqqKPnLfdUrHNqpOkzyVyNXhWmdztHHlIXUHbCxxTasMvMjRWBXAgGLtQCViFujjljbMUVBuSDYNuJ
+    pt:
+      signaturitapi: https://api.signaturit.com/v3/
+      token: USPSYdCQNrYMTlaMZPbsMGxIVWwOtunKcslBzduiEzqywJTxEYGLcdxcfuzqYQfRAnYpAHLKYFfTahJeOjOWeV
+    database: signatures
+    eventsUrl: https://myprofile.bluespace.eu/signature/api/Events
+    gatewayUrl: http://docapi-service/
+    documentationApi: api/Documents
+    documentationAuditApi: api/Documents/Audit
+    customerPortal_ApiUrl: https://myprofile.bluespace.eu/
+    environment: PRO
+
+docapi:
+  registry: bluespaceregistry.azurecr.io
+  replicas: 1
+  repository: bluespace-customerportal-web/sharepointapi
+  tag: v_1.98
+  config:
+    database: documents
+    serviceUrl: https://bluespaceselfstorage.sharepoint.com
+    sitesUrl: /sites/Stores/
+    api: _api/
+    environment: PRO
+    siteName: SantBoi
+    sharedDocumentFolder: Documentos compartidos
+    gatewayUrl: http://crmapi-service
+    contractsApi: /crmapi/Contracts/
+    sitesApi: /crmapi/Sites/
+    azureBlobStorageConnectionString: "DefaultEndpointsProtocol=https;AccountName=prewebportalsa;AccountKey=BZf+jxz4E2OziR0egxxQcZnnmOPLA9wdvRvxreLR12FJgtnvwljCVrCQ7NZjiYnZNkbBzVoAS9EKsKgJuJdkgQ==;EndpointSuffix=core.windows.net"
+    mailHost: smtp.office365.com
+    emailITSupport: support.bluespace@quantion.com
+    mailFrom: no-reply@bluespace.eu
+
+datosProyecto:
+  aplicacion: web
+  cliente: bluespace
+  entorno: pro
+  environment: PRO
+  logLevel: Information
+  proyecto: customerportal
+  whitelist:
+    enabled: false
+    listIp:
+    - 2.139.194.97/32
+
+mongodb:
+  database: customerportal
+  datosProyecto:
+    aplicacion: web
+    cliente: bluespace
+    entorno: pro
+    proyecto: customerportal
+  enabled: true
+  fullnameOverride: mongodb
+  persistence:
+    enabled: true
+    size: 128Gi
+  replicaSet:
+    enabled: true
+    name: rs0
+    pdb:
+      enabled: false
+      minAvailable:
+        arbiter: 1
+        primary: 1
+        secondary: 1
+    replicas:
+      arbiter: 1
+      secondary: 2
+  usePassword: false

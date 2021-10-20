@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: backend-ingress{{ template "include_branch_name" . }}
+  name: docapi-ingress{{ template "include_branch_name" . }}
   namespace: {{ .Release.Namespace }}
   labels:
     deploy: {{ template "datosProyecto.url" . }}
@@ -10,6 +10,9 @@ metadata:
     nginx.ingress.kubernetes.io/affinity: "cookie"
     nginx.ingress.kubernetes.io/session-cookie-name: "route"
     nginx.ingress.kubernetes.io/session-cookie-hash: "sha1"
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "600s"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
     nginx.ingress.kubernetes.io/rewrite-target: /$2
     {{- if .Values.datosProyecto.whitelist.enabled -}}
     nginx.ingress.kubernetes.io/whitelist-source-range: {{ template "whitelist" . }}
@@ -17,13 +20,13 @@ metadata:
 spec:
   tls:
   - hosts:
-    - myprofile.bluespace.eu
+    - {{ .Values.ingress.host }}
     secretName: {{ .Values.ingress.secretName }}
   rules:
-  - host: myprofile.bluespace.eu
+  - host: {{ .Values.ingress.host }}
     http:
       paths:
-      - path: /backend(/|$)(.*)
+      - path: /document(/|$)(.*)
         backend:
-          serviceName: backend-service{{ template "include_branch_name" . }}
+          serviceName: docapi-service{{ template "include_branch_name" . }}
           servicePort: 80

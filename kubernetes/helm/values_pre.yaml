@@ -92,6 +92,7 @@ identity:
 
 ingress:
   secretName: bluespace-tls
+  host: myprofile-pre.bluespace.eu
 
 crmapi:
   registry: bluespaceregistry.azurecr.io
@@ -167,6 +168,7 @@ datosProyecto:
   aplicacion: web
   cliente: bluespace
   entorno: pre
+  environment: PRE
   logLevel: Information
   mongologLevel: Warning
   proyecto: customerportal

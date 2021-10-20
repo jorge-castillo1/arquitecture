@@ -7,7 +7,7 @@ metadata:
     deploy: {{ template "datosProyecto.url" . }}
 data:
   config.js: |
-        window['httpApiManagerUrl'] = 'https://myprofile.bluespace.eu/backend';
+        window['httpApiManagerUrl'] = '{{ .Values.angular.config.backendUrl }}';
         window['httpBackendUrl'] = '{{ .Values.angular.config.backendUrl }}';
         window['googleApiKey'] = '{{ .Values.angular.config.googleApiKey }}';
         window['googleAnalyticsId'] = '{{ .Values.angular.config.googleAnalyticsId }}';

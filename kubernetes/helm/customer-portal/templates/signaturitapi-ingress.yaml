@@ -20,10 +20,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - myprofile-pre.bluespace.eu
+    - {{ .Values.ingress.host }}
     secretName: {{ .Values.ingress.secretName }}
   rules:
-  - host: myprofile-pre.bluespace.eu
+  - host: {{ .Values.ingress.host }}
     http:
       paths:
       - path: /signature(/|$)(.*)

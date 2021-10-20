@@ -7,7 +7,7 @@ metadata:
     deploy: {{ template "datosProyecto.url" . }}
 data:
   MONGO_URL: {{ template "mongodb_replicaset_url" . }}
-  ENV: PRE
+  ENV: {{ .Values.datosProyecto.environment }}
   Environment: {{ .Values.backend.config.environment }}
   MONGO_HOST: {{ template "mongodb_replicaset_host" . }}
   DatabaseName: {{ .Values.mongodb.database }}
@@ -45,9 +45,9 @@ data:
   MailStores: {{ .Values.backend.config.storesMail }}
   GatewaySignatureEventsUrl: {{ .Values.backend.config.signatureEventsUrl }}
   ChangePaymentMethodCardResponse: {{ .Values.backend.config.changePaymentMethodCardResponse }}
+  ChangePaymentMethodCardEndpoint: {{ .Values.backend.config.precognis.ChangePaymentMethod }}
   PayInvoiceByNewCardMethodCardResponse: {{ .Values.backend.config.payInvoiceByNewCardMethodCardResponse }}
   GatewayPaymentUrl: {{ .Values.backend.config.precognis.PaymentsUrl }}
-  ChangePaymentMethodCardEndpoint: {{ .Values.backend.config.precognis.ChangePaymentMethod }}
   CardConfirmationTokenEndpoint: {{ .Values.backend.config.precognis.CardConfirmationToken }}
   PayInvoice: {{ .Values.backend.config.precognis.PayInvoice }}
   GetCardEndpoint: {{ .Values.backend.config.precognis.GetCardEndpoint }}
