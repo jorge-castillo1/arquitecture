@@ -79,6 +79,7 @@ backend:
       searchEndpoint: api/Documents/Search/
       blobAPI: api/blob/
       blobStorageUnitImageContainer: 'unit-images'
+      BlobStorageStoreFacadeImageContainer: 'stores-images'
 
 cron:
   registry: bluespaceregistry.azurecr.io
@@ -151,7 +152,7 @@ signaturitapi:
     gatewayUrl: http://docapi-service/
     documentationApi: api/Documents
     documentationAuditApi: api/Documents/Audit
-    customerPortal_ApiUrl: https://myprofile-pre.bluespace.eu/
+    customerPortal_ApiUrl: https://myprofile-pre.bluespace.eu/backend/
     environment: PRE
 
 docapi:

@@ -79,6 +79,7 @@ backend:
       searchEndpoint: api/Documents/Search/
       blobAPI: api/blob/
       blobStorageUnitImageContainer: 'unit-images'
+      BlobStorageStoreFacadeImageContainer: 'stores-images'
 
 cron:
   registry: bluespaceregistry.azurecr.io
@@ -170,7 +171,7 @@ docapi:
     gatewayUrl: http://crmapi-service
     contractsApi: /crmapi/Contracts/
     sitesApi: /crmapi/Sites/
-    azureBlobStorageConnectionString: "DefaultEndpointsProtocol=https;AccountName=prewebportalsa;AccountKey=BZf+jxz4E2OziR0egxxQcZnnmOPLA9wdvRvxreLR12FJgtnvwljCVrCQ7NZjiYnZNkbBzVoAS9EKsKgJuJdkgQ==;EndpointSuffix=core.windows.net"
+    azureBlobStorageConnectionString: "DefaultEndpointsProtocol=https;AccountName=prowebportalsa;AccountKey=Q2CbEu0244v7uwTXaXgr56jbjEr1kJDh4wOlR8WSBN+rUr3ufP8n9YsPqYFtbUDpkSA6zrMS7+8+MMHDExgOMA==;EndpointSuffix=core.windows.net"
     mailHost: smtp.office365.com
     emailITSupport: support.bluespace@quantion.com
     mailFrom: no-reply@bluespace.eu
