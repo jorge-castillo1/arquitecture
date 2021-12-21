@@ -37,6 +37,7 @@ backend:
     loginMaxAttempts: 5
     baseUrl: https://myprofile-pre.bluespace.eu/
     mailIT: support.bluespace@quantion.com
+    mailWP: webportal@bluespace.eu
     azureAd: 
       instance: https://login.microsoftonline.com/
       clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
@@ -80,6 +81,10 @@ backend:
       blobAPI: api/blob/
       blobStorageUnitImageContainer: 'unit-images'
       BlobStorageStoreFacadeImageContainer: 'stores-images'
+    googlecaptchaservice:
+      url: https://www.google.com/recaptcha/api/siteverify
+      secret: 6Lccnp8dAAAAAGAGGPOyRCi8J-_8mBFGsqPLDwt7
+
 
 # cron:
 #   registry: bluespaceregistry.azurecr.io
