@@ -2,7 +2,7 @@ angular:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/frontend
-  tag: v_1.139
+  tag: v_1.145
   config:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
@@ -18,7 +18,7 @@ backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.139
+  tag: v_1.145
   config:
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
@@ -91,16 +91,7 @@ backend:
 #     userEndpoint: api/users/
 #     customerPortalApiUrl: https://myprofile-pre.bluespace.eu/backend/
 #     customerPortalApiKey: F56A2E61-6D3C-4C3F-B1B5-16C335EADA96
-#     environment: PRE
-
-identity:
-  baseuri: https://identity-pre.bluespace.eu
-  endpoints:
-    authorize: oauth2/token
-    validate: oauth2/introspect
-    provisioning: wso2/scim/Users
-    groups: scim2/Groups
-    revoke: oauth2/revoke
+#     environment: b
 
 ingress:
   secretName: bluespace-tls
@@ -110,7 +101,7 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.137
+  tag: v_1.138
   config:
     serviceUrl: https://bluebasetest.bluespace.es/BLUESPACEPRE/
     domain: BLUESPACE
@@ -122,7 +113,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.137
+  tag: v_1.138
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.49;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
     database: spacemanager
@@ -131,7 +122,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.137
+  tag: v_1.138
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -159,7 +150,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.137
+  tag: v_1.138
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
@@ -187,7 +178,7 @@ datosProyecto:
   whitelist:
     enabled: false
     listIp:
-    - 2.139.194.97/32
+    - 2.145.194.97/32
 
 mongodb:
   database: customerportal
