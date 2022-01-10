@@ -36,7 +36,7 @@ backend:
     loginUnblockedTime: 15
     loginMaxAttempts: 5
     baseUrl: https://myprofile-pre.bluespace.eu/
-    mailIT: support.bluespace@quantion.com
+    mailIT: support.bluespace@quantion.com; vicente.gonzalez@bluespace.es
     mailWP: webportal@bluespace.eu
     azureAd: 
       instance: https://login.microsoftonline.com/
