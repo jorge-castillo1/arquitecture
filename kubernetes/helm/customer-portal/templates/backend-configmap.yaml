@@ -69,3 +69,4 @@ data:
   TenantId: {{ .Values.backend.config.azureAd.tenantId }}
   BlobAPI:  {{ .Values.backend.config.docs.blobAPI }}
   BlobStorageUnitImageContainer:  {{ .Values.backend.config.docs.blobStorageUnitImageContainer }}
+  BlobStorageStoreFacadeImageContainer:  {{ .Values.backend.config.docs.blobStorageStoreFacadeImageContainer }}

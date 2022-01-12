@@ -12,6 +12,7 @@ angular:
     redirectUri: https://myprofile-pre.bluespace.eu/backoffice
     postLogoutRedirectUri: https://myprofile-pre.bluespace.eu/login
     blobStorageUnitImageContainer: 'unit-images'
+    blobStorageStoreFacadeImageContainer: 'stores-images'
     httpBlobStorageUrl: 'https://prewebportalsa.blob.core.windows.net'
 
 backend:
@@ -80,7 +81,7 @@ backend:
       searchEndpoint: api/Documents/Search/
       blobAPI: api/blob/
       blobStorageUnitImageContainer: 'unit-images'
-      BlobStorageStoreFacadeImageContainer: 'stores-images'
+      blobStorageStoreFacadeImageContainer: 'stores-images'
     googlecaptchaservice:
       url: https://www.google.com/recaptcha/api/siteverify
       secret: 6Lccnp8dAAAAAGAGGPOyRCi8J-_8mBFGsqPLDwt7

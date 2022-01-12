@@ -17,3 +17,4 @@ data:
         window['postLogoutRedirectUri'] = '{{ .Values.angular.config.postLogoutRedirectUri }}';
         window['blobStorageUnitImageContainer'] = '{{ .Values.angular.config.blobStorageUnitImageContainer }}';
         window['httpBlobStorageUrl'] = '{{ .Values.angular.config.httpBlobStorageUrl }}';
+        window['blobStorageStoreFacadeImageContainer'] = '{{ .Values.angular.config.blobStorageStoreFacadeImageContainer }}';
