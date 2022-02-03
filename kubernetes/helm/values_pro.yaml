@@ -25,8 +25,8 @@ backend:
     resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
     mailFrom: no-reply@bluespace.eu
     mailHost: smtp.office365.com
-    contactMail: vicente.gonzalez@bluespace.es
-    storesMail: vicente.gonzalez@bluespace.es
+    contactMail: webportal@bluespace.eu
+    storesMail: webportal@bluespace.eu
     signatureEventsUrl: http://backend-service/api/Events
     precognisPaymentsUrl: https://bluespace.precognis.com/openbravo/wspr/
     changePaymentMethodCardResponse: https://myprofile.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
@@ -37,7 +37,7 @@ backend:
     loginUnblockedTime: 15
     loginMaxAttempts: 5
     baseUrl: https://myprofile.bluespace.eu/
-    mailIT: vicente.gonzalez@bluespace.es
+    mailIT: webportal@bluespace.eu
     mailWP: webportal@bluespace.eu
     azureAd: 
       instance: https://login.microsoftonline.com/
