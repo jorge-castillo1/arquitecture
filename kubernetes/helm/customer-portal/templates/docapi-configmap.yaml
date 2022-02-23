@@ -24,3 +24,4 @@ data:
   Email__Smtp__Host: {{ .Values.docapi.config.mailHost }}
   EmailITSupport: {{ .Values.docapi.config.emailITSupport }}
   MailFrom: {{ .Values.backend.config.mailFrom }}
+  MailExceptionDocumetStoreApiCC: {{ .Values.docapi.config.mailExceptionDocumetStoreApiCC }}

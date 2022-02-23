@@ -64,6 +64,7 @@ data:
   BaseUrl: {{ .Values.backend.config.baseUrl }}
   MailIT: {{ .Values.backend.config.mailIT }}
   MailWP: {{ .Values.backend.config.mailWP }}
+  MailDownloadContractCC: {{ .Values.backend.config.mailDownloadContractCC }}
   Instance: {{ .Values.backend.config.azureAd.instance }}
   ClientId: {{ .Values.backend.config.azureAd.clientId }}
   TenantId: {{ .Values.backend.config.azureAd.tenantId }}
