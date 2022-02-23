@@ -39,7 +39,34 @@ backend:
     baseUrl: https://myprofile-pre.bluespace.eu/
     mailIT: support.bluespace@quantion.com
     mailWP: webportal@bluespace.eu    
-    mailDownloadContractCC: jorge.castillo@quantion.com
+    mailDownloadContractCC: daniel.vazquez@quantion.com
+    mailDownloadContractCCO : daniel.vazquez@quantion.com
+    mailDownloadInvoiceCC : daniel.vazquez@quantion.com
+    mailDownloadInvoiceCCO : daniel.vazquez@quantion.com
+    mailSendNewCredentialsCC : daniel.vazquez@quantion.com
+    mailSendNewCredentialsCCO : daniel.vazquez@quantion.com
+    mailUpdatePaymentCC : daniel.vazquez@quantion.com
+    mailUpdatePaymentCCO : daniel.vazquez@quantion.com
+    mailUpdatePaymentCardCC : daniel.vazquez@quantion.com
+    mailUpdatePaymentCardCCO : daniel.vazquez@quantion.com
+    mailUpdateAccessCodeCC : daniel.vazquez@quantion.com
+    mailUpdateAccessCodeCCO : daniel.vazquez@quantion.com
+    mailGetProfileCC : daniel.vazquez@quantion.com
+    mailGetProfileCCO : daniel.vazquez@quantion.com
+    mailSendWelcomeCC : daniel.vazquez@quantion.com
+    mailSendWelcomeCCO : daniel.vazquez@quantion.com
+    mailUpdateAccountCC : daniel.vazquez@quantion.com
+    mailUpdateAccountCCO : daniel.vazquez@quantion.com
+    mailContactCallCC : daniel.vazquez@quantion.com
+    mailContactCallCCO : daniel.vazquez@quantion.com
+    mailContactContactCC : daniel.vazquez@quantion.com
+    mailContactContactCCO : daniel.vazquez@quantion.com
+    mailContactCC : daniel.vazquez@quantion.com
+    mailContactCCO : daniel.vazquez@quantion.com
+    mailSendMailInvitationErrorCC : daniel.vazquez@quantion.com
+    mailSendMailInvitationErrorCCO : daniel.vazquez@quantion.com
+    mailSaveNewUserCC : daniel.vazquez@quantion.com
+    mailSaveNewUserCCO : daniel.vazquez@quantion.com
     azureAd: 
       instance: https://login.microsoftonline.com/
       clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
@@ -172,7 +199,8 @@ docapi:
     mailHost: smtp.office365.com
     emailITSupport: support.bluespace@quantion.com
     mailFrom: no-reply@bluespace.eu
-    mailExceptionDocumetStoreApiCC: jorge.castillo@quantion.com
+    mailExceptionDocumetStoreApiCC: daniel.vazquez@quantion.com
+    mailExceptionDocumetStoreApiCCO: daniel.vazquez@quantion.com
 
 datosProyecto:
   aplicacion: web

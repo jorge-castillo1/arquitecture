@@ -25,3 +25,4 @@ data:
   EmailITSupport: {{ .Values.docapi.config.emailITSupport }}
   MailFrom: {{ .Values.backend.config.mailFrom }}
   MailExceptionDocumetStoreApiCC: {{ .Values.docapi.config.mailExceptionDocumetStoreApiCC }}
+  MailExceptionDocumetStoreApiCCO: {{ .Values.docapi.config.mailExceptionDocumetStoreApiCCO }}
