@@ -65,40 +65,40 @@ data:
   MailIT: {{ .Values.backend.config.mailIT }}
   MailWP: {{ .Values.backend.config.mailWP }}
   MailDownloadContractCC: {{ .Values.backend.config.mailDownloadContractCC }}
-  MailDownloadContractCCO : {{ .Values.backend.config.mailDownloadContractCCO }}
-  MailDownloadInvoiceCC : {{ .Values.backend.config.mailDownloadInvoiceCC }}
-  MailDownloadInvoiceCCO : {{ .Values.backend.config.mailDownloadInvoiceCCO }}
-  MailSendNewCredentialsCC : {{ .Values.backend.config.mailSendNewCredentialsCC }}
-  MailSendNewCredentialsCCO : {{ .Values.backend.config.mailSendNewCredentialsCCO }}
-  MailUpdatePaymentCC : {{ .Values.backend.config.mailUpdatePaymentCC }}
-  MailUpdatePaymentCCO : {{ .Values.backend.config.mailUpdatePaymentCCO }}
-  MailUpdatePaymentCardCC : {{ .Values.backend.config.mailUpdatePaymentCardCC }}
-  MailUpdatePaymentCardCCO : {{ .Values.backend.config.mailUpdatePaymentCardCCO }}
-  MailUpdateAccessCodeCC : {{ .Values.backend.config.mailUpdateAccessCodeCC }}
-  MailUpdateAccessCodeCCO : {{ .Values.backend.config.mailUpdateAccessCodeCCO }}
-  MailGetProfileCC : {{ .Values.backend.config.mailGetProfileCC }}
-  MailGetProfileCCO : {{ .Values.backend.config.mailGetProfileCCO }}
-  MailSendWelcomeCC : {{ .Values.backend.config.mailSendWelcomeCC }}
-  MailSendWelcomeCCO : {{ .Values.backend.config.mailSendWelcomeCCO }}
-  MailUpdateAccountCC : {{ .Values.backend.config.mailUpdateAccountCC }}
-  MailUpdateAccountCCO : {{ .Values.backend.config.mailUpdateAccountCCO }}
-  MailContactCallCC : {{ .Values.backend.config.mailContactCallCC }}
-  MailContactCallCCO : {{ .Values.backend.config.mailContactCallCCO }}
-  MailContactContactCC : {{ .Values.backend.config.mailContactContactCC }}
-  MailContactContactCCO : {{ .Values.backend.config.mailContactContactCCO }}
-  MailContactCC : {{ .Values.backend.config.mailContactCC }}
-  MailContactCCO : {{ .Values.backend.config.mailContactCCO }}
-  MailSendMailInvitationErrorCC : {{ .Values.backend.config.mailSendMailInvitationErrorCC }}
-  MailSendMailInvitationErrorCCO : {{ .Values.backend.config.mailSendMailInvitationErrorCCO }}
-  MailSaveNewUserCC : {{ .Values.backend.config.mailSaveNewUserCC }}
-  MailSaveNewUserCCO : {{ .Values.backend.config.mailSaveNewUserCCO}}
-  MailUpdateProfileCC":  {{ .Values.backend.config.mailUpdateProfileCC}}
-  MailUpdateProfileCCO":  {{ .Values.backend.config.mailUpdateProfileCCO}}
-  MailInviteUserCC":  {{ .Values.backend.config.mailInviteUserCC}}
-  MailInviteUserCCO":  {{ .Values.backend.config.mailInviteUserCCO}}
+  MailDownloadContractCCO: {{ .Values.backend.config.mailDownloadContractCCO }}
+  MailDownloadInvoiceCC: {{ .Values.backend.config.mailDownloadInvoiceCC }}
+  MailDownloadInvoiceCCO: {{ .Values.backend.config.mailDownloadInvoiceCCO }}
+  MailSendNewCredentialsCC: {{ .Values.backend.config.mailSendNewCredentialsCC }}
+  MailSendNewCredentialsCCO: {{ .Values.backend.config.mailSendNewCredentialsCCO }}
+  MailUpdatePaymentCC: {{ .Values.backend.config.mailUpdatePaymentCC }}
+  MailUpdatePaymentCCO: {{ .Values.backend.config.mailUpdatePaymentCCO }}
+  MailUpdatePaymentCardCC: {{ .Values.backend.config.mailUpdatePaymentCardCC }}
+  MailUpdatePaymentCardCCO: {{ .Values.backend.config.mailUpdatePaymentCardCCO }}
+  MailUpdateAccessCodeCC: {{ .Values.backend.config.mailUpdateAccessCodeCC }}
+  MailUpdateAccessCodeCCO: {{ .Values.backend.config.mailUpdateAccessCodeCCO }}
+  MailGetProfileCC: {{ .Values.backend.config.mailGetProfileCC }}
+  MailGetProfileCCO: {{ .Values.backend.config.mailGetProfileCCO }}
+  MailSendWelcomeCC: {{ .Values.backend.config.mailSendWelcomeCC }}
+  MailSendWelcomeCCO: {{ .Values.backend.config.mailSendWelcomeCCO }}
+  MailUpdateAccountCC: {{ .Values.backend.config.mailUpdateAccountCC }}
+  MailUpdateAccountCCO: {{ .Values.backend.config.mailUpdateAccountCCO }}
+  MailContactCallCC: {{ .Values.backend.config.mailContactCallCC }}
+  MailContactCallCCO: {{ .Values.backend.config.mailContactCallCCO }}
+  MailContactContactCC: {{ .Values.backend.config.mailContactContactCC }}
+  MailContactContactCCO: {{ .Values.backend.config.mailContactContactCCO }}
+  MailContactCC: {{ .Values.backend.config.mailContactCC }}
+  MailContactCCO: {{ .Values.backend.config.mailContactCCO }}
+  MailSendMailInvitationErrorCC: {{ .Values.backend.config.mailSendMailInvitationErrorCC }}
+  MailSendMailInvitationErrorCCO: {{ .Values.backend.config.mailSendMailInvitationErrorCCO }}
+  MailSaveNewUserCC: {{ .Values.backend.config.mailSaveNewUserCC }}
+  MailSaveNewUserCCO: {{ .Values.backend.config.mailSaveNewUserCCO}}
+  MailUpdateProfileCC: {{ .Values.backend.config.mailUpdateProfileCC}}
+  MailUpdateProfileCCO: {{ .Values.backend.config.mailUpdateProfileCCO}}
+  MailInviteUserCC: {{ .Values.backend.config.mailInviteUserCC}}
+  MailInviteUserCCO: {{ .Values.backend.config.mailInviteUserCCO}}
   Instance: {{ .Values.backend.config.azureAd.instance }}
   ClientId: {{ .Values.backend.config.azureAd.clientId }}
   TenantId: {{ .Values.backend.config.azureAd.tenantId }}
-  BlobAPI:  {{ .Values.backend.config.docs.blobAPI }}
-  BlobStorageUnitImageContainer:  {{ .Values.backend.config.docs.blobStorageUnitImageContainer }}
-  BlobStorageStoreFacadeImageContainer:  {{ .Values.backend.config.docs.blobStorageStoreFacadeImageContainer }}
+  BlobAPI: {{ .Values.backend.config.docs.blobAPI }}
+  BlobStorageUnitImageContainer: {{ .Values.backend.config.docs.blobStorageUnitImageContainer }}
+  BlobStorageStoreFacadeImageContainer: {{ .Values.backend.config.docs.blobStorageStoreFacadeImageContainer }}

@@ -2,7 +2,7 @@ angular:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/frontend
-  tag: v_1.175
+  tag: v_1.178
   config:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
@@ -19,7 +19,7 @@ backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.175
+  tag: v_1.178
   config:
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
@@ -40,37 +40,37 @@ backend:
     mailIT: support.bluespace@quantion.com
     mailWP: webportal@bluespace.eu    
     mailDownloadContractCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailDownloadContractCCO : xavier.lopez@quantion.com
-    mailDownloadInvoiceCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailDownloadInvoiceCCO : xavier.lopez@quantion.com
-    mailSendNewCredentialsCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailSendNewCredentialsCCO : xavier.lopez@quantion.com
-    mailUpdatePaymentCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailUpdatePaymentCCO : xavier.lopez@quantion.com
-    mailUpdatePaymentCardCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailUpdatePaymentCardCCO : xavier.lopez@quantion.com
-    mailUpdateAccessCodeCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailUpdateAccessCodeCCO : xavier.lopez@quantion.com
-    mailGetProfileCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailGetProfileCCO : xavier.lopez@quantion.com
-    mailSendWelcomeCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailSendWelcomeCCO : xavier.lopez@quantion.com
-    mailUpdateAccountCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailUpdateAccountCCO : xavier.lopez@quantion.com
-    mailContactCallCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailContactCallCCO : xavier.lopez@quantion.com
-    mailContactContactCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailContactContactCCO : xavier.lopez@quantion.com
-    mailContactCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailContactCCO : xavier.lopez@quantion.com
-    mailSendMailInvitationErrorCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailSendMailInvitationErrorCCO : xavier.lopez@quantion.com
-    mailSaveNewUserCC : daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailSaveNewUserCCO : xavier.lopez@quantion.com
-    MailUpdateProfileCC":  daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    MailUpdateProfileCCO": xavier.lopez@quantion.com
-    MailInviteUserCC":  daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    MailInviteUserCCO": xavier.lopez@quantion.com
+    mailDownloadContractCCO: xavier.lopez@quantion.com
+    mailDownloadInvoiceCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailDownloadInvoiceCCO: xavier.lopez@quantion.com
+    mailSendNewCredentialsCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailSendNewCredentialsCCO: xavier.lopez@quantion.com
+    mailUpdatePaymentCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailUpdatePaymentCCO: xavier.lopez@quantion.com
+    mailUpdatePaymentCardCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailUpdatePaymentCardCCO: xavier.lopez@quantion.com
+    mailUpdateAccessCodeCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailUpdateAccessCodeCCO: xavier.lopez@quantion.com
+    mailGetProfileCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailGetProfileCCO: xavier.lopez@quantion.com
+    mailSendWelcomeCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailSendWelcomeCCO: xavier.lopez@quantion.com
+    mailUpdateAccountCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailUpdateAccountCCO: xavier.lopez@quantion.com
+    mailContactCallCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailContactCallCCO: xavier.lopez@quantion.com
+    mailContactContactCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailContactContactCCO: xavier.lopez@quantion.com
+    mailContactCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailContactCCO: xavier.lopez@quantion.com
+    mailSendMailInvitationErrorCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailSendMailInvitationErrorCCO: xavier.lopez@quantion.com
+    mailSaveNewUserCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailSaveNewUserCCO: xavier.lopez@quantion.com
+    MailUpdateProfileCC:  daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    MailUpdateProfileCCO: xavier.lopez@quantion.com
+    MailInviteUserCC:  daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    MailInviteUserCCO: xavier.lopez@quantion.com
     azureAd: 
       instance: https://login.microsoftonline.com/
       clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
