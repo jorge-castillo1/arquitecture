@@ -40,7 +40,7 @@ backend:
     mailIT: support.bluespace@quantion.com
     mailWP: webportal@bluespace.eu    
     mailDownloadContractCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailDownloadContractCCO: xavier.lopez@quantion.com
+    mailDownloadContractCCO: danivaz25@gmail.com
     mailDownloadInvoiceCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
     mailDownloadInvoiceCCO: xavier.lopez@quantion.com
     mailSendNewCredentialsCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
@@ -67,10 +67,10 @@ backend:
     mailSendMailInvitationErrorCCO: xavier.lopez@quantion.com
     mailSaveNewUserCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
     mailSaveNewUserCCO: xavier.lopez@quantion.com
-    MailUpdateProfileCC:  daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    MailUpdateProfileCCO: xavier.lopez@quantion.com
-    MailInviteUserCC:  daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    MailInviteUserCCO: xavier.lopez@quantion.com
+    mailUpdateProfileCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailUpdateProfileCCO: xavier.lopez@quantion.com
+    mailInviteUserCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
+    mailInviteUserCCO: xavier.lopez@quantion.com
     azureAd: 
       instance: https://login.microsoftonline.com/
       clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
