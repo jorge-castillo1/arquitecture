@@ -92,6 +92,10 @@ data:
   MailSendMailInvitationErrorCCO : {{ .Values.backend.config.mailSendMailInvitationErrorCCO }}
   MailSaveNewUserCC : {{ .Values.backend.config.mailSaveNewUserCC }}
   MailSaveNewUserCCO : {{ .Values.backend.config.mailSaveNewUserCCO}}
+  MailUpdateProfileCC":  {{ .Values.backend.config.mailUpdateProfileCC}}
+  MailUpdateProfileCCO":  {{ .Values.backend.config.mailUpdateProfileCCO}}
+  MailInviteUserCC":  {{ .Values.backend.config.mailInviteUserCC}}
+  MailInviteUserCCO":  {{ .Values.backend.config.mailInviteUserCCO}}
   Instance: {{ .Values.backend.config.azureAd.instance }}
   ClientId: {{ .Values.backend.config.azureAd.clientId }}
   TenantId: {{ .Values.backend.config.azureAd.tenantId }}
