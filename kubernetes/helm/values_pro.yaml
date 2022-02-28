@@ -2,7 +2,7 @@ angular:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/frontend
-  tag: v_1.173
+  tag: v_1.179
   config:
     backendUrl: https://myprofile.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
@@ -19,7 +19,7 @@ backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.173
+  tag: v_1.179
   config:
     inviteUrl: https://myprofile.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
@@ -39,6 +39,38 @@ backend:
     baseUrl: https://myprofile.bluespace.eu/
     mailIT: webportal@bluespace.eu
     mailWP: webportal@bluespace.eu
+    mailDownloadContractCC:
+    mailDownloadContractCCO:
+    mailDownloadInvoiceCC:
+    mailDownloadInvoiceCCO:
+    mailSendNewCredentialsCC:
+    mailSendNewCredentialsCCO:
+    mailUpdatePaymentCC:
+    mailUpdatePaymentCCO:
+    mailUpdatePaymentCardCC:
+    mailUpdatePaymentCardCCO:
+    mailUpdateAccessCodeCC:
+    mailUpdateAccessCodeCCO:
+    mailGetProfileCC:
+    mailGetProfileCCO:
+    mailSendWelcomeCC:
+    mailSendWelcomeCCO:
+    mailUpdateAccountCC:
+    mailUpdateAccountCCO:
+    mailContactCallCC:
+    mailContactCallCCO:
+    mailContactContactCC:
+    mailContactContactCCO:
+    mailContactCC:
+    mailContactCCO:
+    mailSendMailInvitationErrorCC:
+    mailSendMailInvitationErrorCCO:
+    mailSaveNewUserCC:
+    mailSaveNewUserCCO:
+    mailUpdateProfileCC:
+    mailUpdateProfileCCO:
+    mailInviteUserCC:
+    mailInviteUserCCO:
     azureAd: 
       instance: https://login.microsoftonline.com/
       clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
@@ -116,7 +148,7 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.173
+  tag: v_1.175
   config:
     serviceUrl: https://bluebase20.bluespace.es/BLUESPACE/
     domain: BLUESPACE
@@ -128,7 +160,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.173
+  tag: v_1.175
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.48;Port=2638;Servername=BLUESQL;Database=Spaceman
     database: spacemanager
@@ -137,7 +169,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.173
+  tag: v_1.175
   config:
     signaturitapi: https://api.signaturit.com/v3/
     token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
@@ -165,7 +197,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.173
+  tag: v_1.175
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
@@ -181,6 +213,8 @@ docapi:
     mailHost: smtp.office365.com
     emailITSupport: support.bluespace@quantion.com
     mailFrom: no-reply@bluespace.eu
+    mailExceptionDocumetStoreApiCC:
+    mailExceptionDocumetStoreApiCCO:
 
 datosProyecto:
   aplicacion: web
