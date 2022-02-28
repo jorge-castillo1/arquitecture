@@ -54,7 +54,7 @@ backend:
     mailGetProfileCC:
     mailGetProfileCCO:
     mailSendWelcomeCC:
-    mailSendWelcomeCCO:
+    mailSendWelcomeCCO: webportal@bluespace.eu
     mailUpdateAccountCC:
     mailUpdateAccountCCO:
     mailContactCallCC:
@@ -64,7 +64,7 @@ backend:
     mailContactCC:
     mailContactCCO:
     mailSendMailInvitationErrorCC:
-    mailSendMailInvitationErrorCCO:
+    mailSendMailInvitationErrorCCO: webportal@bluespace.eu
     mailSaveNewUserCC:
     mailSaveNewUserCCO:
     mailUpdateProfileCC:
