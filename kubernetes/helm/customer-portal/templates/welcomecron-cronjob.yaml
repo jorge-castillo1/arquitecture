@@ -1,20 +1,20 @@
- apiVersion: batch/v1beta1
- kind: CronJob
- metadata:
-   name: welcomecron-cronjob{{ template "include_branch_name" . }}
- spec:
-   schedule: "0 8,9,10,11,12,13,14,15,16,17,18,19,20 * * *"
-   jobTemplate:
-     spec:
-       template:
-         spec:
-           containers:
-           - name: welcomecron{{ template "include_branch_name" . }}
-             image: "{{ .Values.cron.registry }}/{{ .Values.cron.repository }}:{{ .Values.cron.tag }}"
-             imagePullPolicy: IfNotPresent
-             envFrom:
-               - configMapRef:
-                   name: welcomecron-configmap
-           restartPolicy: OnFailure
-           imagePullSecrets:
-             - name: bluespace-registry
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: welcomecron-cronjob{{ template "include_branch_name" . }}
+spec:
+  schedule: "0 8,9,10,11,12,13,14,15,16,17,18,19,20 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: welcomecron{{ template "include_branch_name" . }}
+            image: "{{ .Values.cron.registry }}/{{ .Values.cron.repository }}:{{ .Values.cron.tag }}"
+            imagePullPolicy: IfNotPresent
+            envFrom:
+              - configMapRef:
+                  name: welcomecron-configmap
+          restartPolicy: OnFailure
+          imagePullSecrets:
+            - name: bluespace-registry
