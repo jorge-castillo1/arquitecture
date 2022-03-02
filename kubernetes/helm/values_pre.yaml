@@ -118,17 +118,17 @@ backend:
       url: https://www.google.com/recaptcha/api/siteverify
       secret: 6Lccnp8dAAAAAGAGGPOyRCi8J-_8mBFGsqPLDwt7
 
-#cron:
-#  registry: bluespaceregistry.azurecr.io
-#  repository: bluespace-customerportal-web/cronjobs
-#  tag: latest
-#  config:
-#    gatewaySignatureUrl: http://signaturitapi-service/
-#    signatureEndpoint: api/signature/
-#    userEndpoint: api/users/
-#    customerPortalApiUrl: https://myprofile-pre.bluespace.eu/backend/
-#    customerPortalApiKey: F56A2E61-6D3C-4C3F-B1B5-16C335EADA96
-#    environment: PRE
+cron:
+  registry: bluespaceregistry.azurecr.io
+  repository: bluespace-customerportal-web/cronjobs
+  tag: latest
+  config:
+    gatewaySignatureUrl: http://signaturitapi-service/
+    signatureEndpoint: api/signature/
+    userEndpoint: api/users/
+    customerPortalApiUrl: https://myprofile-pre.bluespace.eu/backend/
+    customerPortalApiKey: F56A2E61-6D3C-4C3F-B1B5-16C335EADA96
+    environment: PRE
 
 ingress:
   secretName: bluespace-tls
