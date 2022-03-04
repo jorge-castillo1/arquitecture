@@ -105,10 +105,10 @@ backend:
       InvoiceByCustomerApi: /smapi/Invoice/customer/
       invoicePaymentApi: /smapi/Invoice/payment/
     sign:
-      gateway: http://signaturitapi-service
+      gateway: https://myprofile-pre.bluespace.eu/signature
       endpoint: api/signature/
     docs:
-      gateway: http://docapi-service/
+      gateway: https://myprofile-pre.bluespace.eu/document
       documentsApi: api/Documents/
       searchEndpoint: api/Documents/Search/
       blobAPI: api/blob/
@@ -123,7 +123,7 @@ cron:
   repository: bluespace-customerportal-web/cronjobs
   tag: latest
   config:
-    gatewaySignatureUrl: http://signaturitapi-service/
+    gatewaySignatureUrl: https://myprofile-pre.bluespace.eu/signature/
     signatureEndpoint: api/signature/
     userEndpoint: api/users/
     customerPortalApiUrl: https://myprofile-pre.bluespace.eu/backend/
@@ -138,7 +138,7 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.180
+  tag: v_1.182
   config:
     serviceUrl: https://bluebasetest.bluespace.es/BLUESPACEPRE/
     domain: BLUESPACE
@@ -150,7 +150,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.180
+  tag: v_1.182
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.49;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
     database: spacemanager
@@ -159,7 +159,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.180
+  tag: v_1.182
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -187,7 +187,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.180
+  tag: v_1.182
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
