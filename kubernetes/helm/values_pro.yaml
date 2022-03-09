@@ -105,7 +105,7 @@ backend:
       InvoiceByCustomerApi: /smapi/Invoice/customer/
       invoicePaymentApi: /smapi/Invoice/payment/
     sign:
-      gateway: http://signaturitapi-service
+      gateway: http://signaturitapi-service/
       endpoint: api/signature/
     docs:
       gateway: http://docapi-service/

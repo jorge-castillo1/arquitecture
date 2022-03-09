@@ -105,10 +105,10 @@ backend:
       InvoiceByCustomerApi: /smapi/Invoice/customer/
       invoicePaymentApi: /smapi/Invoice/payment/
     sign:
-      gateway: https://myprofile-pre.bluespace.eu/signature
+      gateway: https://myprofile-pre.bluespace.eu/signature/
       endpoint: api/signature/
     docs:
-      gateway: https://myprofile-pre.bluespace.eu/document
+      gateway: https://myprofile-pre.bluespace.eu/document/
       documentsApi: api/Documents/
       searchEndpoint: api/Documents/Search/
       blobAPI: api/blob/
