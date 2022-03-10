@@ -39,38 +39,38 @@ backend:
     baseUrl: https://myprofile-pre.bluespace.eu/
     mailIT: support.bluespace@quantion.com
     mailWP: webportal@bluespace.eu    
-    mailDownloadContractCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailDownloadContractCCO: danivaz25@gmail.com
-    mailDownloadInvoiceCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailDownloadInvoiceCCO: xavier.lopez@quantion.com
-    mailSendNewCredentialsCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailSendNewCredentialsCCO: xavier.lopez@quantion.com
-    mailUpdatePaymentCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailUpdatePaymentCCO: xavier.lopez@quantion.com
-    mailUpdatePaymentCardCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailUpdatePaymentCardCCO: xavier.lopez@quantion.com
-    mailUpdateAccessCodeCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailUpdateAccessCodeCCO: xavier.lopez@quantion.com
-    mailGetProfileCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailGetProfileCCO: xavier.lopez@quantion.com
-    mailSendWelcomeCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailSendWelcomeCCO: xavier.lopez@quantion.com
-    mailUpdateAccountCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailUpdateAccountCCO: xavier.lopez@quantion.com
-    mailContactCallCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailContactCallCCO: xavier.lopez@quantion.com
-    mailContactContactCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailContactContactCCO: xavier.lopez@quantion.com
-    mailContactCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailContactCCO: xavier.lopez@quantion.com
-    mailSendMailInvitationErrorCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailSendMailInvitationErrorCCO: xavier.lopez@quantion.com
-    mailSaveNewUserCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailSaveNewUserCCO: xavier.lopez@quantion.com
-    mailUpdateProfileCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailUpdateProfileCCO: xavier.lopez@quantion.com
-    mailInviteUserCC: daniel.vazquez@quantion.com;danivaz25@gmail.com;jorge.castillo@quantion.com
-    mailInviteUserCCO: xavier.lopez@quantion.com
+    mailDownloadContractCC:
+    mailDownloadContractCCO:
+    mailDownloadInvoiceCC:
+    mailDownloadInvoiceCCO:
+    mailSendNewCredentialsCC:
+    mailSendNewCredentialsCCO:
+    mailUpdatePaymentCC:
+    mailUpdatePaymentCCO:
+    mailUpdatePaymentCardCC:
+    mailUpdatePaymentCardCCO:
+    mailUpdateAccessCodeCC:
+    mailUpdateAccessCodeCCO:
+    mailGetProfileCC:
+    mailGetProfileCCO:
+    mailSendWelcomeCC:
+    mailSendWelcomeCCO: support.bluespace@quantion.com
+    mailUpdateAccountCC:
+    mailUpdateAccountCCO:
+    mailContactCallCC:
+    mailContactCallCCO:
+    mailContactContactCC:
+    mailContactContactCCO:
+    mailContactCC:
+    mailContactCCO:
+    mailSendMailInvitationErrorCC:
+    mailSendMailInvitationErrorCCO: support.bluespace@quantion.com
+    mailSaveNewUserCC:
+    mailSaveNewUserCCO:
+    mailUpdateProfileCC:
+    mailUpdateProfileCCO:
+    mailInviteUserCC:
+    mailInviteUserCCO:
     azureAd: 
       instance: https://login.microsoftonline.com/
       clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
@@ -203,8 +203,8 @@ docapi:
     mailHost: smtp.office365.com
     emailITSupport: support.bluespace@quantion.com
     mailFrom: no-reply@bluespace.eu
-    mailExceptionDocumetStoreApiCC: daniel.vazquez@quantion.com
-    mailExceptionDocumetStoreApiCCO: daniel.vazquez@quantion.com
+    mailExceptionDocumetStoreApiCC:
+    mailExceptionDocumetStoreApiCCO:
 
 datosProyecto:
   aplicacion: web
