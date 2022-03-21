@@ -145,6 +145,7 @@ crmapi:
     api: api/data/v8.1/
     authorization: NTLM
     environment: PRE
+    database: crm
 
 smapi:
   registry: bluespaceregistry.azurecr.io
