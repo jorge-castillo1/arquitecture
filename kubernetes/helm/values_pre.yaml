@@ -2,7 +2,7 @@ angular:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/frontend
-  tag: v_1.189
+  tag: v_1.190
   config:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
@@ -19,7 +19,7 @@ backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.189
+  tag: v_1.190
   config:
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
@@ -38,7 +38,7 @@ backend:
     loginMaxAttempts: 5
     baseUrl: https://myprofile-pre.bluespace.eu/
     mailIT: support.bluespace@quantion.com
-    mailWP: webportal@bluespace.eu    
+    mailWP: webportal@bluespace.eu
     mailDownloadContractCC:
     mailDownloadContractCCO:
     mailDownloadInvoiceCC:
@@ -105,10 +105,10 @@ backend:
       InvoiceByCustomerApi: /smapi/Invoice/customer/
       invoicePaymentApi: /smapi/Invoice/payment/
     sign:
-      gateway: https://myprofile-pre.bluespace.eu/signature/
+      gateway: http://signaturitapi-service/
       endpoint: api/signature/
     docs:
-      gateway: https://myprofile-pre.bluespace.eu/document/
+      gateway: http://docapi-service/
       documentsApi: api/Documents/
       searchEndpoint: api/Documents/Search/
       blobAPI: api/blob/
@@ -121,18 +121,27 @@ backend:
 cron:
   registry: bluespaceregistry.azurecr.io
   repository: bluespace-customerportal-web/cronjobs
-  tag: v_1.29
+  tag: v_1.35
   config:
-    gatewaySignatureUrl: https://myprofile-pre.bluespace.eu/signature/
+    gatewaySignatureUrl: http://signaturitapi-service/
     signatureEndpoint: api/signature/
     userEndpoint: api/users/
     gatewayCrmUrl: http://crmapi-service/
     crmUsersPendingSignEnpoint: crmapi/signaturereminder/userspendingtosign
     crmReminderSentEnpoint: crmapi/signaturereminder/remindersent
-    customerPortalApiUrl: https://myprofile-pre.bluespace.eu/backend/
+    customerPortalApiUrl: http://backend-service/
     customerPortalApiKey: F56A2E61-6D3C-4C3F-B1B5-16C335EADA96
+    daysPreviousToRememberSign: 2    
     environment: PRE
-    daysPreviousToRememberSign: 2
+
+identity:
+  baseuri: https://identity-pre.bluespace.eu
+  endpoints:
+    authorize: oauth2/token
+    validate: oauth2/introspect
+    provisioning: wso2/scim/Users
+    groups: scim2/Groups
+    revoke: oauth2/revoke
 
 ingress:
   secretName: bluespace-tls
@@ -142,20 +151,20 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.187
+  tag: v_1.192
   config:
     serviceUrl: https://bluebasetest.bluespace.es/BLUESPACEPRE/
     domain: BLUESPACE
     api: api/data/v8.1/
     authorization: NTLM
-    environment: PRE
     database: crm
+    environment: PRE
 
 smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.187
+  tag: v_1.192
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.49;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
     database: spacemanager
@@ -164,7 +173,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.187
+  tag: v_1.192
   config:
     signaturitapi: https://api.sandbox.signaturit.com/v3/
     token: capuPuPiidZlIyaCggnQfUpulsznuFJBHOoaJYPsNmGzcxKmBBfOMpjZagnNgUlSqPqgZdBsSqTdMeBToaLOVn
@@ -192,7 +201,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.187
+  tag: v_1.192
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com

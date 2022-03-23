@@ -127,7 +127,10 @@ backend:
 #     gatewaySignatureUrl: http://signaturitapi-service/
 #     signatureEndpoint: api/signature/
 #     userEndpoint: api/users/
-#     customerPortalApiUrl: https://myprofile.bluespace.eu/backend/
+#     gatewayCrmUrl: http://crmapi-service/
+#     crmUsersPendingSignEnpoint: crmapi/signaturereminder/userspendingtosign
+#     crmReminderSentEnpoint: crmapi/signaturereminder/remindersent
+#     customerPortalApiUrl: http://backend-service/
 #     customerPortalApiKey: F56A2E61-6D3C-4C3F-B1B5-16C335EADA96
 #     environment: PRO
 
@@ -154,6 +157,7 @@ crmapi:
     domain: BLUESPACE
     api: api/data/v8.1/
     authorization: NTLM
+    database: crm
     environment: PRO
 
 smapi:

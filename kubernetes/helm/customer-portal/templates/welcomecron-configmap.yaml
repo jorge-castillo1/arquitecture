@@ -12,3 +12,7 @@ data:
   UserEndpoint: {{ .Values.cron.config.userEndpoint }}
   CustomerPortal_ApiUrl: {{ .Values.cron.config.customerPortalApiUrl }}
   CustomerPortal_ApiKey: {{ .Values.cron.config.customerPortalApiKey }}
+  GatewayCrmUrl: {{ .Values.cron.config.gatewayCrmUrl }}
+  CrmUsersPendingSignEnpoint: {{ .Values.cron.config.crmUsersPendingSignEnpoint }}
+  DaysPreviousToRememberSign: !!string {{ .Values.crmapi.config.daysPreviousToRememberSign }}
+  CrmReminderSentEnpoint: {{ .Values.cron.config.crmReminderSentEnpoint }}

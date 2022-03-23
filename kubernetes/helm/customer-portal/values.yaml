@@ -12,6 +12,7 @@ angular:
     redirectUri: https://myprofile-pre.bluespace.eu/backoffice
     postLogoutRedirectUri: https://myprofile-pre.bluespace.eu/login
     blobStorageUnitImageContainer: 'unit-images'
+    blobStorageStoreFacadeImageContainer: 'stores-images'
     httpBlobStorageUrl: 'https://prewebportalsa.blob.core.windows.net'
 
 backend:
@@ -37,7 +38,39 @@ backend:
     loginMaxAttempts: 5
     baseUrl: https://myprofile-pre.bluespace.eu/
     mailIT: support.bluespace@quantion.com
-    mailWP: webportal@bluespace.eu
+    mailWP: webportal@bluespace.eu    
+    mailDownloadContractCC:
+    mailDownloadContractCCO:
+    mailDownloadInvoiceCC:
+    mailDownloadInvoiceCCO:
+    mailSendNewCredentialsCC:
+    mailSendNewCredentialsCCO:
+    mailUpdatePaymentCC:
+    mailUpdatePaymentCCO:
+    mailUpdatePaymentCardCC:
+    mailUpdatePaymentCardCCO:
+    mailUpdateAccessCodeCC:
+    mailUpdateAccessCodeCCO:
+    mailGetProfileCC:
+    mailGetProfileCCO:
+    mailSendWelcomeCC:
+    mailSendWelcomeCCO: support.bluespace@quantion.com
+    mailUpdateAccountCC:
+    mailUpdateAccountCCO:
+    mailContactCallCC:
+    mailContactCallCCO:
+    mailContactContactCC:
+    mailContactContactCCO:
+    mailContactCC:
+    mailContactCCO:
+    mailSendMailInvitationErrorCC:
+    mailSendMailInvitationErrorCCO: support.bluespace@quantion.com
+    mailSaveNewUserCC:
+    mailSaveNewUserCCO:
+    mailUpdateProfileCC:
+    mailUpdateProfileCCO:
+    mailInviteUserCC:
+    mailInviteUserCCO:
     azureAd: 
       instance: https://login.microsoftonline.com/
       clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
@@ -72,7 +105,7 @@ backend:
       InvoiceByCustomerApi: /smapi/Invoice/customer/
       invoicePaymentApi: /smapi/Invoice/payment/
     sign:
-      gateway: http://signaturitapi-service
+      gateway: http://signaturitapi-service/
       endpoint: api/signature/
     docs:
       gateway: http://docapi-service/
@@ -85,15 +118,20 @@ backend:
       url: https://www.google.com/recaptcha/api/siteverify
       secret: 6Lccnp8dAAAAAGAGGPOyRCi8J-_8mBFGsqPLDwt7
 
-
-identity:
-  baseuri: https://identity-pre.bluespace.eu
-  endpoints:
-    authorize: oauth2/token
-    validate: oauth2/introspect
-    provisioning: wso2/scim/Users
-    groups: scim2/Groups
-    revoke: oauth2/revoke
+cron:
+  registry: bluespaceregistry.azurecr.io
+  repository: bluespace-customerportal-web/cronjobs
+  tag: v_1.35
+  config:
+    gatewaySignatureUrl: http://signaturitapi-service/
+    signatureEndpoint: api/signature/
+    userEndpoint: api/users/
+    gatewayCrmUrl: http://crmapi-service/
+    crmUsersPendingSignEnpoint: crmapi/signaturereminder/userspendingtosign
+    crmReminderSentEnpoint: crmapi/signaturereminder/remindersent
+    customerPortalApiUrl: http://backend-service/
+    customerPortalApiKey: F56A2E61-6D3C-4C3F-B1B5-16C335EADA96
+    environment: PRE
 
 ingress:
   secretName: bluespace-tls
@@ -109,6 +147,7 @@ crmapi:
     domain: BLUESPACE
     api: api/data/v8.1/
     authorization: NTLM
+    database: crm
     environment: PRE
 
 smapi:
@@ -145,7 +184,7 @@ signaturitapi:
     gatewayUrl: http://docapi-service/
     documentationApi: api/Documents
     documentationAuditApi: api/Documents/Audit
-    customerPortal_ApiUrl: https://myprofile-pre.bluespace.eu/
+    customerPortal_ApiUrl: https://myprofile-pre.bluespace.eu/backend/
     environment: PRE
 
 docapi:
@@ -168,6 +207,8 @@ docapi:
     mailHost: smtp.office365.com
     emailITSupport: support.bluespace@quantion.com
     mailFrom: no-reply@bluespace.eu
+    mailExceptionDocumetStoreApiCC:
+    mailExceptionDocumetStoreApiCCO:
 
 datosProyecto:
   aplicacion: web
