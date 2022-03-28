@@ -54,7 +54,7 @@ backend:
     mailGetProfileCC:
     mailGetProfileCCO:
     mailSendWelcomeCC:
-    mailSendWelcomeCCO: support.bluespace@quantion.com
+    mailSendWelcomeCCO: support.bluespace@quantion.com,webportal@bluespace.eu
     mailUpdateAccountCC:
     mailUpdateAccountCCO:
     mailContactCallCC:
