@@ -131,7 +131,7 @@ cron:
     crmReminderSentEnpoint: crmapi/signaturereminder/remindersent
     customerPortalApiUrl: http://backend-service/
     customerPortalApiKey: F56A2E61-6D3C-4C3F-B1B5-16C335EADA96
-    daysPreviousToRememberSign: 2    
+    daysPreviousToRememberSign: 2
     environment: PRE
 
 identity:

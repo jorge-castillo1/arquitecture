@@ -121,7 +121,7 @@ backend:
 cron:
   registry: bluespaceregistry.azurecr.io
   repository: bluespace-customerportal-web/cronjobs
-  tag: v_1.35
+  tag: v_1.37
   config:
     gatewaySignatureUrl: http://signaturitapi-service/
     signatureEndpoint: api/signature/
@@ -131,7 +131,17 @@ cron:
     crmReminderSentEnpoint: crmapi/signaturereminder/remindersent
     customerPortalApiUrl: http://backend-service/
     customerPortalApiKey: F56A2E61-6D3C-4C3F-B1B5-16C335EADA96
+    daysPreviousToRememberSign: 2
     environment: PRE
+
+identity:
+  baseuri: https://identity-pre.bluespace.eu
+  endpoints:
+    authorize: oauth2/token
+    validate: oauth2/introspect
+    provisioning: wso2/scim/Users
+    groups: scim2/Groups
+    revoke: oauth2/revoke
 
 ingress:
   secretName: bluespace-tls
