@@ -258,4 +258,9 @@ mongodb:
     replicas:
       arbiter: 1
       secondary: 2
-  usePassword: false
+  usePassword: true
+  # mongodbRootPassword: rz6xWafwrB662FWs
+  dbuser: adminbluespace
+  dbpassword: rz6xWafwrB662FWs
+  service:
+    type: LoadBalancer

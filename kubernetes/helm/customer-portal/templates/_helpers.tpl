@@ -73,11 +73,14 @@ Generar el nombre completo de la url para el ingress a partir de los datos del p
 
 {{- define "mongodb_replicaset_url" -}}
     {{- printf "mongodb://" -}}
+{{- if .Values.mongodb.usePassword }}
+  {{- printf "%s:%s@" .Values.mongodb.dbuser .Values.mongodb.dbpassword }}
+{{- end -}}
 {{- if not .Values.mongodb.replicaSet.enabled -}}
   {{- if .Values.datosProyecto.idMergeRequest -}}
     {{- printf "mongodb-%s/%s" .Values.datosProyecto.idMergeRequest $.Values.mongodb.database -}}
   {{- else -}}
-    {{- printf "mongodb/%s" $.Values.mongodb.database -}}
+    {{- printf "mongodb/%s?authSource=admin&readPreference=primary&directConnection=true&ssl=false" $.Values.mongodb.database -}}
   {{- end -}}
 {{- else -}}
   {{- printf "%s-primary-0%s" (include "mongo_name_constructor" $) (include "namespace_domain" $) -}}
@@ -90,7 +93,7 @@ Generar el nombre completo de la url para el ingress a partir de los datos del p
       {{- printf "," -}}
     {{- end -}}
   {{- end -}}
-  {{- printf "/%s?replicaSet=%s" $.Values.mongodb.database  $.Values.mongodb.replicaSet.name -}}
+  {{- printf "/%s?replicaSet=%s?authSource=admin&readPreference=secondary&directConnection=true&ssl=false" $.Values.mongodb.database  $.Values.mongodb.replicaSet.name -}}
 {{- end -}}
 {{- end -}}
 
