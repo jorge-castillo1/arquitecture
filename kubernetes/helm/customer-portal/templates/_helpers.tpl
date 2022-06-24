@@ -93,7 +93,7 @@ Generar el nombre completo de la url para el ingress a partir de los datos del p
       {{- printf "," -}}
     {{- end -}}
   {{- end -}}
-  {{- printf "/%s?replicaSet=%s?authSource=admin&readPreference=secondary&directConnection=true&ssl=false" $.Values.mongodb.database  $.Values.mongodb.replicaSet.name -}}
+  {{- printf "/%s?replicaSet=%s&authSource=admin&readPreference=secondary&directConnection=true&ssl=false" $.Values.mongodb.database  $.Values.mongodb.replicaSet.name -}}
 {{- end -}}
 {{- end -}}
 
