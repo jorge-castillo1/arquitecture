@@ -39,22 +39,24 @@ backend:
     baseUrl: https://myprofile-pre.bluespace.eu/
     mailIT: support.bluespace@quantion.com
     mailWP: webportal@bluespace.eu
-    mailDownloadContractCC:
-    mailDownloadContractCCO:
-    mailDownloadInvoiceCC:
-    mailDownloadInvoiceCCO:
+    mailDownloadContractCC: support.bluespace@quantion.com
+    mailDownloadContractCCO: webportal@bluespace.eu
+    mailDownloadInvoiceCC: support.bluespace@quantion.com
+    mailDownloadInvoiceCCO: webportal@bluespace.eu
     mailSendNewCredentialsCC:
     mailSendNewCredentialsCCO:
     mailUpdatePaymentCC:
-    mailUpdatePaymentCCO:
+    mailUpdatePaymentCCO: webportal@bluespace.eu
     mailUpdatePaymentCardCC:
-    mailUpdatePaymentCardCCO:
+    mailUpdatePaymentCardCCO: webportal@bluespace.eu
     mailUpdateAccessCodeCC:
     mailUpdateAccessCodeCCO:
     mailGetProfileCC:
     mailGetProfileCCO:
     mailSendWelcomeCC:
     mailSendWelcomeCCO: support.bluespace@quantion.com,webportal@bluespace.eu
+    mailSendWelcomeCronJobCCO: support.bluespace@quantion.com,webportal@bluespace.eu
+    mailStores: support.bluespace@quantion.com
     mailUpdateAccountCC:
     mailUpdateAccountCCO:
     mailContactCallCC:

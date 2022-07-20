@@ -80,6 +80,7 @@ data:
   MailGetProfileCCO: {{ .Values.backend.config.mailGetProfileCCO }}
   MailSendWelcomeCC: {{ .Values.backend.config.mailSendWelcomeCC }}
   MailSendWelcomeCCO: {{ .Values.backend.config.mailSendWelcomeCCO }}
+  MailSendWelcomeCronJobCCO: {{ .Values.backend.config.mailSendWelcomeCronJobCCO }}
   MailUpdateAccountCC: {{ .Values.backend.config.mailUpdateAccountCC }}
   MailUpdateAccountCCO: {{ .Values.backend.config.mailUpdateAccountCCO }}
   MailContactCallCC: {{ .Values.backend.config.mailContactCallCC }}
