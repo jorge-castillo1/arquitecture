@@ -66,7 +66,7 @@ backend:
     mailContactCC:
     mailContactCCO:
     mailSendMailInvitationErrorCC:
-    mailSendMailInvitationErrorCCO: support.bluespace@quantion.com
+    mailSendMailInvitationErrorCCO: support.bluespace@quantion.com,webportal@bluespace.eu
     mailSaveNewUserCC:
     mailSaveNewUserCCO:
     mailUpdateProfileCC:
