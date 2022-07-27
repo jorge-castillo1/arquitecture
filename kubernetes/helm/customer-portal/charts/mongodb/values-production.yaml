@@ -159,6 +159,11 @@ resources: {}
 #   cpu: 100m
 #   memory: 256Mi
 
+resourcesArbiter:
+  requests:
+    cpu: 100m
+    memory: 512Mi
+
 ## Pod priority
 ## https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/
 # priorityClassName: ""

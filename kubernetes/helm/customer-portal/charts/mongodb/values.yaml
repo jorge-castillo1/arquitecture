@@ -92,6 +92,10 @@ replicaSet:
     secondary: 1
   useHostnames: true
 resources: {}
+resourcesArbiter:
+  requests:
+    cpu: 100m
+    memory: 512Mi
 securityContext:
   enabled: true
   fsGroup: 1001
