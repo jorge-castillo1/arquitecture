@@ -21,7 +21,7 @@ data:
   GatewayUrl: {{ .Values.signaturitapi.config.gatewayUrl }}
   DocumentationAPI: {{ .Values.signaturitapi.config.documentationApi }}
   DocumentationAuditAPI: {{ .Values.signaturitapi.config.documentationAuditApi }}
-  ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}
+  ConnectionStrings__serverdb: {{ .Values.mongodb.url }}
   Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
   Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}
   CustomerPortal_ApiUrl: {{ .Values.signaturitapi.config.customerPortal_ApiUrl }}

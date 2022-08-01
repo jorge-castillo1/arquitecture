@@ -237,32 +237,4 @@ datosProyecto:
 
 mongodb:
   database: customerportal
-  datosProyecto:
-    aplicacion: web
-    cliente: bluespace
-    entorno: dev
-    proyecto: customerportal
-  enabled: true
-  fullnameOverride: mongodb
-  persistence:
-    enabled: true
-    existingClaim: "mongodb-customerportal-pre-pvc"
-    size: 1Gi
-  replicaSet:
-    enabled: false
-    name: rs0
-    pdb:
-      enabled: false
-      minAvailable:
-        arbiter: 1
-        primary: 1
-        secondary: 1
-    replicas:
-      arbiter: 1
-      secondary: 2
-  usePassword: true
-  # mongodbRootPassword: rz6xWafwrB662FWs
-  dbuser: adminbluespace
-  dbpassword: rz6xWafwrB662FWs
-  service:
-    type: LoadBalancer
+  url: mongodb+srv://adminbluespace:rz6xWafwrB662FWs@myprofile-pre.p7cg2.mongodb.net/?retryWrites=true&w=majority

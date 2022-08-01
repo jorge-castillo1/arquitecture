@@ -6,12 +6,12 @@ metadata:
   labels:
     deploy: {{ template "datosProyecto.url" . }}
 data:
-  MONGO_URL: {{ template "mongodb_replicaset_url" . }}
+  MONGO_URL: {{ .Values.mongodb.url }}
   DatabaseName: {{ .Values.docapi.config.database }}
   ServiceUrl: {{ .Values.docapi.config.serviceUrl }}
   SitesUrl: {{ .Values.docapi.config.sitesUrl }}
   API: {{ .Values.docapi.config.api }}
-  ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}
+  ConnectionStrings__serverdb: {{ .Values.mongodb.url }}
   Environment: {{ .Values.docapi.config.environment }}
   SharedDocumentsFolder: {{ .Values.docapi.config.sharedDocumentFolder }}
   SiteNameSharepoint: {{ .Values.docapi.config.siteName }}

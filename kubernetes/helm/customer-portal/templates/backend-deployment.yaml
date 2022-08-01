@@ -19,12 +19,7 @@ spec:
         app: backend{{ template "include_branch_name" . }}
       annotations:
         checksum/config: {{include (print $.Template.BasePath "/backend-configmap.yaml") .| sha256sum }}
-    spec:
-      initContainers:
-      - name: wait-db-readyness
-        image: busybox:1.28
-        command: ['sh', '-c', 'until nslookup {{ template "mongodb_replicaset_host" . }}; do echo waiting for {{ template "mongodb_replicaset_host" . }}; sleep 2; done;']
-        imagePullPolicy: Always
+    spec:      
       containers:
       - image: "{{ .Values.backend.registry }}/{{ .Values.backend.repository }}:{{ .Values.backend.tag }}"
         name: backend{{ template "include_branch_name" . }}

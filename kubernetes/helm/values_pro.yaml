@@ -2,7 +2,7 @@ angular:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/frontend
-  tag: v_1.230
+  tag: v_1.233
   config:
     backendUrl: https://myprofile.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
@@ -19,7 +19,7 @@ backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.230
+  tag: v_1.233
   config:
     inviteUrl: https://myprofile.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
@@ -153,7 +153,7 @@ crmapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/crmapi
-  tag: v_1.231
+  tag: v_1.233
   config:
     serviceUrl: https://bluebase20.bluespace.es/BLUESPACE/
     domain: BLUESPACE
@@ -166,7 +166,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.231
+  tag: v_1.233
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.48;Port=2638;Servername=BLUESQL;Database=Spaceman
     database: spacemanager
@@ -175,7 +175,7 @@ signaturitapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/signaturitapi
-  tag: v_1.231
+  tag: v_1.233
   config:
     signaturitapi: https://api.signaturit.com/v3/
     token: clItRnRdObkXobAYlIqZKBIwWQSEkKXscpDXLhloqISMtUpzKrktvOnquzauTxNFdweLYFKqiYkLicuoMNKawW
@@ -203,7 +203,7 @@ docapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/sharepointapi
-  tag: v_1.231
+  tag: v_1.233
   config:
     database: documents
     serviceUrl: https://bluespaceselfstorage.sharepoint.com
@@ -236,35 +236,4 @@ datosProyecto:
 
 mongodb:
   database: customerportal
-  datosProyecto:
-    aplicacion: web
-    cliente: bluespace
-    entorno: pro
-    proyecto: customerportal
-  enabled: true
-  fullnameOverride: mongodb
-  persistence:
-    enabled: true
-    size: 128Gi
-  replicaSet:
-    enabled: true
-    name: rs0
-    pdb:
-      enabled: false
-      minAvailable:
-        arbiter: 1
-        primary: 1
-        secondary: 1
-    replicas:
-      arbiter: 1
-      secondary: 2
-  resourcesArbiter:
-    requests:
-      cpu: 100m
-      memory: 512Mi
-  usePassword: true
-  mongodbRootPassword: JdBRSX9vurf6MzGb
-  dbuser: adminbluespace
-  dbpassword: JdBRSX9vurf6MzGb
-  service:
-    type: LoadBalancer
+  url: mongodb+srv://adminbluespacepro:JdBRSX9vurf6MzGb@myprofile-pro.p7cg2.mongodb.net/?retryWrites=true&w=majority

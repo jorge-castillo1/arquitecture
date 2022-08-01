@@ -7,7 +7,7 @@ metadata:
     deploy: {{ template "datosProyecto.url" . }}
 data:
   ServiceUrl: {{ .Values.crmapi.config.serviceUrl }}
-  ConnectionStrings__serverdb: {{ template "mongodb_replicaset_url" . }}
+  ConnectionStrings__serverdb: {{ .Values.mongodb.url }}
   DatabaseName: {{ .Values.mongodb.database }}
   Logging__LogLevel__Default: {{ .Values.datosProyecto.logLevel}}
   Logging__Serilog__LogLevel__Default: {{ .Values.datosProyecto.mongologLevel}}

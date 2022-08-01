@@ -6,10 +6,9 @@ metadata:
   labels:
     deploy: {{ template "datosProyecto.url" . }}
 data:
-  MONGO_URL: {{ template "mongodb_replicaset_url" . }}
+  MONGO_URL: {{ .Values.mongodb.url }}
   ENV: {{ .Values.datosProyecto.environment }}
   Environment: {{ .Values.backend.config.environment }}
-  MONGO_HOST: {{ template "mongodb_replicaset_host" . }}
   DatabaseName: {{ .Values.mongodb.database }}
   GatewayUrl: {{ .Values.backend.config.crm.gateway }}
   InviteConfirmation: {{ .Values.backend.config.inviteUrl }}
