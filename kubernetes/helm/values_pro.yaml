@@ -2,7 +2,7 @@ angular:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/frontend
-  tag: v_1.233
+  tag: v_1.236
   config:
     backendUrl: https://myprofile.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
@@ -19,7 +19,7 @@ backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.233
+  tag: v_1.236
   config:
     inviteUrl: https://myprofile.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile.bluespace.eu/reset-password/
