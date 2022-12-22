@@ -2,7 +2,7 @@ angular:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/frontend
-  tag: v_1.255
+  tag: v_1.256
   config:
     backendUrl: https://myprofile-pre.bluespace.eu/backend
     googleApiKey: AIzaSyB7Tl1jFLiN9aTj6smbAJgROHpw2s7VNMA
@@ -19,7 +19,7 @@ backend:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/backend
-  tag: v_1.255
+  tag: v_1.256
   config:
     inviteUrl: https://myprofile-pre.bluespace.eu/signup/
     resetPasswordUrl: https://myprofile-pre.bluespace.eu/reset-password/
@@ -28,7 +28,7 @@ backend:
     contactMail: support.bluespace@quantion.com
     storesMail: support.bluespace@quantion.com
     signatureEventsUrl: http://backend-service/api/Events
-    precognisPaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
+    precognisPaymentsUrl: https://bluemdwpre.precognis.com/openbravo/wspr/
     changePaymentMethodCardResponse: https://myprofile-pre.bluespace.eu/backend/api/payment/changepaymentmethod/card/response
     payInvoiceByNewCardMethodCardResponse: https://myprofile-pre.bluespace.eu/backend/api/payment/invoice/response
     updateCardMethodCardResponse: https://myprofile-pre.bluespace.eu/backend/api/payment/update-card/response
@@ -78,7 +78,7 @@ backend:
       clientId: 0e5672c6-d85c-4e5d-b530-8070f57fbe43
       tenantId: eaac2fb5-db15-44de-9b3a-fd6b9d799c58
     precognis:
-      PaymentsUrl: https://bluespacetest.precognis.com/openbravo/wspr/
+      PaymentsUrl: https://bluemdwpre.precognis.com/openbravo/wspr/
       ChangePaymentMethod: com.precognis.einapay.bluespace.webportalcard/changepaymentmethod
       CardConfirmationToken: com.precognis.einapay.bluespace.cardsignature/changepaymentmethod
       PayInvoice: com.precognis.einapay.bluespace.payinvoice_sm/usetoken
@@ -105,6 +105,7 @@ backend:
       accountApi: /smapi/Account/
       invoiceApi: /smapi/Invoice/
       InvoiceByCustomerApi: /smapi/Invoice/customer/
+      DocumentsByCustomerApi: /smapi/Invoice/documents/
       invoicePaymentApi: /smapi/Invoice/payment/
     sign:
       gateway: http://signaturitapi-service/
@@ -166,7 +167,7 @@ smapi:
   registry: bluespaceregistry.azurecr.io
   replicas: 1
   repository: bluespace-customerportal-web/smapi
-  tag: v_1.253
+  tag: v_1.254
   config:
     odbcConnection: Driver=SQL Anywhere 16;UID=BIuser;PWD=RADicalREAD**;Host=212.36.77.49;Port=2638;Servername=RADTEST98SQL;Database=RADTEST98
     database: spacemanager

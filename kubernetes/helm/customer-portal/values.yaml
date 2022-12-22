@@ -103,6 +103,7 @@ backend:
       accountApi: /smapi/Account/
       invoiceApi: /smapi/Invoice/
       InvoiceByCustomerApi: /smapi/Invoice/customer/
+      DocumentsByCustomerApi: /smapi/Invoice/documents/
       invoicePaymentApi: /smapi/Invoice/payment/
     sign:
       gateway: http://signaturitapi-service/
